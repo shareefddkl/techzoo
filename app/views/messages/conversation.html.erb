@@ -1,0 +1,29 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <div id="home_sub_form"><br />
+    <div style="margin: 9px 0 0 26px;">
+      Conversion with <%= @user.display_name %>
+      <div style="float:right; margin: 1px 27px;">
+        <%= will_paginate @messages %>
+      </div>
+      <% for message in @messages %>
+        <div id="message_<%= message.id %>" class="<%= cycle('message-odd', 'message-even') %>">
+          <% if message.user_id == current_user.id or message.receiver_id == current_user.id %>
+            <p style="font-size: small" ><%= image_tag(message.user.avatar.url(:original), :style=>"background: url('/images/avatar bg.png');width:125px;height: 118px;')") %></p>
+            <div style="float: right; margin: -130px 90px; width :410px;height: 112px;">
+              <b><%  if message.user.user_type == 'student' %><%= link_to  message.user.display_name, student_path(message.user.student.id), :title => "#{message.user.account_id}",:style => 'color :blue'  %><%else%><%= link_to  message.user.display_name, mentor_path(message.user.mentor.id),:title => "#{message.user.account_id}",:style => 'color :blue'%><%end%></b>
+            <%end%>
+              <br/><em style="color: #474545;font-size: 12px;">&nbsp;&nbsp;<%= message.body %></em>
+            <p style="font-size: 6px;"><%= message.created_at.strftime("%d/%b/%Y") %>&nbsp;&nbsp;<%= message.created_at.strftime("%I:%M%p") %></p>
+            <%= link_to image_tag("close button.png", :width => 20, :height => 20, :title => "Click", :border=>0), message_path(message), :confirm => 'Are you sure?', :method => :delete, :remote => true %>
+          </div>
+        </div>
+      <%end%><br/>
+      <%= render :partial => 'reply_form' %>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

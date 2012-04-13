@@ -1,0 +1,7 @@
+<% @profile_subtab_tab = true %>
+<div id="message_notice" style="color:green; margin: 68px 0 -65px;"></div>
+<%= form_for :mentor_message, :as => @mentor_message, :url => mentor_message_mentor_path(@mentor_message), :remote => true, :method => 'post' do |f| %>
+  <%= f.text_area :body, :style=>"background:url('/images/text box.png'); width:328px; height:115px;margin: 69px -36px 0 7px;;" %>
+  <button type="submit" style="background: none; border: none; float: left; margin: 7px 178px -24px 40px;"><%=  image_tag('send button.png') %></button>
+  <button type="submit" onclick = "hide_popup()" style="background: none; border: none; float: right; margin:-6px 4px 0 28px;"><%=  image_tag('cancel button.png') %></button>
+<%end%>

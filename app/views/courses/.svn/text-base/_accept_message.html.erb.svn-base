@@ -1,0 +1,5 @@
+<div id="accept_message_notice" style="color:green"></div>
+<%= form_for :accept_message,:as => @accept_message, :url => accept_message_course_path(@accept_message), :remote => true, :method => 'post' do |f| %>
+  <%= f.text_field :body, :style=>"background:url('/images/grey bar_1.png'); width:402px; height:26px;margin: 159px -55px 0 4px;-moz-border-radius: 7px;color:white" %>
+  <button type="submit" style="background: none; border: none; float: right; margin: 159px 21px 0 73px;"><%=  image_tag('submit button_1.png') %></button>
+<%end%>

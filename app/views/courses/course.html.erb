@@ -1,0 +1,34 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <h1 style="float:left;font-size: 16px;margin: 29px 27px; color: black">Course History</h1>
+    <table cellpadding="8px" cellspacing="0px"  width="55%" border="0" style="margin: 81px 0 0 -147px;float: left; ">
+      <tr  style="background-color:#333232; font-size: 14px; color: white; font-family:'Liberation Sans';">
+        <th class="table_border">Course Name</th>
+        <th class="table_border">No of Learners</th>
+        <th class="table_border">Starting Date</th>
+        <th class="table_border">Ending Date</th>
+      </tr>
+      <%for course in @courses%>
+        <% if course.end_date.blank? %>
+        <%else%>
+          <% if (course.end_date < Date.today)%>
+            <tr style="font-size: 11px; font-family:'Liberation Sans';" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border">&nbsp;&nbsp;<%= link_to course.name, student_list_course_path(course.id), :remote => true %></td>
+              <td class="table_border">&nbsp;&nbsp;<%= "#{(course_count = course.courses_students.where("status = 'accepted'").count ) ? "#{course_count}" : ""}" %></td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.start_date%></td>
+              <td>&nbsp;&nbsp;<%= course.end_date %></td>
+            </tr>
+          <% end %>
+        <%end%>
+      <% end %>
+    </table>
+    <div id="course_div">
+
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

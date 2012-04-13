@@ -1,0 +1,133 @@
+<table cellspacing="2px" cellpadding="6px" style="font-size: 16px; margin: 1px 2px;color: #555555;-moz-border-radius: 5px;">
+  <%  if current_user.mentor.education_type == 'professor' %>
+    <tr height="35px">
+      <td >College Name</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >University</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.university %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Board</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.board %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.stream %></td>
+    </tr>
+  <%  elsif current_user.mentor.education_type == 'school' %>
+    <tr height="35px">
+      <td >School Name</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Class</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.standard %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Board</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.board %></td>
+    </tr>
+  <%  elsif current_user.mentor.education_type == 'corporate' %>
+    <tr height="35px">
+      <td >Corporate Exp</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.corexp %></td>
+    </tr>
+    <tr height="35px">
+      <td >Qualification</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.qualification %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.stream %></td>
+    </tr>
+  <%  elsif current_user.mentor.education_type == 'research' %>
+    <tr height="35px">
+      <td >Company</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Designation</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.designation %></td>
+    </tr>
+    <tr height="35px">
+      <td >Qualification</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.qualification %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.stream %></td>
+    </tr>
+  <%  elsif current_user.mentor.education_type == 'professional' %>
+    <tr height="35px">
+      <td >Company</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Designation</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.designation %></td>
+    </tr>
+    <tr height="35px">
+      <td >Qualification</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.qualification %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.stream %></td>
+    </tr>
+  <% elsif current_user.mentor.education_type == 'good' %>
+    <tr height="35px">
+      <td >Education</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.education %></td>
+    </tr>
+    <tr height="35px">
+      <td >Occupation</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.occupation%></td>
+    </tr>
+    <tr height="35px">
+      <td >Work Area</td>
+      <td style="color:#759F31;"><%= current_user.mentor.work %></td>
+    </tr>
+    <tr height="35px">
+      <td >Location</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.location %></td>
+    </tr>
+    <tr height="35px">
+      <td >Good In</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.mentor.good %></td>
+    </tr>
+  <% end %>
+</table>

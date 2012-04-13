@@ -1,0 +1,4 @@
+<%= form_tag search_courses_path, :method => 'get' do %>
+  <%= text_field_tag(:query, "#{params[:query] || 'Search'}",:onFocus => "if(this.value=='Search') this.value='';",:onBlur => "if(this.value=='') this.value='Search';") %>
+<button type="submit" style="border: none; background: none;left: 285px;    position: relative;    top: -27px;"><%=  image_tag('search icon.png') %></button>
+<% end %>

@@ -1,0 +1,34 @@
+<div id="invite_others">
+  <%= form_tag(import_users_path(current_user),:method => 'post', :remote => :true) do %>
+    <h1 style="font-size:19px" >Invite Others</h1>
+    <p style="font-size:10px;  width: 283px; color: #5F5F5F;">Invite your friends and other people,so that they also take benefit of this online facility </p>
+    <div style="color: #5F5F5F;">
+      <%= label_tag :email, "Your Email Address"%>
+      <%= text_field_tag :email %> @
+      <select id="lib_selector" name="lib" style="margin: -38px 184px 5px;float: left;width: 103px;background-color: #FFFFFF;
+              color: #5F5F5F;">
+        <option value="gmail.com" selected="selected"> gmail.com </option>
+        <option value="yahoo.com"> yahoo.com </option>
+        <option value="hotmail.com"> hotmail.com </option>
+      </select>
+    </div>
+    <div>
+      <%= label_tag :password, " Email Password"%>
+      <%= password_field_tag :password %>
+    </div>
+    <button type="submit"><%=  "Continue" %></button>
+    <p style="font-size:10px;  width: 283px; margin-top: 70px; color: #5F5F5F;">Dont worry,we will not stored your password or email with out your permission</p>
+  </div>
+<% end %>
+<div id="invitation">
+  <h1 style="font-size:19px; width: 246px;">Enter email addresses</h1>
+  <p style="font-size:10px;  width: 283px; color: #5F5F5F;">Enter email address of people to invite.Separate each email address by a comma.</p>
+  <%= form_for @invite, :url => invite_students_path, :method => 'post', :remote => :true do |f| %>
+    <div>
+  <%#= f.label :password, "Enter Email Address"%>
+      <%=f.text_area :emails%>
+      <%= validation_error(@invite.errors["emails"]) %>
+    </div>
+    <button type="submit"><%=  "Send" %></button><%#= button_to "Send Invitation" %>
+  <% end %>
+</div>

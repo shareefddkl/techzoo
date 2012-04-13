@@ -1,0 +1,35 @@
+<div id="background_form">
+    <div id="sub_navigation">
+    <% @report_subtab = true %>
+  </div>
+  <div id="default_sub_page">
+   <table cellpadding="8px" cellspacing="0px"  width="100%" border="3" style="margin: 16px -30px;">
+        <tr style="background-color:#333232; font-size: 14px; color: wheat; font-family:'Liberation Sans';" >
+          <th class="table_border">ID code</th>
+          <th class="table_border">Full Name</th>
+          <th class="table_border">Link</th>
+          <th class="table_border">BLOCK</th>
+          <th class="table_border">Delete</th>
+          <th class="table_border">Ignore</th>
+          <th class="table_border">Reported By</th>
+          <th>Status</th>
+        </tr>
+        <% @user_report.each do |a| %>
+        <tr>
+         <td class="table_border"><%=  a.account_id %></td>
+         <td class="table_border"><%=  a.display_name %></td>
+         <td class="table_border"><%= link_to 'link1',"",:remote => true %></td>
+         <td><button type="submit"  style="background: -moz-image-rect; size: '20px' border: MintCream Blue;"><%=  "Block" %></button></td>
+         <td><button type="submit"  style="background: -moz-image-rect; size: '20px' border: MintCream Blue;"><%=  "Yes" %></button></td>
+         <td><button type="submit"  style="background: -moz-image-rect; size: '20px' border: MintCream Blue;"><%=  "Yes"  %></button></td>
+         <td><%=  %></td>
+         <td><%= a.status %></td>
+        </tr>
+        <%end%>
+   </table>
+    <table cellpadding="8px" cellspacing="0px"  width="30%" height="5%" border="1" style="margin: 26px -30px;">
+      <tr><td><%= text_field_tag(:name, "#{'Reporter Comment'}", :style => "background:#545151;color: white;-moz-border-radius: 5px;width: 181px;height: 34px;") %>
+          </td></tr>
+    </table>
+</div>
+</div>

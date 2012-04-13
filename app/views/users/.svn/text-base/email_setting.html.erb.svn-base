@@ -1,0 +1,112 @@
+<% @setting_subtab = true %>
+<div id="email_setting" style="display: none">
+  <%= form_for current_user, :url => update_email_setting_users_path(current_user), :remote => true do |f| %>
+    <table width="30%" align="center" cellpadding="5px" cellspacing="0px" border="0" style="margin-top: 30%;font-size: 15px;background-color: #F7F7F7;-moz-border-radius: 12px;color:#ffffff;padding: 1px;">
+      <tr>
+        <td width="20px" style="margin:-9px 220px; position: absolute;">
+          <%=image_tag("close button.png", :style => "cursor: pointer", :border =>0, :onclick => "hide_popup();")%>
+        </td>
+      </tr>
+      <tr>
+        <td width="20px" style="background-color:#FC870A;-moz-border-radius: 0px 0px 12px 12px;text-align: center;margin:-1px 78px;color: black; position: absolute;">
+          Change Email
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div id="login_error" style="color:green"></div>
+        </td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :email,
+            :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 31px 10px 9px;   height: 23.2px;",
+            :value => 'Email',
+            :onfocus => "if(this.getValue()=='Email'){this.clear();this.style.color = '#3F3F3F';}",
+            :onblur => "if(this.getValue()==''){this.setValue('Email');this.style.color = '#3F3F3F';}" %></td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.submit "Change", :type => :image , :class => 'email_setting_submit' %>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>
+<div id="password_change" style="display: none">
+  <%= form_for current_user, :url => update_email_setting_users_path(current_user), :remote => true do |f| %>
+    <table width="50%" align="center" cellpadding="5px" cellspacing="0px" border="0" style="margin-top: 30%;font-size: 15px;background-color: #F7F7F7;-moz-border-radius: 12px;padding: 1px;">
+      <tr>
+        <td width="20px" style="margin:-9px 220px; position: absolute;">
+          <%=image_tag("close button.png", :style => "cursor: pointer", :border =>0, :onclick => "hide_popup();")%>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:#FC870A;-moz-border-radius: 0px 0px 12px 12px;text-align: center;margin:-1px 78px;color: black; position: absolute;">
+          Change Password
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div id="login_error" style="color:red"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="current_password_text">
+            <%= f.text_field :placeholder,
+              :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 41px 10px 0;   height: 23.2px;",
+              :value => 'Type Current Password',
+              :onfocus => "current_setPass();"
+          %>
+          </div>
+          <div id="current_password" style="display: none;">
+            <%= f.password_field :password, :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 41px 10px 0;   height: 23.2px;",
+              :value => '',
+              :onblur => "current_checkPass();" %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="new_password_text">
+            <%= f.text_field :placeholder,
+              :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 0px 10px 0;   height: 23.2px;",
+              :value => 'Enter New Password',
+              :onfocus => "new_setPass();"
+          %>
+          </div>
+          <div id="new_password" style="display: none;">
+            <%= f.password_field :password, :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 0px 10px 0px;   height: 23.2px;",
+              :value => '',
+              :onblur => "new_checkPass();" %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="confirm_password_text">
+            <%= f.text_field :placeholder,
+              :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 0px 10px 0;   height: 23.2px;",
+              :value => 'Retype New Password',
+              :onfocus => "confirm_setPass();"
+          %>
+          </div>
+          <div id="confirm_password" style="display: none;">
+            <%= f.password_field :password_confirmation, :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 0px 10px 0px;   height: 23.2px;",
+              :value => '',
+              :onblur => "conform_checkPass();" %>
+          </div>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <%= f.submit "Change", :type => :image , :class => 'email_setting_submit'%>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>
+
+<script>
+</script>

@@ -1,0 +1,137 @@
+<div id="default_page">
+  <div id="admin_navigation">
+  </div>
+  <div id="default_sub_page">
+    <%= form_tag(admino_status_path, :method => :get) do %>
+      <table cellpadding="0" cellspacing="0px"  width="100%" border="0" style="margin: 10px 10px 10px -23px;">
+        <tr>
+          <td><%= select_tag :description, options_for_select([["Mentor","mentor", {:class => "drop_down_bg"}],["Student","student", {:class => "drop_down_bg"}]]),:onchange=>"status_type(this.value)" %></td>
+          <td>
+            <div id="mentor_status_fields"><%= select_tag "mentor_education_type",options_for_select([['', {:class => "drop_down_bg"}],['professor', {:class => "drop_down_bg"}],['school', {:class => "drop_down_bg"}],['corporate', {:class => "drop_down_bg"}],['research', {:class => "drop_down_bg"}],['professional', {:class => "drop_down_bg"}],['good', {:class => "drop_down_bg"}]], (params[:mentor_education_type] ? params[:mentor_education_type] : 'select' )) %>
+            </div>
+            <div id="student_status_fields" style="display: none;"><%= select_tag "student_education_type", options_for_select([['in_school', {:class => "drop_down_bg"}],['college', {:class => "drop_down_bg"}],['phd', {:class => "drop_down_bg"}],['pg', {:class => "drop_down_bg"}],['professional', {:class => "drop_down_bg"}],['others', {:class => "drop_down_bg"}]], params[:student_education_type]) %>
+            </div>
+          </td>
+          <td> <%#= date_select "start_date", params[:start_date], :size => '15' %><%= calendar_date_select_tag "start_date", params[:start_date], :size => '12' %></td>
+          <td><%#= date_select "end_date", params[:end_date], :size => '15' %><%= calendar_date_select_tag "end_date",params[:end_date], :size => '12' %></td>
+          <td><%= submit_tag "Get Stats", :disable_with => "Getting stats..." %></td>
+        </tr>
+      </table>
+    <%end%>
+    <%if @mentor_education_type.present? or @student_education_type.present?  %>
+      <table>
+        <tr>
+          <td><%= @mentor_education_type %><%= @student_education_type %></td>
+          <td><%=  '=' %></td>
+          <td>
+            <%if params[:description] == 'mentor'  %>
+              <% if !@mentor_status.blank? %><%= @mentor_status.count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_status.blank? %><%= @student_status.count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Total No of Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Free Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_fee = 'free'").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_fee = 'free'").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Paid Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_fee = 'paid'").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_fee = 'paid'").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Live Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_type= 'live'").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_type= 'live'").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Webinar Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_type= 'webinar'").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_type= 'webinar'").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Free Live Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_fee = 'free' AND courses.course_type= 'live'  ").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_fee = 'free' AND courses.course_type= 'live' ").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Paid Live Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_fee = 'paid' AND courses.course_type= 'live'  ").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_fee = 'paid' AND courses.course_type= 'live' ").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Free Webinar Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_fee = 'free' AND courses.course_type= 'webinar'  ").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_fee = 'free' AND courses.course_type= 'webinar' ").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Paid Webinar Courses:</td>
+          <td>:</td>
+          <td>
+            <%if params[:description] == 'mentor' %>
+              <% if !@mentor_courses.blank? %><%= @mentor_courses.where("courses.course_fee = 'paid' AND courses.course_type= 'webinar'  ").count %><%else%><%= "0" %><%end%>
+            <%else%>
+              <% if !@student_courses.blank? %><%= @student_courses.where("courses.course_fee = 'paid' AND courses.course_type= 'webinar' ").count %><%else%><%= "0" %><%end%>
+            <%end%>
+          </td>
+        </tr>
+      </table>
+    <%end%>
+  </div>
+</div>
+

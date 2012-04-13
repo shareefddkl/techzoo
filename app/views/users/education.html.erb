@@ -1,0 +1,48 @@
+<tr>
+  <td valign="top">
+    <a href="/users/basic">Basic Info</a><br />
+    <a href="/users/picture">Picture</a><br />
+    <a href="/users/education">Education</a><br />
+    <a href="/users/yes">Work</a><br />
+     <a href="/users/interest">Interest</a><br />
+  </td>
+
+  <td width="85%">
+
+        <table>
+          <tr>
+            <td>Company:</td>
+            <td><%=text_field_tag :college_name, current_user.mentor.college_name %></td>
+          </tr>
+          <tr>
+            <td>Designation:</td>
+            <td><%= text_field_tag :designation, current_user.mentor.designation %></td>
+          </tr>
+          <tr>
+            <td>Qualification:</td>
+            <td><%=text_field_tag :qualification, current_user.mentor.qualification %></td>
+          </tr>
+          <tr>
+            <td>City:</td>
+            <td><%= text_field_tag :city, current_user.mentor.city %></td>
+          </tr>
+          <tr>
+            <td>Degree:</td>
+            <td><%=text_field_tag :degree, current_user.mentor.degree %></td>
+          </tr>
+          <tr>
+            <td>Stream:</td>
+            <td><%=text_field_tag :stream, current_user.mentor.stream %></td>
+          </tr>
+          <td>I Changed My Profession <br />
+                 
+                            <input type="radio" name="yes_type" value="yes" onclick="display_yes_from('yes_form')" />Yes
+
+                            <br />
+                            <input type="radio" name="yes_type" value="research" onclick="display_yes_from('research_form')" checked/> No</td>
+                            
+                            </table>
+
+                          </td>
+        </tr>
+                          

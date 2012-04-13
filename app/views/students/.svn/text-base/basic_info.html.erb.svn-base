@@ -1,0 +1,48 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h4 style=" background-color: #545151; width: 649px; height: 25px; margin: 5px 5px;padding: 0 0 4px;font-size: 16px; color: white; "><b style="font-style:italic; margin: 5px 20px;float: left;">Basic Info</b></h4><br/>
+    <div id="basic_form" style="font-size:15px;color: black;">
+      <%= form_for current_user.student, :url => update_basic_info_students_path(current_user.student), :method => :put do |f| %>
+        <table style=" color: #6D6B6B;">
+          <tr>
+            <td width="180px">First Name</td>
+            <td><%= f.text_field :first_name %></td>
+          </tr>
+          <tr>
+            <td>Middle Name</td>
+            <td><%= f.text_field :middle_name %></td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td><%= f.text_field :last_name %></td>
+          </tr>
+          <tr>
+            <td>Date of Birth</td>
+            <td><%= f.date_select :date_of_birth, :start_year => Time.now.year - 40, :end_year => Time.now.year %></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><%= f.text_field :city %></td>
+          </tr>
+          <tr>
+            <td>Mobile No</td>
+            <td><%= f.text_field :mobile%></td>
+          </tr>
+          <tr>
+            <td>LandLine No</td>
+            <td><%= f.text_field :land_line_no %><%#= f.text_field :phone1, :size => 2, :maxlength => 3, :class => "text" %>
+              <%#= f.text_field :phone2, :size => 3, :maxlength => 4, :class => "text" %>
+              <%#= f.text_field :phone3, :size => 4, :maxlength => 10, :class => "text" %></td>
+          </tr>
+        </table>
+        <button type="submit" style="background: none; border: none; left: 919px;    padding: 8px 30px;    position: absolute;    top: 236px;   padding: 8px 30px;"><%=  image_tag('save button.png') %></button>
+      <% end %>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+

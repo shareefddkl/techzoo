@@ -1,0 +1,74 @@
+<% @course_subtab = true %>
+<%= link_to "New", new_course_path %>
+<%= form_for @course,:as => :course, :url => update_course_design_course_path(@course), :html => {:multipart => true} do |f| %>
+  <table>
+    <tr>
+      <td>Course Type</td>
+      <td>
+        <%= select_tag :id, options_for_select(current_user.courses.select("id, course_type").map{|course| [course.course_type, course.id]}, params[:id]), :onchange => "window.location.href = '/courses/course_design?id='+this.value"  %>
+
+      </td>
+    </tr>
+    <tr>
+      <td>Course Name</td>
+      <td>
+        <%= f.text_field :name %>
+      </td>
+    </tr>
+    <tr>
+      <td>Abstract</td>
+      <td>
+        <%= f.text_area :abstract,  :rows => 3, :cols => 20 %>
+      </td>
+    </tr>
+    <tr>
+      <td>Prerequisites</td>
+      <td>
+        <%= f.text_area :prerequisites,  :rows => 3, :cols => 20 %>
+      </td>
+    </tr>
+    <tr>
+      <td>Course Content</td>
+      <td>
+        <%= f.text_area :course_content,  :rows => 3, :cols => 20 %>
+      </td>
+    </tr>
+    <tr>
+      <td>Language</td>
+      <td>
+        <%= f.text_field :language %>
+      </td>
+    </tr>
+    <tr>
+      <td><%=f.submit "Save"%></td>
+    </tr>
+  </table>
+  <div id="web">
+    <%= f.fields_for :documents do |document_fields| %>
+
+      <% if document_fields.object.new_record? %>
+        <p>
+          Document upload:<%= f.text_field :description%><%= document_fields.file_field :document %><%= f.submit 'Upload' %>
+        </p>
+      <% end %>
+      <% unless document_fields.object.new_record? %>
+        <div class="thumb">
+          <%= link_to image_tag(document_fields.object.document.url(:thumb)), document_fields.object.document.url(:original) %>
+          <%= document_fields.check_box :_destroy %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  function changeOption(){
+    var opt = document.getElementById("select");
+    var display = 'none';
+    if(opt.value == 'Webinar'){
+      display = '';
+    }
+    document.getElementById('web').style.display = display;
+  }
+  changeOption();
+</script>

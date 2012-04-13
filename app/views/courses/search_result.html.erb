@@ -1,0 +1,17 @@
+<div id="default_page">
+  <div id="default_sub_page">
+     <div style="margin: -66px -89px;font-size: 16px; color:#545151;">
+        <h1 style="font-size: 18px; color:#545151;" >Search Result</h1>
+        <%=image_tag("line (separater).png",  :style=>"margin:-10px 0px 22px -6px") %>
+        <br/><%@courses.each do |course|%>
+          <em style="color: blue;"><%=course.name%></em><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<%= course.abstract.gsub(/<\/?[^>]*>/, "").slice(0..100) %>...<br/><br/>
+        <%end%>
+    </div>
+  </div>
+</div>
+<%= image_tag('banner shadow.png', :style=>"height: 11px;
+  left: 214px;
+  position: absolute;
+  top: 1305px;
+  width: 977px;"   ) %>

@@ -1,0 +1,87 @@
+<% @course_subtab = true %>
+<table>
+  <tr>
+    <td>Select Course</td>
+    <td>
+      <%= select_tag :id, options_for_select(current_user.courses.select("id, name").map{|course| [course.name, course.id]}, params[:id]), :onchange => "window.location.href = '/courses/course_view?id='+this.value"  %>
+    </td>
+  </tr>
+  <tr>
+    <td>Course Name:</td>
+    <td>
+      <%= @course.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>Starting Date:</td>
+    <td>
+      <%= @course.start_date %>
+    </td>
+  </tr>
+  <tr>
+    <td>Ending Date:</td>
+    <td>
+      <%= @course.end_date %>
+    </td>
+  </tr>
+  <tr>
+    <td>Duration:</td>
+    <td>
+      <% if((((@course.end_date-@course.start_date).to_i)/30)>=1) %>
+        <%=(((@course.end_date-@course.start_date).to_i)/30) %>months
+      <% else %>
+      <% end %>
+      <%=(((@course.end_date-@course.start_date).to_i)%30) %>days
+    </td>
+  </tr>
+  <tr>
+    <td>Class Strength:</td>
+    <td>
+      <%= @course.strength %>
+    </td>
+  </tr>
+  <tr>
+    <td>Categories:</td>
+    <td>
+      <%= @course.categories %>
+    </td>
+  </tr>
+  <tr>
+    <td>Type:</td>
+    <td>
+      <%= @course.course_type %>
+    </td>
+  </tr>
+  <tr>
+    <td>Amount:</td>
+    <td>
+      <%= @course.amount %>
+    </td>
+  </tr>
+</table>
+<br /><br />
+
+<table border="1">
+  <tr>
+    <th>Topic</th>
+    <th>File Name</th>
+    <th>File Type</th>
+    <th>Discussion</th>
+  </tr>
+  <tr>
+    <td>
+      <%= @course.name %>
+    </td>
+    <td>
+      <%= @course.file_name %>
+    </td>
+    <td>
+      <%= @course.course_content_type %>
+    </td>
+    <td>
+      <%= @course.file_size %>
+    </td>
+  </tr>
+</table>
+
+

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/techzoo/!svn/ver/275/trunk
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/techzoo/!svn/ver/128/trunk/Gemfile.lock
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/techzoo/!svn/ver/254/trunk/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/techzoo/!svn/ver/1/trunk/.gitignore
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/techzoo/!svn/ver/262/trunk/Gemfile
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/techzoo/!svn/ver/1/trunk/config.ru
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/techzoo/!svn/ver/1/trunk/README
+END
+hs_err_pid2418.log
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/techzoo/!svn/ver/1/trunk/hs_err_pid2418.log
+END

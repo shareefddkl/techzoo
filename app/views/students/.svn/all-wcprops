@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/techzoo/!svn/ver/274/trunk/app/views/students
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/270/trunk/app/views/students/index.html.erb
+END
+invite_friends.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/264/trunk/app/views/students/invite_friends.html.erb
+END
+education.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/254/trunk/app/views/students/education.html.erb
+END
+_education_profile_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/techzoo/!svn/ver/265/trunk/app/views/students/_education_profile_form.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/270/trunk/app/views/students/show.html.erb
+END
+work.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/253/trunk/app/views/students/work.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/1/trunk/app/views/students/edit.html.erb
+END
+other_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/151/trunk/app/views/students/other_message.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/269/trunk/app/views/students/_tabs.html.erb
+END
+_student_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/techzoo/!svn/ver/272/trunk/app/views/students/_student_message.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/1/trunk/app/views/students/new.html.erb
+END
+_education_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/techzoo/!svn/ver/274/trunk/app/views/students/_education_profile.html.erb
+END
+education_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/techzoo/!svn/ver/274/trunk/app/views/students/education_profile.html.erb
+END
+basic_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/274/trunk/app/views/students/basic_info.html.erb
+END
+_education_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/241/trunk/app/views/students/_education_form.html.erb
+END
+interest.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/274/trunk/app/views/students/interest.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/272/trunk/app/views/students/_form.html.erb
+END
+others.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/264/trunk/app/views/students/others.html.erb
+END
+_invite_others_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/techzoo/!svn/ver/264/trunk/app/views/students/_invite_others_form.html.erb
+END

@@ -1,0 +1,1033 @@
+.meter {
+    height: 20px;  /* Can be anything */
+    position: relative;
+    -moz-border-radius: 0px;
+    padding: 0px;
+}
+
+.meter > span {
+    display: block;
+    height: 100%;
+    background-color: rgb(43,194,83);
+
+
+}
+body {
+    margin: 0;
+    overflow:auto;
+    padding: 0;
+    font-family:'Liberation Sans';
+}
+.form_error{
+    color: red;
+    font-size: 13px;
+    padding-left: 158px;
+}
+
+.error
+{
+    color: red;
+    font-size: 13px;
+}
+.notice
+{
+    color: green;
+    font-size: 13px;
+}
+
+/* Styles for  login form*/
+#user_login_form{
+    background: url('/images/login image.png');
+    height:151px;
+    width:222px;
+    left:57%;
+    margin: -100px 0 0 -250px;
+    padding:42px 31px 18px;
+    position:fixed;
+    top:45%;
+    z-index:1001;
+    font-size: 12px;
+}
+#user_login_form a{
+    color: #5F5F5F;
+    text-decoration: none;
+    outline: medium none;
+}
+
+
+
+#user_login_form #action button{
+    background: url("/images/sign in button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    float: right;
+    height: 29px;
+    margin: 8px -2px 0 1px;
+    padding: 5px 0;
+    text-align: center;
+    width: 94px;
+}
+#user_login_form #fields input {
+    margin: 5px 0;
+    -moz-border-radius: 10px;
+    width: 211px;
+    height: 29px;
+    background-color: white;
+    clear: both;
+}
+
+/* Styles for Registor form */
+#registor_form{
+    background: url('/images/register box.png');
+    height:192px;
+    width:233px;
+    left:57%;
+    margin: -100px 0 0 -250px;
+    padding:50px 41px 10px 10px;
+    position:fixed;
+    top:45%;
+    z-index:1001;
+    font-size: 12px;
+}
+
+#registor_form a{
+    color: #00A4FF;
+}
+
+#registor_form  #action button{
+    background: url("/images/sign in button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    float: right;
+    height: 28px;
+    margin: -2px -12px 0 0;
+    padding: 3px 0;
+    text-align: center;
+    width: 92px;
+}
+.reset_button{
+    background: url("/images/sign in button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    font-size: 18px;
+    height: 29px;
+    left: 37px;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    top: 198px;
+    width: 94px;
+}
+
+/* student form styles*/
+#main_form{
+    background: url('/images/bg- form.png');
+    width: 960px;
+    height: 1049px;
+    margin: -46px 10px;
+    padding-bottom: 2em;
+    clear: both;
+}
+
+#sub_form{
+    background: url("/images/sign up form.png") repeat scroll 0 0 transparent;
+    height: 838px;
+    left: auto;
+    padding: 2em 6em 0 1em;
+    position: absolute;
+    top: 371px;
+    width: 510px;
+}
+
+#sub_form form label{
+    width: 8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0.01em 92px 0 1px;
+    display:inline-table;
+    font-size: 16px;
+}
+
+#sub_form form input{
+    background:#3F3F3F;
+    color: white;
+    margin: 0.1em 0;
+    -moz-border-radius: 5px;
+    width: 261px;
+    height: 26px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+
+#sub_form form .text{
+    background:#3F3F3F;
+    color: white;
+    margin: 0.1em 0;
+    -moz-border-radius: 5px;
+    width: 65px;
+    height: 26px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+#sub_form form textarea{
+    background:#3F3F3F;
+    color: white;
+    margin: 0.1em 0;
+    -moz-border-radius: 5px;
+    width: 261px;
+    height: 30px;
+    font-size: 16px;
+    margin: 0.1em 0;
+    padding: 1px 9px;
+}
+#sub_form form select{
+    background:#3F3F3F;
+    color: white;
+    width: 85px;
+    -moz-border-radius: 5px;
+    height: 24px;
+    margin: 0.1em 0;
+    font-size: 16px;
+}
+#sub_form form em select{
+    background-color: #3F3F3F;
+    color: white;
+    width: 263px;
+    -moz-border-radius: 5px;
+    height: 28px;
+    margin: 0.1em 0;
+    font-size: 16px;
+}
+#sub_form form button{
+    background: url("/images/save & next button.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: black;
+    font-size: 14px;
+    height: 24px;
+    left: 517px;
+    padding: 0 0 3px;
+    position: absolute;
+    top: 839px;
+    width: 129px;
+}
+#su_form form em{
+    position: absolute;
+    top: 1208px;
+    left: 887px;
+}
+em img{
+    width: 12px;
+    height: 13px;
+}
+
+
+/* style for courses*/
+
+#Live{
+    font-size: 15px;
+}
+#Live label {
+    width: 10em;
+    float: left;
+    text-align: left;
+    padding-top: 0.2em;
+    margin-right: 0.1em;
+    display: block;
+}
+#Webinar{
+    font-size: 15px;
+}
+#Webinar label {
+    width: 10em;
+    float: left;
+    text-align: left;
+    padding-top: 0.2em;
+    margin-right: 0.1em;
+    display: block;
+}
+/* style for mentors personal form */
+
+em button{
+    background:url("/images/submit button.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#333333;
+    display:inline-block;
+    font-size:10px;
+    height:32px;
+    margin:0 3px;
+    padding: 6px 36px 95px 1px ;
+    text-align:center;
+    vertical-align:middle;
+    width:116px;
+}
+
+/*button{
+    background:url("/images/continue & send button.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#333333;
+    display:inline-block;
+    font-size:15px;
+    height:32px;
+    margin:24px -86px;
+    padding:  0 15px 16px 2px;
+    text-align:center;
+    vertical-align:middle;
+    width:91px;
+    float: right;
+}*/
+/* style for tabs*/
+.personal_button{
+    background: url("/images/personal detail white button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #333333;
+    font-size: 28px;
+    left: 365px;
+    height: 63px;
+    margin:-2px -1px;
+    padding: 6px 0 3px 12px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 203px;
+}
+
+.education_button{
+    background: url("/images/ed details white button.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    clear: both;
+    color: #333333;
+    font-size: 28px;
+    height: 67px;
+    margin: 1px -4px;
+    left: 580px;
+    padding: 1px 0 2px 3px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 217px;
+}
+
+.other_button{
+    background: url("/images/other white button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    clear: both;
+    color: #333333;
+    font-size: 28px;
+    height: 64px;
+    left: 797px;
+    margin: -4px -7px;
+    padding: 17px 0 1px 9px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 217px;
+}
+.personal_details{
+    background: url("/images/personal detail grey button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 28px;
+    left: 365px;
+    height: 63px;
+    margin: -1px -3px;
+    padding: 6px 0 3px 12px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 203px;
+}
+.education_details{
+    background: url("/images/ed detail grey button.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    clear: both;
+    color: #FFFFFF;
+    font-size: 28px;
+    height: 67px;
+    left: 580px;
+    padding: 1px 0 2px 3px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 217px;
+    margin: 0 -2px;
+}
+.other_details{
+    background: url("/images/other grey button.png") repeat scroll 0 0 transparent;
+    border: medium none;
+    clear: both;
+    color: #FFFFFF;
+    font-size: 28px;
+    height: 55px;
+    left: 797px;
+    margin: -2px -4px;
+    padding: 17px 0 1px 9px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 218px;
+}
+
+.personal_divider{
+    margin: 22px 191px;
+    clear: both;
+    position: absolute;
+}
+.education_divider{
+    clear: both;
+    left: 585px;
+    margin: 20px 199px;
+    position: absolute;
+}
+/* style for mentors and student education forms*/
+#main_education_form{
+    background: url('/images/bg- form.png');
+    width: 960px;
+    height: 1049px;
+    margin: -46px 10px;
+    padding-bottom: 2em;
+    clear: both;
+
+}
+#main_education_form input, #main_education_form select {
+    margin: 1.1em 0;
+}
+
+#education_sub_form form label {
+    display:inline-block;
+    font: bold 15px "solid";
+    width:203px;
+    margin: -10px;
+    color: #FFFFFF;
+}
+
+#education_sub_form form select, #education_sub_form form textarea, #education_sub_form form input {
+    margin-left: -74px;
+    background-color: #FFFFFF;
+    -moz-border-radius: 1px;
+    width:131px;
+    color: #5F5F5F;
+}
+
+
+#education_sub_form div {
+    margin:-15px 0;
+
+}
+#education_sub_form{
+    background: url('/images/sign up form.png');
+    width: 515px;
+    padding: 2em 6em 0em 1em;
+    height: 838px;
+    left:auto;
+    margin: 76px -5px;
+}
+#education_sub_form form b{
+    font-size: 19px;
+    margin: 0 3px 17px -13px;
+    display: inline-block;
+    color: #BBD870;
+}
+
+#education_sub_form form{
+    background-color:#5F5F5F;
+    margin:40px -83px 13px 54px;
+    padding:20px 8px 52px 18px;
+    /* width: 309px;
+     height: 252px;*/
+}
+
+
+#education_sub_form form button{
+    background: url("/images/save & next button.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    top: 1210px;
+    color: #5F5F5F;
+    display: inline-block;
+    float: none;
+    font-size: 14px;
+    height: 32px;
+    padding: 0 14px 10px 2px;
+    position: absolute;
+    left: 889px;
+    text-align: center;
+    width: 129px;
+}
+
+#education_sub_form form em{
+    top: 1213px;
+    float: none;
+    font-size: 14px;
+    left: 400px;
+    position: absolute;
+}
+h1 img{
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+
+#text{
+    background:  #f0f0f0;
+    margin-left: 14em;
+    width: 20%;
+    margin-top: 2em;
+    font: bold 12px/12px "oblique", serif;
+}
+#professor_form h1{
+    float: right;
+    margin:-217px 7px;
+}
+
+
+#school_form h1{
+    float: right;
+    margin:-186px 7px;
+}
+
+
+
+#corporate_form h1{
+    float: right;
+    margin:-219px 7px;
+}
+
+
+
+#research_form h1{
+    float: right;
+    margin:-253px 7px;
+}
+
+
+
+#professional_form h1{
+    float: right;
+    margin:-251px 7px;
+}
+
+
+
+#good_form h1{
+    float: right;
+    margin:-221px 7px;
+}
+
+
+
+/* Styles for mentor others */
+#student_others{
+    background: url('/images/sign up form.png');
+    width: 515px;
+    padding: 2em 6em 0em 1em;
+    height: 838px;
+    left:auto;
+    clear: both;
+    margin: 76px -5px;
+}
+
+#invite_others{
+    background: url('/images/invite other bg.png');
+    width: 192px;
+    padding: 0 106px 0 11px;
+    height: 373px;
+    left:auto;
+    clear: both;
+    float: left;
+    margin: -27px  0 2px;
+}
+
+#invite_others form label{
+    display:inline-block;
+    font:17px "solid";
+    width:203px;
+    margin: 0 1px -14px 4px;
+    color: #5F5F5F;
+}
+#invite_others form input{
+    margin: 5px -6px 14px 9px;
+    background-color: #FFFFFF;
+    width:150px;
+    color: #5F5F5F;
+    -moz-border-radius: 3px;
+}
+#invitation{
+    background: url('/images/invite other bg.png');
+    width: 192px;
+    padding: 0 104px 0 13px;
+    margin: -373px -105px;
+    height: 373px;
+    left:auto;
+    clear: both;
+    float: right;
+
+}
+#invitation textarea{
+    margin: 4px 0 24px 10px;
+    background-color: #FFFFFF;
+    width:251px;
+    color: #5F5F5F;
+    height: 100px;
+}
+
+#invitation button,#invite_others button {
+    background:url("/images/continue & send button.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#333333;
+    display:inline-block;
+    font:12px "solid";
+    height:32px;
+    margin:24px -86px;
+    padding:  0 15px 8px 2px;
+    text-align:center;
+    vertical-align:middle;
+    width:109px;
+    float: right;
+    color: #5F5F5F;
+}
+
+.skip_button{
+    background: url("/images/save & next button.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #5F5F5F;
+    font-size: 14px;
+    left: 878px;
+    padding: 3px 11px 11px 15px;
+    position: absolute;
+    text-decoration: none;
+    top: 1209px;
+    width: 129px;
+}
+/* styles for demo button*/
+.demo_button{
+    background:url('/images/save & next button.png') no-repeat scroll 0 0 transparent;
+    width:129px;
+    float: right;
+    border:medium none;
+    font-size: 14px;
+    color: #5F5F5F;
+    display:table;
+    height:32px;
+    margin:-4px -45px 3px;
+    padding:  3px 8px 10px 1px;
+    text-align:center;
+    vertical-align:bottom;
+}
+/*Style for faqs and default pages*/
+#faq{
+    background-image: url('/images/bg- form.png');
+    margin: -17px 12px;
+    width: 945px;
+    height:1128px;
+    clear: both;
+    padding: 6px;
+}
+#sub_faq{
+    padding-top: 2em;
+    padding-left: 3em;
+    background-image: url('/images/form bg.png');
+    width:536px;
+    height: 964px;
+    margin: 31px 4px 16px 162px;
+}
+#sub_faq h1{
+    color: #CF5810;
+    font-style: italic;
+    margin: -8px -65px -10px;
+    font-size: 52px;
+}
+#sub_faq p{
+    color :#000000;
+    font-size:14px;
+    width:524px;
+    height: 500px;
+    margin: 52px 0 0 -59px;
+}
+#sub_faq em{
+    color: #7F7E7E;
+}
+#default_page{
+    background-image: url('/images/bg- form.png');
+    margin: -17px 12px;
+    width: 945px;
+    height:1128px;
+    clear: both;
+    padding: 6px;
+}
+#default_sub_page{
+    padding-top: 2em;
+    padding-left: 3em;
+    background-image: url('/images/form bg.png');
+    width :535px;
+    height: 963px;
+    margin: 30px -4px 20px 147px;
+}
+/* styles for background template*/
+
+
+#sign {
+    float :right;
+    margin: 1px 162px;
+}
+#sign a{
+    text-decoration: none;
+}
+
+#sign a img{
+    text-decoration: none;
+    border: none;
+}
+
+
+#main_div{
+    background: url('/images/background.jpg');
+    width :1400px;
+    height: 1700px;
+}
+
+
+.more_button{
+    background: url("/images/learn more button.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #FFFFFF;
+    display: inline-table;
+    font-size: 13px;
+    height: 31px;
+    margin: -67px 9px 7px;
+    padding: 6px 2px;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 96px;
+}
+.chromemenu input{
+    margin: 11px 28px 0 64px;
+    background-image: url('/images/Search bar.png');
+    width: 210px;
+    height: 22px;
+    color:#768d9b;
+    padding: 1px 13px;
+    font-size: 10px;
+    -moz-border-radius: 13px 0px 0px 13px;
+    text-decoration: none;
+    border: none;
+}
+
+.chromemenu{
+    width: 933px;
+    font-weight: bold;
+    padding-top: 27px;
+}
+
+.chromemenu ul{
+    margin: -43px 3px;
+    list-style: none;
+    height: 53px;
+    -moz-border-radius: 10px;
+    font-family:'Liberation Sans';
+    font-size:14px;
+    font-weight: bold;
+    width: 940px;
+    background-image:  url('/images/Navigation bar.png');
+    text-align: left;
+    padding-left: 2em;
+    /*font: bold 14px sans-serif;*/
+}
+
+.chromemenu ul li{
+    display: inline;
+    margin: 10px;
+    position: relative;
+    right: 17px;
+    top: 15px;
+}
+
+.chromemenu ul li span{
+    color: #494949;
+    padding: 12px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.chromemenu ul li span a:hover, .chromemenu ul li span a.selected{
+    background: #BFBFBF;
+    width: 110px;
+    height: 42px;
+    padding: 11px;
+    margin: 0;
+}
+
+li ul {
+    position: absolute;
+    left: 123px;
+    top: -3px;
+    display: none;
+
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #3F3F3F;
+    padding-bottom: 15px;
+    display: inline;
+    font-size: 15px;
+    margin: 1px -5px;
+}
+
+
+li:hover ul, li.over ul {
+    padding: 90px;
+    padding-top: 1px;
+    padding-left: 25px;
+    spacing :2px;
+    display: block;
+    background-image: url('/images/SUB MENU button.png');
+    width :50%;
+    color :red;
+}
+
+
+
+#container{
+    height: 1177px;
+    width: 985px;
+    position :static;
+    float: left;
+    -moz-border-radius: 10px;
+}
+
+
+#bottom  {
+    background: url("/images/lines.png") repeat scroll 0 0 transparent;
+    color: #768D9B;
+    float: left;
+    font-family:"Liberation Sans";
+    font-size: 12px;
+    height: 120px;
+    left: 515px;
+    line-height: 30px;
+    position: absolute;
+    top: 53px;
+    width: 198px;
+}
+
+#bottom a{
+    color: #768D9B;
+    text-decoration: none;
+}
+
+.button  {
+    background:url("/images/learn more button.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#333333;
+    display:inline-block;
+    font-size:11px;
+    height:19px;
+    margin:0 3px;
+    padding:3px 0;
+    text-align:center;
+    vertical-align:middle;
+    width:89px;
+}
+
+#footer {
+    color: #FFFFFF;
+    font: 45px/40px "Times New Roman",serif;
+    padding-top: 0.4em;
+}
+#footer a{
+    text-decoration: none;
+    color: #A7B6BF;
+}
+
+#leftbar {
+    float: left;
+    width: 140px;
+    color :#768d9b;
+    font-family:'Liberation Sans';
+    font-size:12px;
+    margin: 57px 36px;
+    line-height: 31px;
+    background: url('/images/lines.png');
+    height: 146px;
+}
+#leftbar a{
+    text-decoration: none;
+    color :#768d9b;
+}
+#inform {
+    float:left;
+    background-color: #ffffff;
+    width :270px;
+}
+
+#rightBar {
+    float:right;
+    width: 177px;
+    height :30%;
+    font-color :red;
+}
+/* new styles for front page*/
+
+
+#header{
+    height: 425px;
+    margin-left: 11px;
+    margin-right: 13px;
+    margin-top: -28px;
+    width: 978px;
+}
+#header-left{
+    left: 294px;
+    position: absolute;
+    top: 214px;
+}
+#newsletter{
+    background: url('/images/newsletter background bar.png');
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 960px;
+}
+#newsletter-left{
+    width: 364px;
+    height: 85px;
+    font-size: 12px;
+    color :#AFAFAF;
+}
+
+#newsletter-middle{
+    float: left;
+    left: 377px;
+    position: relative;
+    top: -60px;
+    width: 313px;
+}
+.subscribe_button {
+    background-image: url("/images/subscribe button.png");
+    color: black;
+    font-size: 14px;
+    left: 216px;
+    padding: 5px 9px;
+    position: relative;
+    text-decoration: none;
+    top: -59px;
+}
+#connections{
+    float: left;
+    left: 444px;
+    position: relative;
+    top: -62px;
+    width: 177px;
+}
+
+#tailored_training{
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 950px;
+    background: #EDEDED;
+    -moz-border-radius: 10px 10px 10px 10px;
+    margin-top: 27px;
+    margin-left: 6px;
+}
+#students{
+    width: 307px;
+}
+#students p{
+    color: grey;
+    font-size: 12px;
+    left: 13px;
+    line-height: 19px;
+    position: relative;
+    top: -49px;
+}
+#mentors{
+    float: left;
+    margin-left: 347px;
+    margin-top: -281px;
+    width: 307px;
+}
+#mentors p{
+    color: grey;
+    font-size: 12px;
+    left: -2px;
+    line-height: 19px;
+    position: relative;
+    top: -49px;
+}
+
+#our_courses{
+    -moz-border-radius: 10px 10px 10px 10px;
+    background-color: #F2EFEF;
+    color: black;
+    float: left;
+    font-size: 22px;
+    height: 277px;
+    margin-left: 671px;
+    margin-top: -314px;
+    width: 277px;
+}
+#tailored{
+    width: 584px;
+}
+#tailored p{
+    color: grey;
+    float: left;
+    font-size: 12px;
+    line-height: 19px;
+    margin: -203px 22px 0 248px;
+}
+#tailored_link a{
+    font-size: 12px;
+    color: #70C8E5;
+}
+#tailored_link{
+    float: left;
+    font-size: 12px;
+    line-height: 29px;
+    margin: -142px 39px 0 248px;
+}
+#learnmore a{
+    text-decoration: none;
+}
+#learnmore{
+    float: right;
+    font-size: 12px;
+    margin: -29px 40px;
+}
+#testmonial{
+    float: right;
+    margin-left: -20px;
+    margin-top: -213px;
+    width: 348px;
+}
+/* style for drop down select background*/
+.drop_down_bg{
+    background-color: #84CE4C;
+    color: #ffffff
+}
+
+/* Styles for ads display*/
+.ad-odd{
+    font-size: 12px;
+    left: 966px;
+    line-height: 17px;
+    position: absolute;
+    top: 688px;
+}
+.ad-even{
+    font-size: 12px;
+    left: 973px;
+    line-height: 17px;
+    position: absolute;
+    top: 779px;
+}

@@ -1,0 +1,77 @@
+<div id="main_form">
+  <h1 style="padding:16px 10px 10px 145px; color: black; font-size: 40px">Sign Up Form</h1>
+  <div id="image" style="padding-left: 7.2em; font-size: 21px; color: black;">I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em><%= image_tag('green dot.png') %></em>&nbsp;&nbsp;Mentor&nbsp;&nbsp;<%= image_tag('white dot.png') %>&nbsp;&nbsp;Learner
+    <div><%= render :partial => "tabs" %>
+      <div id="sub_form">
+        <%= form_for @mentor do |f| %>
+          <table border="0">
+            <tr>
+              <td style="padding-right: 10em;">
+                <div>
+                  <%= f.label :first_name, "First Name<font color='green'>*</font>".html_safe %>
+                  <%= f.text_field :first_name%>
+                  <%= validation_error(@mentor.errors["first_name"]) %>
+                </div>
+                <div>
+                  <%= f.label :middle_name, "Middle Name"%><br />
+                  <%= f.text_field :middle_name %>
+                  <%= validation_error(@mentor.errors["middle_name"]) %>
+                </div>
+                <div>
+                  <%= f.label :last_name, "Last Name<font color='green'>*</font>".html_safe %>
+                  <%= f.text_field :last_name%>
+                  <%= validation_error(@mentor.errors["last_name"]) %>
+                </div>
+                <div>
+                  <%= f.label :date_of_birth, "Date of Birth<font color='green'>*</font>".html_safe%>
+                  <br/><br/><%= f.date_select :date_of_birth, :start_year => Time.now.year - 40, :end_year => Time.now.year %>
+                  <%= validation_error(@mentor.errors["date_of_birth"]) %>
+                </div>
+                <div>
+                  <%= f.label :address, "Address<font color='green'>*</font>".html_safe%>
+                  <%= f.text_area :address, :rows => 3, :cols => 40%>
+                  <%= validation_error(@mentor.errors["address"]) %>
+                </div>
+                <div>
+                  <%= f.label :city, "City<font color='green'>*</font>".html_safe %>
+                  <%= f.text_field :city%>
+                  <%= validation_error(@mentor.errors["city"]) %>
+                </div>
+                <div>
+                  <%= f.label :state, "State<font color='green'>*</font>".html_safe%>
+                  <%= f.text_field :state%>
+                  <%= validation_error(@mentor.errors["state"]) %>
+                </div>
+                <div>
+                  <%= f.label :country, "Country<font color='green'>*</font>".html_safe %><br/>
+                  <em> <%= f.country_select(:country) %></em>
+                  <%= validation_error(@mentor.errors["country"]) %>
+                </div>
+                <div>
+                  <%= f.label :pincode, "Pincode<font color='green'>*</font>".html_safe%>
+                  <%= f.text_field :pincode%>
+                  <%= validation_error(@mentor.errors["pincode"]) %>
+                </div>
+                <div>
+                  <%= f.label :lande_line_no, "Land Line No"%>
+                  <%= f.text_field :lande_line_no%>
+                  <%#= f.text_field :phone1, :size => 3, :maxlength => 2, :class => "text" %>
+                  <%#= f.text_field :phone2, :size => 3, :maxlength => 4, :class => "text" %>
+                  <%#= f.text_field :phone3, :size => 4, :maxlength => 10, :class => "text" %>
+                  <%#= validation_error(@mentor.errors["lande_line_no"]) %>
+                </div>
+                <div>
+                  <%= f.label :mobile, "Mobile"%>
+                  <%= f.text_field :mobile%>
+                  <%= validation_error(@mentor.errors["mobile"]) %>
+                </div>
+                <br/> <em style="font-size: 14px;  left: 29px;    position: absolute;    top: 841px; "><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+              </td>
+            </tr>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 43px 0 19px;    width: 980px;") %>

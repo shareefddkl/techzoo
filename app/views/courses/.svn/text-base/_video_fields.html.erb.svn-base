@@ -1,0 +1,7 @@
+<div class="fields">
+  <%= f.text_field :title, :value => 'Topic Description',
+          :onfocus => "if(this.getValue()=='Topic Description'){this.clear();this.style.color = '#FFFFFF';}",
+          :onblur => "if(this.getValue()==''){this.setValue('Topic Description');this.style.color = '#FFFFFF';}", :style=>"margin: 10px -30px 0 -6px;" %>
+  <%= f.file_field :video %> 
+  <%= link_to_remove_fields image_tag("close button.png", :title => "Remove", :border=>0, :style=>'margin: 2px -15px -13px ;'), f %>
+</div>

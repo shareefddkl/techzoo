@@ -1,0 +1,21 @@
+production:
+  bin_path: '/opt/local/bin'  
+  searchd_file_path: '/var/www/apps/ts/current/public/system/db/sphinx'
+  searchd_log_file: '/var/www/apps/ts/current/log/searchd.log'
+  query_log_file: '/var/www/apps/ts/current/log/searchd.query.log'
+  pid_file: '/var/www/apps/ts/current/log/searchd.production.pid'
+  mem_limit: 1024M
+  sql_range_step: 512
+  charset_table: 0..9, A..Z->a..z, _, a..z, U+410..U+42F->U+430..U+44F, U+430..U+44F
+  ignore_chars: U+27
+  port: 9312
+  prefix_fields: bic2sc1, bic2sc2, bic2sc3, bic2sc4
+  min_prefix_len: 1
+  enable_star: 1
+ 
+development:
+  port: 3314
+  address: localhost
+  max_matches: 10000
+  enable_star: true
+  min_infix_len: 1

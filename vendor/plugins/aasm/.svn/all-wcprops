@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/Rakefile
+END
+aasm.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/aasm.gemspec
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/Gemfile
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/README.md
+END

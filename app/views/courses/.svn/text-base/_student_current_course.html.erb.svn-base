@@ -1,0 +1,11 @@
+<%if @courses_students.to_a.empty? %>
+  <div style="color:red;"> No Course Found </div>
+<%else%>
+  <%  @courses_students.each do |courses_student| %>
+    <% if courses_student.status == 'accepted' and courses_student.course.end_date > Date.today%>
+      <%= link_to courses_student.course.name, student_course_display_course_path(courses_student.course) %><br/>
+    <%else%>
+     
+    <% end %>
+  <%end%>
+<%end%>

@@ -1,0 +1,5 @@
+<%= form_for([@course, @video, @video.comments.build], :method => 'post', :remote => true) do |f| %>
+  <%= f.text_field :comment, :style=>"margin:-16px 0px 1px;  background:#545151; width: 198px; height: 27px; color: white; font-size: 15px;"  %>
+  <button type="submit" style="background: none; border: none; float: left; margin: 7px 134px 0 -10px;"><%=  image_tag('send button.png') %></button>
+
+<%end%>

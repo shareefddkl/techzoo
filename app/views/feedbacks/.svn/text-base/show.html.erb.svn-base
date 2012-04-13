@@ -1,0 +1,50 @@
+<% @message_subtab=true %>
+<table>
+  <tr>
+    <td>Course name</td>
+    <td>
+      <%= select_tag :id, options_for_select(Course.select("id, name").map{|course| [course.name, course.id]}, params[:id]), :onchange => "window.location.href = '/feedbacks/show?id='+this.value"  %>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td><%=current_user.account_id%></td>
+  </tr>
+<% for feedback in @feedback %>
+  <tr>
+    <td>Overall rating</td>
+    <td><%=(feedback.communication_skills+feedback.teaching_skill+feedback.course_material+feedback.doubt_clearence+feedback.subject_knowledge)/5%>/10</td>
+  </tr>
+    <tr>
+    <td>Course id*:</td>
+    <td><%=feedback.course_id%></td>
+  </tr>
+  <tr>
+    <td><b>Ratings</b></td>
+  </tr>
+    <tr>
+    <td>Communication Skill*:</td>
+    <td><%=feedback.communication_skills%>/10</td>
+  </tr>
+    <tr>
+    <td>Teaching Skill*:</td>
+    <td><%=feedback.teaching_skill%>/10</td>
+  </tr>
+  <tr>
+    <td>Course Material*:</td>
+    <td><%=feedback.course_material%>/10</td>
+  </tr>
+  <tr>
+    <td>Doubt Clearance*:</td>
+    <td><%=feedback.doubt_clearence%>/10</td>
+  </tr>
+  <tr>
+    <td>Subject Knowledge*:</td>
+    <td><%=feedback.subject_knowledge%>/10</td>
+  </tr>
+  <tr>
+    <td>Comment</td>
+    <td><%=feedback.comment%></td>
+  </tr>
+ <% end %>
+</table>

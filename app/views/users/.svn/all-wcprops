@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/techzoo/!svn/ver/274/trunk/app/views/users
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/66/trunk/app/views/users/index.html.erb
+END
+education.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/66/trunk/app/views/users/education.html.erb
+END
+picture.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/66/trunk/app/views/users/picture.html.erb
+END
+send_password_reset.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/1/trunk/app/views/users/send_password_reset.html.erb
+END
+setting.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/261/trunk/app/views/users/setting.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/153/trunk/app/views/users/show.html.erb
+END
+basic.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/66/trunk/app/views/users/basic.html.erb
+END
+forgot_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/238/trunk/app/views/users/forgot_password.html.erb
+END
+work.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/66/trunk/app/views/users/work.html.erb
+END
+email_setting.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/264/trunk/app/views/users/email_setting.html.erb
+END
+notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/273/trunk/app/views/users/notification.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/274/trunk/app/views/users/new.html.erb
+END
+photo.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/265/trunk/app/views/users/photo.html.erb
+END
+interest.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/66/trunk/app/views/users/interest.html.erb
+END
+newpost.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/128/trunk/app/views/users/newpost.html.erb
+END
+activate.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/1/trunk/app/views/users/activate.html.erb
+END
+reset_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/1/trunk/app/views/users/reset_password.html.erb
+END

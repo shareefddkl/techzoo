@@ -1,0 +1,29 @@
+<%#= form_for @course, :method => 'post' do  |f| %>
+
+<%#= f.label :course_type, "Course Type" %>
+<%#= f.select :course_type, ['webinar', 'live'], :onchange => "change_course(this.value)" %>
+<h1 style="float: left; margin: 39px 40px -37px; font-size: 18px;">Course Type</h1>
+<%= select_tag :course_course_type, options_for_select([["Select", "", {:class => "drop_down_bg"}], ["Webinar", "webinar", {:class => "drop_down_bg"}], ["Live", "live", {:class => "drop_down_bg"}]], (params[:course] ? params[:course][:course_type] : "")), :onchange => "change_course(this.value)", :style=>"margin: 10px 256px 0; background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;float: right;font-size: 23px; padding: 0 3px;" %>
+<img alt="" src="/images/line (separater).png" style="margin: 45px 28px -47px;"/>
+<div id="course_design_form" style="font-size:15px;color: black;">
+  <div id="course_form_div">
+    <% if params[:course] %>
+      <%= render :partial => "course_form" %>
+    <% end %>
+  </div>
+</div>
+<%# end %>
+<script type="text/javascript">
+  function change_course(course_type){
+    if(course_type != ''){
+      new Ajax.Updater('course_form_div', '/courses/'+course_type+'/get_course_form',
+      {
+        evalScripts: true,
+        asynchronus: true,
+        method: 'get'
+      });
+    }else{
+      $('course_form_div').innerHTML = ""
+    }
+  }
+</script>

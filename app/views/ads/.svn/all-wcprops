@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/techzoo/!svn/ver/273/trunk/app/views/ads
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/techzoo/!svn/ver/271/trunk/app/views/ads/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/techzoo/!svn/ver/271/trunk/app/views/ads/new.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/273/trunk/app/views/ads/_form.html.erb
+END

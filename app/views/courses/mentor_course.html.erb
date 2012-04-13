@@ -1,0 +1,55 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab_tab = true %>
+  </div>
+  <div id="home_sub_form">
+<%#@profile_subtab_tab=true%>
+    <br/> <h2 style=" width: 640px; height: 30px; margin: 5px 16px;padding: 0 0 4px; font-size: 16px; color: #4F4D4D; "> <%=@course.name%></h2><br/>
+    <div style=" background-image: url('/images/grey bg.png'); width: 600px; height: 486px;margin: -14px 29px;  font-size: 15px;  color: #6D6B6B;">
+      <table style="color:white; font-size: 17px; margin: 1px 10px;">
+        <tr height="45px">
+          <td width="220px">Course Type</td>
+          <td style="color:#759F31;"><%= @course.course_type %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Course Name</td>
+          <td style="color:#759F31;"><%= @course.name %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Abstract</td>
+          <td style="color:#759F31;"><%= @course.abstract %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Prerequisites</td>
+          <td style="color:#759F31;"><%= @course.prerequisites %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Course Content</td>
+          <td style="color:#759F31;"><%= @course.course_content %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Starting Date</td>
+          <td style="color:#759F31;"><%= @course.start_date %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Ending Date</td>
+          <td style="color:#759F31;"><%= @course.end_date %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Class Strength</td>
+          <td style="color:#759F31;"><%= @course.strength %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Category</td>
+          <td style="color:#759F31;"><%= @course.categories %></td>
+        </tr>
+        <tr height="45px">
+          <td width="220px">Course Fees</td>
+          <td style="color:#759F31;"><%= @course.course_fee %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

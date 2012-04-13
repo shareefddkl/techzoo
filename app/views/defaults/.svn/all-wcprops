@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/techzoo/!svn/ver/270/trunk/app/views/defaults
+END
+faq.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/268/trunk/app/views/defaults/faq.html.erb
+END
+about.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/267/trunk/app/views/defaults/about.html.erb
+END
+terms.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/270/trunk/app/views/defaults/terms.html.erb
+END
+news_events.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/267/trunk/app/views/defaults/news_events.html.erb
+END
+career.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/267/trunk/app/views/defaults/career.html.erb
+END
+demo.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/267/trunk/app/views/defaults/demo.html.erb
+END

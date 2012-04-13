@@ -1,0 +1,29 @@
+development:
+	application_id: 	325223007532015
+	api_key: xxxxxxxxxxxxxxxxxxxxxxxx
+	secret_key: e808178aad319a4c7d0bc58b18a776b2
+	canvas_page_name: http://apps.facebook.com/techzoo
+	callback_url: your_callback_url
+	pretty_errors: true
+	set_asset_host_to_callback_url: true
+	tunnel:
+	public_host_username:
+	public_host:
+	public_port: 4007
+	local_port: 3000
+	server_alive_interval: 0
+
+	production:
+	application_id: xxxxxxxxxxxx
+	api_key: xxxxxxxxxxxxxxxxxxxxxxxx
+	secret_key: xxxxxxxxxxxxxxxxxxxxxxxx
+	canvas_page_name: MyApps
+	callback_url: your_callback_url
+	pretty_errors: true
+	set_asset_host_to_callback_url: true
+	tunnel:
+	public_host_username:
+	public_host:
+	public_port:
+	local_port:
+	server_alive_interval: 0

@@ -1,0 +1,83 @@
+
+<%= form_for @course, :html => { :multipart => true} do |f| %>
+  <br/><div id="Live">
+    <div>
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name %>
+      <%= validation_error(@course.errors["name"]) %>
+    </div>
+    <div>
+      <%= f.label :abstract, "Abstract" %>
+      <%= f.text_area :abstract,  :rows => 3, :cols => 20 %>
+      <%= validation_error(@course.errors["abstract"]) %>
+    </div>
+    <div>
+      <%= f.label :prerequisites, "Prerequisites" %>
+      <%= f.text_area :prerequisites,  :rows => 3, :cols => 20 %>
+      <%= validation_error(@course.errors["prerequisites"]) %>
+    </div>
+    <div>
+      <%= f.label :course_content, "Course Content" %>
+      <%= f.text_area :course_content,  :rows => 3, :cols => 20 %>
+      <%= validation_error(@course.errors["course_content"]) %>
+    </div>
+    <div>
+      <%= f.label :language, "Course Language" %>
+      <%= f.text_field :language %>
+      <%= validation_error(@course.errors["language"]) %>
+    </div><br/>
+    <%if @course.course_type == 'live'%>
+      <%= f.hidden_field :course_type, :value => 'live' %>
+    <%else%>
+      <%= f.hidden_field :course_type, :value => 'webinar' %>
+      <label>File Upload</label>
+      <%= select_tag :description, options_for_select([["Video","video", {:class => "drop_down_bg"}],["Document","doc", {:class => "drop_down_bg"}]]),:onchange=>"select_file_type(this.value)" %>
+      <div id="document_form" style="display: none;">
+        <%= f.fields_for :documents do |builder| %>
+          <%=builder.text_field :title, :style => "color:#FFFFFF;",
+            :value => 'Topic Description',
+            :onfocus => "if(this.getValue()=='Topic Description'){this.clear();this.style.color = '#FFFFFF';}",
+            :onblur => "if(this.getValue()==''){this.setValue('Topic Description');this.style.color = '#FFFFFF';}", :style=>"margin: 10px -30px 0 -6px;" %>
+          <%= builder.file_field :document %>
+      <%# if builder.object.new_record? %>
+      <%#= render 'document_fields', :f => builder  %>
+      <%#end%>
+        <%end%>
+        <p><%= link_to_add_fields image_tag("add more button.png", :border => 0, :style=>'position: absolute;    right: 573px;    top: 707px;'), f, :documents %></p>
+      </div>
+      <div id="video_form" style="display: none;">
+        <%= f.fields_for :videos do |builder| %>
+          <%=builder.text_field :title, :style => "color:#FFFFFF;",
+            :value => 'Topic Description',
+            :onfocus => "if(this.getValue()=='Topic Description'){this.clear();this.style.color = '#FFFFFF';}",
+            :onblur => "if(this.getValue()==''){this.setValue('Topic Description');this.style.color = '#FFFFFF';}", :style=>"margin: 10px -30px 0 -6px;" %>
+          <%= builder.file_field :video %>
+      <%#= render 'video_fields', :f => builder  %>
+        <%end%>
+        <p><%= link_to_add_fields image_tag("add more button.png", :border => 0, :style=>'position: absolute;    right: 573px;    top: 707px;'), f, :videos %></p>
+      </div>
+    <%end%>
+    <% if !@course.new_record? %>
+      Documents:<br/>
+      <% @course.documents.each do |course_document| %>
+        <%= image_tag(course_document.document.url(:thumb)) %><br/>
+      <%end%>
+      Videos:<br/>
+      <% @course.videos.each do |course_video| %>
+        <%= image_tag(course_video.video.url(:thumbnail)) %><br/>
+      <%end%>
+    <%end%>
+  </div>
+  <button type="submit" style=" background: none repeat scroll 0 0 transparent;
+          border: medium none;
+          float: none;
+          height: 30px;
+          position: absolute;
+          left: 900px;
+          top: 246px;
+          width: 80px;"><%=  image_tag('save button.png') %></button>
+<%end%>
+<script>
+  
+ 
+</script>

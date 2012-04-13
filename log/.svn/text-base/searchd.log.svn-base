@@ -1,0 +1,144 @@
+[Mon Aug 29 19:47:31.793 2011] [13065] accepting connections
+[Mon Aug 29 19:47:51.775 2011] [13065] caught SIGTERM, shutting down
+[Mon Aug 29 19:47:51.776 2011] [13065] shutdown complete
+[Mon Aug 29 19:47:52.056 2011] [13119] accepting connections
+[Mon Aug 29 19:51:07.126 2011] [13119] rotating indices (seamless=1)
+[Mon Aug 29 19:51:07.130 2011] [13119] rotating index 'user_core': success
+[Mon Aug 29 19:51:07.130 2011] [13119] rotating finished
+[Mon Aug 29 19:51:07.191 2011] [13119] rotating indices (seamless=1)
+[Mon Aug 29 19:51:07.195 2011] [13119] rotating index 'user_core': success
+[Mon Aug 29 19:51:07.195 2011] [13119] rotating finished
+[Mon Aug 29 19:51:26.065 2011] [13119] caught SIGTERM, shutting down
+[Mon Aug 29 19:51:26.066 2011] [13119] shutdown complete
+[Mon Aug 29 19:51:26.340 2011] [13324] accepting connections
+[Mon Aug 29 19:52:53.281 2011] [13324] rotating indices (seamless=1)
+[Mon Aug 29 19:52:53.283 2011] [13324] rotating index 'user_core': success
+[Mon Aug 29 19:52:53.283 2011] [13324] rotating finished
+[Mon Aug 29 19:52:53.332 2011] [13324] rotating indices (seamless=1)
+[Mon Aug 29 19:52:53.333 2011] [13324] rotating index 'user_core': success
+[Mon Aug 29 19:52:53.333 2011] [13324] rotating finished
+[Mon Aug 29 19:53:19.662 2011] [13324] rotating indices (seamless=1)
+[Mon Aug 29 19:53:19.664 2011] [13324] rotating index 'user_core': success
+[Mon Aug 29 19:53:19.664 2011] [13324] rotating finished
+[Mon Aug 29 19:53:19.714 2011] [13324] rotating indices (seamless=1)
+[Mon Aug 29 19:53:19.715 2011] [13324] rotating index 'user_core': success
+[Mon Aug 29 19:53:19.715 2011] [13324] rotating finished
+[Mon Aug 29 20:32:35.077 2011] [13324] rotating indices (seamless=1)
+[Mon Aug 29 20:32:35.083 2011] [13324] rotating index 'user_core': success
+[Mon Aug 29 20:32:35.083 2011] [13324] rotating finished
+[Mon Aug 29 20:32:35.100 2011] [13324] rotating indices (seamless=1)
+[Mon Aug 29 20:32:35.108 2011] [13324] rotating index 'user_core': success
+[Mon Aug 29 20:32:35.108 2011] [13324] rotating finished
+[Mon Aug 29 20:55:48.361 2011] [13324] caught SIGTERM, shutting down
+[Mon Aug 29 20:55:48.362 2011] [13324] shutdown complete
+[Fri Sep  2 15:13:06.028 2011] [ 4467] accepting connections
+[Fri Sep  2 15:13:23.865 2011] [ 4467] caught SIGTERM, shutting down
+[Fri Sep  2 15:13:23.865 2011] [ 4467] shutdown complete
+[Fri Sep  2 15:13:34.327 2011] [ 4504] accepting connections
+[Fri Sep  2 15:36:25.505 2011] [ 4504] caught SIGTERM, shutting down
+[Fri Sep  2 15:36:25.505 2011] [ 4504] shutdown complete
+[Fri Sep  2 15:36:50.079 2011] [ 4687] accepting connections
+[Fri Sep  2 15:48:27.255 2011] [ 4687] caught SIGTERM, shutting down
+[Fri Sep  2 15:48:27.255 2011] [ 4687] shutdown complete
+[Fri Sep  2 15:48:47.463 2011] [ 4791] accepting connections
+[Fri Sep  2 15:57:35.445 2011] [ 4791] caught SIGTERM, shutting down
+[Fri Sep  2 15:57:35.445 2011] [ 4791] shutdown complete
+[Fri Sep  2 15:59:42.633 2011] [ 4919] accepting connections
+[Fri Sep  2 18:53:15.009 2011] [ 4919] caught SIGTERM, shutting down
+[Fri Sep  2 18:53:15.012 2011] [ 4919] shutdown complete
+[Sat Sep  3 10:43:55.458 2011] [ 2124] accepting connections
+[Sat Sep  3 15:00:51.807 2011] [ 2124] caught SIGTERM, shutting down
+[Sat Sep  3 15:00:51.808 2011] [ 2124] shutdown complete
+[Sat Sep  3 16:44:23.124 2011] [ 2377] accepting connections
+[Sat Sep  3 18:05:33.552 2011] [ 2377] caught SIGTERM, shutting down
+[Sat Sep  3 18:05:33.552 2011] [ 2377] shutdown complete
+[Sun Sep  4 10:53:51.409 2011] [ 1860] accepting connections
+[Sun Sep  4 11:00:51.473 2011] [ 1860] caught SIGTERM, shutting down
+[Sun Sep  4 11:00:51.473 2011] [ 1860] shutdown complete
+[Sun Sep  4 11:01:39.422 2011] [ 2395] accepting connections
+[Sun Sep  4 12:14:40.472 2011] [ 2395] caught SIGTERM, shutting down
+[Sun Sep  4 12:14:40.472 2011] [ 2395] shutdown complete
+[Sun Sep  4 12:15:52.636 2011] [ 3164] accepting connections
+[Sun Sep  4 15:00:11.887 2011] [ 3164] caught SIGTERM, shutting down
+[Sun Sep  4 15:00:11.888 2011] [ 3164] shutdown complete
+[Sun Sep  4 15:00:38.037 2011] [ 5032] accepting connections
+[Sun Sep  4 16:16:15.919 2011] [ 5032] caught SIGTERM, shutting down
+[Sun Sep  4 16:16:15.920 2011] [ 5032] shutdown complete
+[Sun Sep  4 16:16:29.630 2011] [ 5647] accepting connections
+[Sun Sep  4 16:24:42.866 2011] [ 5647] caught SIGTERM, shutting down
+[Sun Sep  4 16:24:42.866 2011] [ 5647] shutdown complete
+[Sun Sep  4 16:25:04.966 2011] [ 6226] accepting connections
+[Sun Sep  4 16:27:56.651 2011] [ 6226] caught SIGTERM, shutting down
+[Sun Sep  4 16:27:56.651 2011] [ 6226] shutdown complete
+[Sun Sep  4 16:28:20.686 2011] [ 6354] accepting connections
+[Sun Sep  4 16:33:26.668 2011] [ 6354] caught SIGTERM, shutting down
+[Sun Sep  4 16:33:26.668 2011] [ 6354] shutdown complete
+[Sun Sep  4 16:33:46.002 2011] [ 6483] accepting connections
+[Sun Sep  4 16:41:49.820 2011] [ 6483] caught SIGTERM, shutting down
+[Sun Sep  4 16:41:49.820 2011] [ 6483] shutdown complete
+[Sun Sep  4 16:42:51.298 2011] [ 6676] accepting connections
+[Sun Sep  4 16:45:26.047 2011] [ 6676] caught SIGTERM, shutting down
+[Sun Sep  4 16:45:26.047 2011] [ 6676] shutdown complete
+[Sun Sep  4 16:47:00.515 2011] [ 6774] accepting connections
+[Sun Sep  4 17:06:56.570 2011] [ 6774] caught SIGTERM, shutting down
+[Sun Sep  4 17:06:56.571 2011] [ 6774] shutdown complete
+[Sun Sep  4 17:11:47.803 2011] [ 2374] accepting connections
+[Sun Sep  4 17:15:24.749 2011] [ 2374] caught SIGTERM, shutting down
+[Sun Sep  4 17:15:24.750 2011] [ 2374] shutdown complete
+[Sun Sep  4 17:17:41.992 2011] [ 2578] accepting connections
+[Sun Sep  4 17:44:14.781 2011] [ 2578] caught SIGTERM, shutting down
+[Sun Sep  4 17:44:14.781 2011] [ 2578] shutdown complete
+[Sun Sep  4 17:44:30.269 2011] [ 2795] accepting connections
+[Sun Sep  4 17:45:40.103 2011] [ 2795] caught SIGTERM, shutting down
+[Sun Sep  4 17:45:40.103 2011] [ 2795] shutdown complete
+[Mon Sep  5 10:17:26.767 2011] [ 1769] accepting connections
+[Mon Sep  5 11:55:55.121 2011] [ 1769] caught SIGTERM, shutting down
+[Mon Sep  5 11:55:55.121 2011] [ 1769] shutdown complete
+[Mon Sep  5 11:56:31.532 2011] [ 2925] accepting connections
+[Mon Sep  5 18:53:39.957 2011] [ 2925] caught SIGTERM, shutting down
+[Mon Sep  5 18:53:39.957 2011] [ 2925] shutdown complete
+[Mon Sep  5 18:54:19.394 2011] [ 4432] accepting connections
+[Mon Sep  5 18:58:55.090 2011] [ 4432] caught SIGTERM, shutting down
+[Mon Sep  5 18:58:55.090 2011] [ 4432] shutdown complete
+[Mon Sep  5 19:01:19.023 2011] [ 4548] accepting connections
+[Mon Sep  5 19:02:45.512 2011] [ 4548] caught SIGTERM, shutting down
+[Mon Sep  5 19:02:45.512 2011] [ 4548] shutdown complete
+[Mon Sep  5 19:04:55.915 2011] [ 4639] accepting connections
+[Mon Sep  5 19:18:11.508 2011] [ 4639] caught SIGTERM, shutting down
+[Mon Sep  5 19:18:11.508 2011] [ 4639] shutdown complete
+[Tue Sep  6 15:19:34.035 2011] [ 3128] accepting connections
+[Tue Sep  6 17:54:16.625 2011] [ 3128] caught SIGTERM, shutting down
+[Tue Sep  6 17:54:16.626 2011] [ 3128] shutdown complete
+[Tue Sep  6 18:34:49.923 2011] [ 5261] accepting connections
+[Tue Sep  6 18:44:47.447 2011] [ 5261] caught SIGTERM, shutting down
+[Tue Sep  6 18:44:47.447 2011] [ 5261] shutdown complete
+[Wed Sep  7 12:08:58.537 2011] [ 2675] accepting connections
+[Wed Sep  7 12:37:15.491 2011] [ 2675] rotating indices (seamless=1)
+[Wed Sep  7 12:37:15.495 2011] [ 2675] rotating index 'user_core': success
+[Wed Sep  7 12:37:15.495 2011] [ 2675] rotating finished
+[Wed Sep  7 12:37:15.524 2011] [ 2675] rotating indices (seamless=1)
+[Wed Sep  7 12:37:15.527 2011] [ 2675] rotating index 'user_core': success
+[Wed Sep  7 12:37:15.527 2011] [ 2675] rotating finished
+[Wed Sep  7 12:37:26.869 2011] [ 2675] caught SIGTERM, shutting down
+[Wed Sep  7 12:37:26.870 2011] [ 2675] shutdown complete
+[Wed Sep  7 12:37:27.158 2011] [ 3400] accepting connections
+[Wed Sep  7 12:40:03.985 2011] [ 3400] rotating indices (seamless=1)
+[Wed Sep  7 12:40:03.990 2011] [ 3400] rotating index 'user_core': success
+[Wed Sep  7 12:40:03.990 2011] [ 3400] rotating finished
+[Wed Sep  7 12:40:04.009 2011] [ 3400] rotating indices (seamless=1)
+[Wed Sep  7 12:40:04.016 2011] [ 3400] rotating index 'user_core': success
+[Wed Sep  7 12:40:04.016 2011] [ 3400] rotating finished
+[Wed Sep  7 12:40:11.841 2011] [ 3400] caught SIGTERM, shutting down
+[Wed Sep  7 12:40:11.841 2011] [ 3400] shutdown complete
+[Wed Sep  7 12:40:12.123 2011] [ 3471] accepting connections
+[Wed Sep  7 13:03:44.465 2011] [ 3471] rotating indices (seamless=1)
+[Wed Sep  7 13:03:44.467 2011] [ 3471] rotating index 'user_core': success
+[Wed Sep  7 13:03:44.469 2011] [ 3471] rotating index 'course_core': success
+[Wed Sep  7 13:03:44.469 2011] [ 3471] rotating finished
+[Wed Sep  7 13:03:44.492 2011] [ 3471] rotating indices (seamless=1)
+[Wed Sep  7 13:03:44.500 2011] [ 3471] rotating index 'user_core': success
+[Wed Sep  7 13:03:44.505 2011] [ 3471] rotating index 'course_core': success
+[Wed Sep  7 13:03:44.505 2011] [ 3471] rotating finished
+[Wed Sep  7 13:03:54.165 2011] [ 3471] caught SIGTERM, shutting down
+[Wed Sep  7 13:03:54.166 2011] [ 3471] shutdown complete
+[Wed Sep  7 13:03:54.412 2011] [ 4019] accepting connections

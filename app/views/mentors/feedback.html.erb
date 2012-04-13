@@ -1,0 +1,117 @@
+<% @message_subtab=true %>
+<table>
+  <tr>
+    <td>Course name</td>
+    <td>
+      <%= select_tag :id, options_for_select(@mentor.user.courses.select("id, name").map{|course| [course.name, course.id]}, params[:id]), :onchange => "window.location.href = '/mentors/feedback?id='+this.value"  %>
+    </td>
+  </tr>
+
+  <tr>
+    <td><%=current_user.account_id%></td>
+  </tr>
+  <% for course in @mentor.user.courses %>
+    <% for feedback in course.feedbacks %>
+  <table>
+    <tr>
+      <td><%= feedback.user.account_id%>&nbsp;&nbsp;&nbsp;&nbsp;<%= feedback.user.student.first_name %></td>
+    </tr>
+    <tr>
+    <tr>
+      <td style="color: #494949;padding-left: 100px"><u><%= feedback.course.name%></u></td>
+    </tr>
+      <td>Overall rating
+        <div class="meter">
+
+          <span style="width :<%= ((feedback.communication_skills+feedback.teaching_skill+feedback.course_material+feedback.doubt_clearence+feedback.subject_knowledge)/5)%>%;"></span>
+
+          <td><%=(feedback.communication_skills+feedback.teaching_skill+feedback.course_material+feedback.doubt_clearence+feedback.subject_knowledge)/5%>/10
+          </td>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td style='color :red'; align='center';><b>Ratings</b></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Communication Skills
+        <div class="meter">
+          <span style="width: <%= (feedback.communication_skills/10)*100 %>%"></span>
+          <td><%= feedback.communication_skills/10 %>/10
+          </td>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Teaching skill
+        <div class="meter">
+          <span style="width: <%= (feedback.teaching_skill/10)*100 %>%"></span>
+          <td><%= feedback.teaching_skill/10 %>/10
+          </td>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Course Material
+        <div class="meter">
+          <span style="width: <%= (feedback.course_material/10)*100 %>%"></span>
+          <td><%= feedback.course_material/10 %>/10
+          </td>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Doubt Clearence
+        <div class="meter">
+          <span style="width: <%= (feedback.doubt_clearence/10)*100 %>%"></span>
+          <td><%= feedback.doubt_clearence/10 %>/10
+          </td>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Subject Knowledge
+        <div class="meter">
+
+          <span style="width: <%= (feedback.subject_knowledge/10)*100 %>%"></span>
+
+          <td><%= feedback.subject_knowledge/10 %>/10
+          </td>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td style = 'color :blue'>Comment</td>
+      <td><%=feedback.comment%></td>
+  </tr>
+  <tr>
+      <td></td>
+    </tr>
+    </table><hr></hr>
+    <% end %>
+  <%end%>
+</table>

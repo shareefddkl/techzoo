@@ -1,0 +1,88 @@
+<div id="background_form">
+  <div id="sub_search_navigation">
+    <% @search_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <h1 style="float:left;font-size: 16px;margin: 33px 19px; color: #545151">Advance Search</h1><br/>
+    <div id="search_form" style="font-size:15px;color: black; margin: 90px 24px;">
+      <%= form_tag advance_search_searches_path, :method => 'get' do %>
+        <div style="float:right; margin: -82px 22px;"><%= select_tag "all", options_for_select([['Mentor','Mentor', {:class => "drop_down_bg"}] , ['Learner','Student', {:class => "drop_down_bg"}]],params[:all]), :onchange => "changeOption(this.value)"%></div>
+        <label>First Name</label>
+        <%= text_field_tag "first_name", params[:first_name] %><br/>
+        <label>Middle Name</label>
+        <%= text_field_tag "middle_name", params[:middle_name] %><br/>
+        <label>Last Name</label>
+        <%= text_field_tag "last_name", params[:last_name] %><br/>
+        <label>City</label>
+        <%= text_field_tag "city", params[:city] %><br/>
+        <label>State</label>
+        <%= text_field_tag "state", params[:state] %><br/>
+        <div id='course'>
+          <label>Course</label>
+          <%= text_field_tag "course", params[:course]%>
+        </div>
+        <label>Country</label>
+        <%= country_select(:country,:UnitedStates) %><br/>
+        <div id='student_education' style="display: none;">
+          <label>Category</label>
+          <%= select_tag "student_education_type", options_for_select([['in_school', {:class => "drop_down_bg"}],['college', {:class => "drop_down_bg"}],['phd', {:class => "drop_down_bg"}],['pg', {:class => "drop_down_bg"}],['professional', {:class => "drop_down_bg"}],['others', {:class => "drop_down_bg"}]], params[:student_education_type]) %>
+        </div>
+        <div id='mentor_fields'>
+          <label>Category</label>
+          <%= select_tag "mentor_education_type",options_for_select([['professor', {:class => "drop_down_bg"}],['school', {:class => "drop_down_bg"}],['corporate', {:class => "drop_down_bg"}],['research', {:class => "drop_down_bg"}],['professional', {:class => "drop_down_bg"}],['good', {:class => "drop_down_bg"}]],params[:mentor_education_type]) %><br/>
+          <label>Course Fee: </label>
+          <%= select_tag "fees", options_for_select([['all', {:class => "drop_down_bg"}], ['free', {:class => "drop_down_bg"}], ['paid', {:class => "drop_down_bg"}]], params[:fees]) %><br/>
+          <label>Status:</label>
+          <%= select_tag "status", options_for_select([['', {:class => "drop_down_bg"}],['active', {:class => "drop_down_bg"}], ['inactive', {:class => "drop_down_bg"}]], (params[:status] ? params[:status] : '' )) %><br/>
+        </div>
+        <button type="submit"  style="background: none repeat scroll 0 0 transparent;
+                border: medium none;
+                float: left;
+                height: 29px;
+                margin: 42px 90px 0 62px;
+                width: 111px;"><%=  image_tag('search button.png') %></button>
+        <button type="reset" value="Reset field"  style="background: none repeat scroll 0 0 transparent;
+                border: medium none;
+                float: right;
+                height: 29px;
+                margin: -31px 210px;
+                width: 100px;"><%=  image_tag('reset button.png') %></button>
+              <% end %>
+    </div>
+    <%=image_tag("line (separater).png",  :style=>"margin: 5px 28px -23px;") %>
+    <% if @search_users && (params[:last_name].present? || params[:first_name].present? || params[:middle_name].present? || params[:city].present? || params[:state].present? || params[:student_education_type].present? || params[:mentor_education_type].present?) %>
+      <br/><h1 style="margin: 51px 24px 30px; font-size: 18px; color:#545151;" >Search Result</h1>
+      <table cellpadding="8px" cellspacing="0px"  width="90%" border="0"  style="margin: 0px 23px;">
+        <tr style="color:#545151; font-size: 15px;" >
+          <th>Id code</th>
+          <th>Full Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Mentor/Learner</th>
+          <th>Category</th>
+        </tr>
+        <% @search_users.each do |a| %>
+          <tr height="40px" style=" color:#5B5A5A;font-size:13px;">
+            <td>&nbsp;&nbsp;<%if params[:all] == 'Mentor'%>
+                <%=link_to a.user.account_id, mentor_path(a.id)%>
+              <%else%>
+                <%=link_to a.user.account_id, student_path(a.id)%>
+              <%end%>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%if params[:all] == 'Mentor'%>
+                <%=link_to a.user.display_name, mentor_path(a.id)%>
+              <%else%>
+                <%=link_to a.user.display_name, student_path(a.id)%>
+              <%end%>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= a.user.user_type %></td>
+            <td>&nbsp;&nbsp;<%= a.education_type %></td>
+            <!--<td><%#= a.user.account_id %></td>-->
+            <td><%#= a.user.name %></td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+

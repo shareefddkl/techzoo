@@ -1,0 +1,84 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h2 style=" background-color: rgb(84, 81, 81); width: 649px; height: 25px; margin: 5px 5px;padding: 0 0 4px; font-size: 16px; color: white; "><b style="font-style:italic; margin: 5px 20px;float: left;">Work Details</b></h2><br/>
+    <%= form_for current_user.student, :url => update_work_student_path(current_user.student), :method => :put do |f| %>
+      <table width="50%" style="margin: 1px 17px -16px; font-size: 15px; color: #6D6C6C;">
+        <tr>
+          <td>Employer</td>
+          <td><%= f.text_field :employer, :style=>"background:#545151; width: 198px; height: 27px; color: white; font-size: 15px;" %></td>
+        </tr>
+        <tr>
+          <td>Designation</td>
+          <td><%= f.text_field :working, :style=>"background:#545151; width: 198px; height: 27px; color: white; font-size: 15px;" %></td>
+        </tr>
+        <tr>
+          <td id="tabs" >
+            <a href="javascript: display_tab('work')"></a>
+          </td>
+        </tr>
+      </table>
+      <div id="work_deatails" style="background: url('/images/white paper.png'); width: 306px; height: 299px; margin: -90px 5px; float:right;">
+        <table style="margin:20px 24px; font-size: 15px; color: #6D6C6C;">
+          <tr height="49px;">
+            <td>
+              <input type="radio" name="student"  onclick="display_work_from('more_work_form')" />&nbsp;&nbsp;More Work Details
+            </td>
+          </tr>
+          <tr>
+            <td  id="more_work_form" style="display:none"><%=f.text_area :more_work_details , :rows => 2, :cols => 30, :style=>"margin: -16px 33px -15px; background-color: #545151; color: white;-moz-border-radius: 5px; width: 180px;height: 53px;"%></td>
+          </tr>
+          <tr height="49px;"><td>
+              <input type="radio" name="student"  onclick="display_work_from('research_form')" />&nbsp;&nbsp; Research Paper</td></tr>
+          <tr>
+            <td  id="research_form" style="display:none"><%=f.text_area :research_paper , :rows => 2, :cols => 30, :style=>"margin: -15px 33px -15px; background-color: #545151; color: white;-moz-border-radius: 5px; width: 180px;height: 53px;"%></td>
+          </tr>
+          <tr height="49px;"><td>
+              <input type="radio" name="student"  onclick="display_work_from('research_work_form')" />&nbsp;&nbsp; Research Work
+            </td></tr>
+          <tr>
+            <td id="research_work_form" style="display:none">
+              <%=f.text_area :research_work , :rows => 2, :cols => 30, :style=>"margin: -16px 33px -15px; background-color: #545151; color: white;-moz-border-radius: 5px; width: 180px;height: 53px;"%>
+            </td>
+          </tr>
+          <tr height="49px;"><td>
+              <input type="radio" name="student"  onclick="display_work_from('misc_form')" />&nbsp;&nbsp; Misc
+            </td>
+          </tr>
+          <tr>
+            <td id="misc_form" style="display:none">
+              <%=f.text_area :misc, :rows => 2, :cols => 30, :style=>"margin: -18px 33px -21px; background-color: #545151; color: white;-moz-border-radius: 5px; width: 180px;height: 53px;"%>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button type="submit" style="background: none; border: none;float: right; margin: -117px -296px;"><%=  image_tag('save button.png') %></button>
+    <% end %>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+
+
+<script>
+  function display_work_from(form_id){
+    var forms = ["more_work_form", "research_form", "research_work_form", "misc_form"]
+    for(i=0; i<forms.length; i++){
+
+      document.getElementById(forms[i]).style.display = "none";
+    }
+    document.getElementById(form_id).style.display = "block";
+  }
+
+  function display_tab(tab_id){
+    var tabs = ["work"]
+    for(i=0; i<tabs.length; i++){
+
+      document.getElementById(tabs[i]).style.display = "none";
+    }
+    document.getElementById(tab_id).style.display = "block";
+  }
+</script>
+

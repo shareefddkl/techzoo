@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mentors</title>
+    <script type="text/javascript" src="/javascripts/flowplayer-3.2.6.min.js"></script>
+<%#= javascript_include_tag  'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+
+<%#= javascript_include_tag 'http://cdn.pandastream.com/u/1.3/jquery.panda-uploader.min.js' %>
+
+    <!-- For swf player -->
+<%#= javascript_include_tag 'swfobject','application' %>
+    <%= stylesheet_link_tag  "style","mentor" %>
+    <%= javascript_include_tag "prototype", "application",  "effects", "dragdrop", "rails"%>
+    <%= calendar_date_select_includes %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <% ['notice', 'error', 'warning'].each do |flash_key| %>
+      <% if flash[flash_key.to_sym] %>
+        <span class="<%= flash_key %>">
+          <%= flash[flash_key.to_sym] %>
+        </span>
+      <% end %>
+    <% end %>
+    <div id="mentor_main_div">
+      <div id="sign_out">
+        <em style="color:#CDF3F7; float: left;margin: 5px;">Welcome,<%=current_user.display_name%></em>
+        <%= link_to image_tag('logout button.png'), logout_path %>
+      </div>
+      <div id="mentor_banner" style="margin: 0 210px;">
+        <p style="color:#ffffff;font-size: 40px;margin: 0 -11px;padding: 29px;"> LOGO</p>
+        <div  class="mentor_chromemenu">
+          <table>
+            <tr>
+              <td>
+                <ul>
+                  <li><span><%= link_to "Home", home_index_path, :class => (params[:controller] == "home" || params[:controller] == "messages" || (params[:controller] == "courses" && (params[:action] == "learner" || params[:action] == "course" ||  params[:action] == "topic")))  ? "selected" : "" %></span></li>
+                  <li><span><%= link_to "Profile", mentors_path, :class => (params[:controller] == "mentors" || (params[:controller] ==  "users" && params[:action] == "photo")) ? "selected" : "" %></span></li>
+                  <li><span><%= link_to "Courses", courses_path, :class => (params[:controller] == "courses" && (params[:action] == 'index' ||params[:action] == 'new' || params[:action] == 'course_control'||params[:action] == 'course_view'||params[:action] == 'show'||params[:action] == 'edit') ) ? "selected" : "" %></span></li>
+                  <li><span><%= link_to "Settings", setting_users_path , :class => (params[:controller] == "users" && params[:action] == "setting") || (params[:controller] == "ads") ? "selected" : ""%></span></li>
+                  <li><span><%= link_to "Search", accountid_search_searches_path, :class => params[:controller] == "searches" ? "selected" : "" %></span></li>
+                  <li><span><%= link_to "Blog", blogs_path, :class => params[:controller] == "blogs" ? "selected" : "" %></span></li>
+                  <div style="padding-left: 127px;margin: -16px 467px;"><%= render :partial => "courses/search" %><%#= text_field_tag(:search, "Search",:style => "color:#768d9b;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %></div>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <img alt="" src="/images/banner shadow.png" style="height: 9px;margin: -35px 16px 10px;width: 954px;"/>
+        </div>
+        <% if @message_subtab %>
+          <div id="message_navigation">
+            <ul>
+              <li><span><%= link_to "Messages", messages_path, :class => params[:controller] == "messages" ? "selected" : "" %></span></li></ul>
+          </div>
+          <div id="current_course_navigation">
+            <ul>
+              <!--<span><%#= link_to "Inbox #{(msg_count = current_user.received_messages.where("receiver_status = 'unread'").count and msg_count > 0) ? "(#{msg_count})" : ""}", inbox_messages_path %></span>-->
+              <li><span><%=link_to_function "Current Course", 'current_course()',:class => (params[:controller] ==  "courses" && (params[:action] == "current" || params[:action] =='topic')) ? "selected" : "" %><img alt="" src="/images/expanding arrow.png" style="left: 85px;    position: absolute;    top: 18px;"/></span>
+              </li></ul></div>
+          <div id="navigation">
+            <ul>
+              <li><span><%= nav_link 'Learner Application', learner_courses_path %></span></li>
+              <li> <span><%= nav_link 'Course History', course_courses_path %></span></li>
+              <span><%#= link_to 'My feedback', feedback_courses_path %></span>
+            </ul>
+          </div>
+        <% elsif @profile_subtab %>
+          <div id="profile_navigation">
+            <ul>
+              <li><span><%= nav_link 'Basin Info', basic_info_mentors_path %></span></li>
+              <li><span><%= nav_link 'Picture', photo_users_path %></span></li>
+              <li><span><%= nav_link 'Education', education_profile_mentor_path(current_user) %></span></li>
+              <li><span><%= nav_link 'Work', work_mentors_path %></span></li>
+              <li><span><%= nav_link 'Interest', interest_mentors_path %></span></li>
+              <li><span><%= nav_link 'Invite', invite_friends_mentors_path %></span></li>
+            </ul>
+          </div>
+        <% elsif @course_subtab %>
+          <div id="course_navigation">
+            <ul>
+              <li><span><%= nav_link 'Course Design', new_course_path %></span></li>
+              <li><span><%= nav_link 'Course Control', course_control_courses_path %></span></li>
+              <li><span><%= nav_link 'Course View', course_view_courses_path %></span></li>
+            </ul>
+          </div>
+        <% elsif @setting_subtab %>
+          <div id="account_navigation">
+            <ul>
+              <li><span><%=nav_link 'General', setting_users_path %></span></li>
+              <li><span><%= nav_link 'Ads Settings', new_ad_path %></span></li>
+            </ul>
+          </div>
+        <% elsif @course_control_subtab %>
+          <div id="course_navigation">
+            <ul>
+              <li><span><%= nav_link 'Course Design', new_course_path %></span></li>
+              <li><span><%= nav_link 'Course Control', course_control_courses_path %></span></li>
+              <li><span><%= nav_link 'Course View', course_view_courses_path %></span></li>
+            </ul>
+            <% if current_user.courses.exists? %>
+              <div style="margin: 149px 18px ; position: absolute;">
+                status<br />
+                <%= @course.status %><br />
+                <% if @course.end_date? %>
+                  <%= @course.end_date < Date.today ? 'closed' : 'open' %>
+                <%else%>
+                <% end %>
+              </div>
+            <%else%>
+            <%end%>
+          </div>
+        <% elsif @blog_subtab %>
+          <div id="profile_navigation">
+            <ul>
+              <li><span><%= nav_link "Blog View", BLOG_URL %></span></li>
+              <li><span><%= nav_link "Blog Controll", "#{BLOG_URL}/admin" %></span></li>
+              <li><span><%= nav_link "Blog Search", search_blogs_path %></span></li>
+            </ul>
+          </div>
+        <%  elsif @search_subtab  %>
+          <div id="search_navigation">
+            <ul>
+              <li><span><%= nav_link "Search by Userid", accountid_search_searches_path %></span></li>
+              <li><span><%= nav_link "Search by Name", name_search_searches_path %></span></li>
+              <li><span><%= nav_link "Search by Course", course_search_searches_path %></span></li>
+              <li><span><%= nav_link "Advance search", advance_search_searches_path %></span></li>
+            </ul>
+          </div>
+        <% end %>
+        <div id="mentor_container">
+          <%= yield %>
+        </div>
+        <div id="mentor_content" style="width :85%;float: left;position: absolute;margin: 27px 3px;top: 1002pt;left: 158pt;">
+          <div id="mentor_leftbar">
+            <p style="font-family: 'Liberation Sans',sans-serif; font-size: 16px;color:white; margin: -74px 0 10px;">Current Courses</p>
+            <!--<%#=link_to 'Development blog',''%><br />
+<%#=link_to 'Documentation',''%><br />
+<%#=link_to 'Plugins',''%><br />
+<%#=link_to 'Suggest Ideas',''%><br />
+<%#=link_to 'Support Forum',''%><br />
+<%#=link_to 'Themes',''%><br />-->
+            <% Course.all(:limit => 5, :order => 'created_at Desc').each do |course| %>
+              <%= course.name %><br />
+            <%end%>
+          </div>
+          <div id="mentor_inform">
+            <p style="float :left;width :223px;padding-left :1em;font-family: 'Liberation Sans',sans-serif; font-size: 16px;color :white; margin: -12px -14px;"> Upcoming Courses</p>
+            <p style='color: #768d9b;   font-family:"Liberation Sans"; font-size:12px;    line-height: 20px;    margin: 18px 3px;    padding-top: 1em;    width: 253px;'>Lorem ipsum dolor sit amet, consectetur adipicising elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna ali. Ut enim ad minim veniam, quis nostrud exercitation ullam co. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+          </div>
+          <div id="mentor_bottom">
+            <p style="font-family: 'Liberation Sans',sans-serif; font-size: 16px;color:white; margin:-72px 0 12px;">News & Events</p>
+            <%= link_to "In nec nisi quis dui volutpat.", ''%><br />
+            <%= link_to "Cras pharetra,enim id nullam.", ''%><br />
+            <%=  link_to "Donec luctus egestas elit sed.", ""%><br />
+            <%=  link_to "Morbi vehicula risus a nullam.",''%><br />
+            <%=  link_to "Pellentesque sodales, odio id.", ''%>
+          </div>
+          <div style="color :#768d9b;padding-top :2.5em;font-family:'Liberation Sans'; font-size:12px;  left: 766px;position: absolute;width: 230px; line-height: 19px;">
+            <p style="font-family: 'Liberation Sans',sans-serif; font-size: 16px;padding-left :1em;float :left;color :white;width: 130px; margin: -43px -19px;">Get In Touch</p>
+            Firm:Fake Firm<br />
+            Address :123 FakeStreet<br />
+            25 Newyork<br />
+            phone:+1233213432<br />
+            Fax +4332 434235 5453<br />
+            Email :info@companysite.com<br />
+          </div>
+          <div id="mentor_footer" style="background: url('/images/footer.png'); width: 969px; height: 30px; margin: 242px 3px 0;">
+            <span style="font-size: 11px;float :left;color: #748c9a; margin: -15px 17px;font-family:'Arial';">@copyright Sitename. All Rights Reserved.</span><span style="font-size: 11px;float :right;color:#748c9a; margin: -15px 39px;font-family:'Arial';">&nbsp;&nbsp;<%= link_to 'Home',home_index_path%>&nbsp;&nbsp;| &nbsp;&nbsp;<%= link_to 'About us',about_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Career',career_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'News',news_events_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'FAQ',faq_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Suggestion',new_suggestion_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Feedback',new_suggestion_path%>&nbsp;&nbsp;</span>
+          </div>
+        </div>
+        <div id='overlay' onclick='hide_popup()' style='filter:alpha(opacity=50);'></div>
+        <div id='overlay1' onclick='hide_popup()' style='filter:alpha(opacity=50);'></div>
+        <div align='center' id='popup_box'>
+          <div style='float: right; margin-top: -40px;margin-right:-40px'>
+            <a href="#" onclick="hide_popup(); return false;"></a>
+          </div>
+          <div id='popup_body' style='float:right'></div>
+        </div>
+        <div align='center' id='popup_box4'>
+          <div style='float: right; margin-top: 40px;margin-right:-25px'>
+            <%= link_to_function image_tag("/images/close button.png", :border => 0, :title => "Close"), "hide_popup()", :style => "margin-left: -20px;"%>
+          </div>
+          <div id='popup_body4' style='float:right'></div>
+        </div>
+        <div align='center' id='popup_box5'>
+          <div style='float: right; margin-top: -40px;margin-right:-40px'>
+            <a href="#" onclick="hide_popup(); return false;"></a>
+          </div>
+          <div id='popup_body5' style='float:right'></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

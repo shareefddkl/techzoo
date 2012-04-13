@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td id="tabs" >
+      <% if student = current_user.student %>
+        <%if params[:action] == 'edit' %>
+          <%= link_to "Personal Details", edit_student_path(student), :class => "personal_button" %>
+          <%= link_to "Education Details",education_student_path(student), :class => "education_details" %>
+          <%= image_tag('circle divider.png', :class => "personal_divider") %>
+          <%= link_to "Invite Others", others_student_path(student), :class => "other_details" %>
+        <%elsif params[:action] == 'education'%>
+          <%= link_to "Personal Details", edit_student_path(student), :class => "personal_details" %>
+          <%= link_to "Education Details", education_student_path(student), :class => "education_button" %>
+          <%= link_to "Invite Others", others_student_path(student), :class => "other_details" %>
+          <%= image_tag('circle divider.png', :class => "education_divider") %>
+
+        <%else%>
+          <%= link_to "Personal Details", edit_student_path(student), :class => "personal_details" %>
+          <%= link_to "Education Details", education_student_path(student), :class => "education_details" %>
+          <%= link_to "Invite Others", others_student_path(student), :class => "other_button" %>
+          <%= image_tag('circle divider.png', :class => "education_divider") %>
+        <%end%>
+      <% else %>
+        <%= link_to "Personal Details", new_student_path(),  :class => "personal_button" %>
+        Education
+        Others
+      <% end %>
+    </td>
+  </tr>
+</table>

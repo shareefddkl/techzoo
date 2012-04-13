@@ -1,0 +1,45 @@
+<div id="background_form">
+  <div id="sub_account_navigation">
+    <% @course_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <p style="float:left;font-size: 16px;margin: 33px 19px; color: #545151">Select <b style="color: #545151">Course</b></p>
+    <%=image_tag("course name.png",  :style=>"float: left; margin: 127px -132px 0px;") %>
+    <%= form_tag course_apply_courses_path(@courses), :method => 'get' do %>
+      <%= text_field_tag :query, params[:query], :style => "margin: 33px 185px 0; background:#545151;color: white;-moz-border-radius: 5px;width: 281px;height: 24px;float: right;" %>
+      <button type="submit"  style="background: none; border: none; float: right;margin: -31px 74px 0;"><%=  image_tag('search button.png') %></button>
+      <%=image_tag("line (separater).png",  :style=>"margin: 50px 28px -37px;") %>
+    <% end %>
+    <% if @courses && params[:query] %>
+      <table  width="94%" border="0" cellpadding="8px" cellspacing="0" style=" background-color: white; margin: 70px 24px; ">
+        <tr style="background-color:#333232; color: white; font-size: 14px;font-family:'Liberation Sans';">
+          <th class="table_border">Course Name</th>
+          <th class="table_border">Name</th>
+          <th class="table_border">Account Id</th>
+          <th class="table_border">Status</th>
+          <th class="table_border">Course fees</th>
+          <th class="table_border">Course type</th>
+          <th>Apply</th>
+        </tr>
+        <% @courses.each do |course| %>
+          <% if (course.name? && course.status == 'published') && (course.end_date > Date.today) %>
+            <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" height ="40px" style="font-size:11px; margin: 1px;color: #686565;font-family:'Liberation Sans';">
+              <td class="table_border"><%= course.name %></td>
+              <td class="table_border"><%= course.user.display_name %></td>
+              <td class="table_border"><%= course.user.account_id %></td>
+              <td class="table_border"><% if course.end_date? %>
+                  <%= course.end_date < Date.today ? 'close' : 'open' %>
+                <% else %>
+                <% end %></td>
+              <td class="table_border"><%= course.course_fee %></td>
+              <td class="table_border"><%= course.course_type %></td>
+              <td><%= button_to 'Apply', {:action => 'apply', :id => course.id}, :method => :post %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+    <% end %>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

@@ -1,0 +1,108 @@
+<div id="header">
+  <div id="header-left"style="position: absolute;">
+    <em style="font-size: 30px;color :#0B7BA0; padding-left: 3px;font-family: Times New Roman,Helvetica,serif;">Learning<br />
+      <em style="font-size: 30px;color :#BA0E0E;font-family: Times New Roman,Helvetica,serif;">FOR THE</em><br />
+      <em style="font-size: 30px;color :grey;font-family: Times New Roman,Helvetica,serif;">OF GO</em></em><br /><br />
+    <%=link_to image_tag('click here button.png' , :border => 0),'' %>
+  </div>
+  <%= image_tag('/images/banner image1.jpg', :style => "-moz-border-radius: 10px 10px 10px 10px;")  %>
+  <%= image_tag('/images/banner shadow.png', :style=>" height: 10px;    left: 213px;    position: absolute;    top: 555px;    width: 984px;")%>
+</div>
+<div id="newsletter">
+  <div id="newsletter-left">
+    <%=image_tag('newsletter icon.png',:style => ' float: left;margin: -15px 12px 0px;')%>
+    <%= image_tag('subscribe text.png',:style => ' float: right;margin: -67px 35px 0;')%>
+    <%= image_tag('line.png',:style => ' float: right;margin: -48px -76px 0;') %><br />
+    <em style="margin: 10px;left: 7px;    position: relative;    top: 27px;">Get exclusive deals you wont find
+      anywhere else straight to your inbox!</em>
+  </div>
+  <div style="float: left;    left: 361px;    position: relative;    top: -82px;">
+    <em style="font-size: 60px;color: #ffffff;">}</em>
+  </div>
+  <div id="newsletter-middle">
+    <%= image_tag('newsletter bar.png', :style => '') %>
+    <%= link_to "subscribe","",:class => "subscribe_button" %>
+  </div>
+  <div id="connections">   
+    <%=link_to image_tag('facebook.png',:border => 0,:title => 'facebook'),"http://apps.facebook.com/techzoo"%>
+    <%=link_to image_tag('blog icon.png',:border => 0,:title => 'blog'),''%>
+    <%=link_to image_tag('twitter.png', :border => 0,:title => 'twitter'),'http://twitter.com/techzoo'%>
+    <%=link_to image_tag('icon.png', :border => 0,:title => 'icon'),''%>
+  </div>
+</div>
+<div id="tailored_training">
+  <div id="students">
+    <%= image_tag('students.png', :style => 'position: relative;left: 10px;    position: relative;    top: -61px;') %>
+    <em style="color: grey;    font-size: 11px;    left: -75px;    position: relative;    top: -47px;">Lorem ipsum dolor sit amet,massa blandit.</em>
+    <%=image_tag('image1.png', :style => 'position: relative;left: 10px;    position: relative;    top: -43px;')%>
+    <p>Vivamus aliquet blandit rtrum.Vivamus felis velit,porta vitae dapibus quis,lancinia eget urna.Nam eget massa vel velit viverra pretium vel elementum purus</p>
+    <%=link_to 'Learn more',"",:class => 'more_button'%>
+  </div>
+  <div id="mentors">
+    <%= image_tag('mentor.png', :style => 'position: relative;left: -9px;    position: relative;    top: -61px;') %>
+    <em style="color: grey;    font-size: 11px;    left: -81px;    position: relative;    top: -47px;">Lorem ipsum dolor sit amet,massa blandit.</em>
+    <%=image_tag('image2.png', :style => 'position: relative;left: -9px;    position: relative;    top: -43px;')%>
+    <p>Vivamus aliquet blandit rtrum.Vivamus felis velit,porta vitae dapibus quis,lancinia eget urna.Nam eget massa vel velit viverra pretium vel elementum purus</p>
+    <%=link_to 'Learn more',"",:class => 'more_button'%>
+  </div>
+  <div id="our_courses">
+    <%= image_tag('our courses.png', :style => 'left: 13px;    padding: 10px;    position: relative;    top: 4px;') %>
+    <% Ad.all( :order => 'created_at Desc').each do |course| %>
+      <% if course.active == true %>
+        <div class="<%= cycle('ad-odd', 'ad-even') %>">
+          <div style="margin:86px -60px;" >
+            <%= image_tag ('course icon 1.png')%>
+          </div>
+          <div style="margin: -156px 11px;width :179px;">
+            <div style="color :skyblue;"><%= course.title %></div>
+            <div style="color:#666161;"><%= course.matter.slice(0..100) %></div>
+            <em style="color: red;"> learn more >></em>
+          </div>
+        </div>
+        <div style="left: 1119px;    padding-right: 1em;    position: absolute;    top: 958px;">
+          <%= image_tag ('arrow down.png')%><%= image_tag ('arrow up.png')%>
+        </div>
+      <%end%>
+    <%end %>
+  </div>
+  <%= image_tag('/images/line (separater).png', :style => " height: 3px;
+  left: 3px;
+  position: relative;
+  top: -57px;
+  width: 947px;") %>
+  <div id="tailored">
+    <%= image_tag('/images/tailored training.png', :style => 'left: 13px;position: relative;top: -200px;')%>
+    <%= image_tag('image3.jpg', :style => 'left: -171px;    position: relative;    top: -7px;')%>
+    <p> Lorem ipsum dolor sit amet, consectetur adipicising elit. Vivamus sit amet mauris lectus,at bibendum lacus. Ma uris risus massa,
+      facilisis id molestie vitae, ultrices in</p>
+    <div id="tailored_link">
+      <%=link_to 'Lorem ipsum dolor sit Lorem ipsum dolor sit',''%><br/>
+      <%=link_to 'Lorem ipsum dolor sit Lorem ipsum dolor sit',''%><br/>
+      <%=link_to 'Lorem ipsum dolor sit Lorem ipsum dolor sit',''%>
+    </div>
+    <div id="learnmore">
+      <%=link_to '<font color=#31384F>>> learnmore</font>'.html_safe,''%>
+    </div>
+  </div>
+  <div id="testmonial">
+    <%= image_tag('testimonials.png', :style => 'left: 8px;position: relative;top: -77px;') %>
+    <%= image_tag('pencil.png', :style => 'left: 5px;position: relative;top: -57px;') %>
+    <div style="position: relative;top: -70px; left: 13px;">
+      <div style="color :skyblue;font-size: 15px;">Pellentesque nec augue</div>
+      <div style="font-size: 13px;color: #5B5959;line-height: 17px;">july 28th,2015|5 comments</div>
+      <div style="font-size: 11px;color: grey;line-height: 17px;"> Lorem ipsum dolor sit amet,massa blandit,Vitae nibh mollis mauris,
+        mauris euismod dui diam at morbi ,nequeligula</div>
+    </div>
+    <div style="position: relative;top: -45px; left: 13px;">
+      <div style="color :skyblue;font-size: 15px;">Lorem ipsum dolor sit amet </div>
+      <div style="font-size: 13px;color: #5B5959;line-height: 17px;">july 28th,2015|5 comments</div>
+      <div style="font-size: 11px;color: grey;line-height: 17px;"> Lorem ipsum dolor sit amet,massa blandit,Vitae nibh mollis mauris,
+        mauris euismod dui diam at morbi ,nequeligula</div>
+    </div>
+  </div>
+</div>
+<%= image_tag('/images/banner shadow.png', :style => " height: 9px;
+  left: 3px;
+  position: relative;
+  top: -32px;
+  width: 984px;") %>

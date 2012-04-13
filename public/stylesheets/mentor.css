@@ -1,0 +1,1028 @@
+/*
+    Document   : mentor
+    Created on : 19 Nov, 2011, 11:00:20 AM
+    Author     : vivek
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/* styles for feed back show*/
+body {
+    margin: 0;
+    overflow:auto;
+    padding: 0;
+    font-family:'Liberation Sans';
+}
+.meter {
+    height: 14px;  /* Can be anything */
+    position: relative;
+    -moz-border-radius: 0px;
+    padding: 0px;
+    background: url("/images/grey inset.png");
+    width: 234px;
+}
+
+.meter > span {
+    display: block;
+    height: 100%;
+    background: url("/images/progressbar.png");
+}
+
+#Live{
+    font-size: 15px;
+    margin: 7px 0 1px 26px;
+}
+#Live label {
+    width: 10em;
+    float: left;
+    text-align: left;
+    padding-top: 0.2em;
+    margin-right: 0.1em;
+    display: block;
+}
+/*Style for mentor layout*/
+
+.form_error{
+    color: red;
+    font-size: 13px;
+    padding-left: 174px;
+}
+.error
+{
+    color: red;
+    font-size: 13px;
+}
+.notice
+{
+    color: green;
+    font-size: 13px;
+}
+#mentor_main_div{
+    background: url("/images/background image(blue).jpg");
+    width :1400px;
+    height: 1700px;
+}
+#sign_out {
+    float :right;
+    margin: 1px 225px;
+}
+#em {
+     color:#CDF3F7;
+     float: left;
+     margin: 5px;
+}
+#sign_out a{
+    text-decoration: none;
+}
+
+#sign_out a img{
+    text-decoration: none;
+    border: none;
+}
+
+
+.mentor_chromemenu input{
+    margin: 11px 28px 0 64px;
+    background-image: url('/images/Search bar.png');
+    width: 210px;
+    height: 22px;
+    color:#768d9b;
+    padding: 1px 13px;
+    font-size: 10px;
+    -moz-border-radius: 13px 0px 0px 13px;
+    text-decoration: none;
+    border: none;
+}
+
+.mentor_chromemenu{
+    width: 933px;
+    font-weight: bold;
+    padding-top: 27px;
+}
+.mentor_chromemenu ul li{
+    display: inline;
+    margin: 10px;
+    position: relative;
+    right: 17px;
+    top: 15px;
+}
+
+.mentor_chromemenu ul li span a:hover, .mentor_chromemenu ul li span a.selected{
+    background: #BFBFBF;
+    width: 110px;
+    height: 42px;
+    padding: 11px;
+    margin: 0;
+}
+.mentor_chromemenu ul {
+    margin: -43px 3px;
+    list-style: none;
+    height: 53px;
+    -moz-border-radius: 10px;
+    font-family:'Liberation Sans';
+    font-size:14px;
+    font-weight: bold;
+    width: 940px;
+    background-image:  url('/images/Navigation bar.png');
+    text-align: left;
+    padding-left: 2em;
+    /*font: bold 14px sans-serif;*/
+}
+
+li ul {
+    position: absolute;
+    left: 123px;
+    top: -3px;
+    display: none;
+
+}
+
+ul li {
+    position: relative;
+}
+
+.mentor_chromemenu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #3F3F3F;
+    padding-bottom: 15px;
+    display: inline;
+    font-size: 14px;
+    font-family:'Liberation Sans';
+    font-weight: bold;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #3F3F3F;
+    padding-bottom: 15px;
+    display: inline;
+    font-family:'Arial';
+    font-size:17px;
+    font-weight: normal;
+}
+
+#content{
+    width: 985px;
+    height: 316px;
+    position :static;
+    float: left;
+    background-color:#EFEFEF;
+    -moz-border-radius: 10px;
+}
+
+#mentor_container{
+    height: 1177px;
+    width: 985px;
+    position :static;
+    float: left;
+    -moz-border-radius: 10px;
+}
+
+
+#mentor_bottom  {
+    background: url("/images/lines.png") repeat scroll 0 0 transparent;
+    color: #768D9B;
+    float: left;
+    font-family:"Liberation Sans";
+    font-size: 12px;
+    height: 120px;
+    left: 515px;
+    line-height: 30px;
+    position: absolute;
+    top: 53px;
+    width: 198px;
+}
+#mentor_bottom a{
+    color :#768d9b;
+    text-decoration: none;
+}
+
+
+
+#mentor_footer {
+    color: #FFFFFF;
+    font: 45px/40px "Times New Roman",serif;
+    padding-top: 0.4em;
+}
+#mentor_footer a{
+    color :#748c9a;
+    text-decoration: none;
+}
+
+#mentor_leftbar {
+    float: left;
+    width: 140px;
+    color :#768d9b;
+    font-family:'Liberation Sans';
+    font-size:12px;
+    margin: 57px 36px;
+    line-height: 31px;
+    background: url('/images/lines.png');
+    height: 146px;
+}
+#mentor_leftbar a{
+    color: #768d9b;
+    text-decoration: none
+}
+#mentor_inform {
+    float:left;
+    width :270px;
+    float :left;
+    width :168px;
+    padding-left :1em;
+    font-size: 16px;
+    color :white;
+}
+
+#mentor_rightBar {
+    float:right;
+    width: 177px;
+    height: 30%;
+    font-color: red;
+}
+
+
+.email_setting_submit{
+    background: url('/images/sign in button.png');
+    width:82px;
+    text-align: center;
+    padding: 6px 7px 6px 5px;
+    margin: -1px 145px 13px 0;
+    float: right;
+}
+#background_form{
+    background: url('/images/bg- form.png');
+    width: 769px;
+    padding-top: 3em;
+    height: 1051px;
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-bottom: 3em;
+    margin: 6px 10px;
+}
+.table_border{
+    border-right:1px solid #748c9a
+}
+.list-line-odd{
+    background-color:#C5C9C8;color:#686565;
+}
+.list-line-even{
+    background-color:#FFFFFF;color:#686565;
+}
+.message-odd:hover, .message-odd.current {
+    background-image: url('/images/light blue highlight.png');
+}
+.message-even:hover, .message-even.current{
+    background-image: url('/images/light blue highlight.png');
+}
+.message-img-odd{
+    background-image: url('/images/avatar bg.png');width:125px;height: 118px; float: left;margin: -35px 0px;
+}
+#profile_table tr td{
+    padding: 8px 0 4px 18px;
+}
+#home_sub_form a{
+    text-decoration: none;
+    color:#686565;
+}
+
+#home_sub_form a:hover{
+    text-decoration: underline;
+}
+
+#current_course a{
+    color: #686666;
+    padding: 0 12px;
+}
+#current_student_course_div a{
+    color: #686666;
+    padding:0 12px;
+}
+#sub_navigation{
+    background-image:  url('/images/navigation bg.png');
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 34px -70px -65px;
+}
+
+#admin_navigation{
+    background-image:  url('/images/navigation bg.png');
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 72px 19px -22px;
+}
+#navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 187px -54px -432px 39px;
+}
+
+#home_sub_form{
+    background: url('/images/form bg.png');
+    width:663px;
+    height: 1043px;
+    margin: 9px 53px;
+}
+
+#navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#navigation ul li {
+    font-size: 15px;
+    margin: 16px -27px;
+    width: 100px;
+}
+
+
+#navigation ul li:hover,#navigation ul li.current{
+    background:  url("/images/hover_1.png");
+    width: 110px;
+    height: 42px;
+    padding-left: 10px;
+    margin: 15px -42px;
+}
+#current_course_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 129px -54px -406px 39px;
+}
+#current_course_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#current_course_navigation ul li {
+    font-size: 15px;
+    margin: 16px -27px;
+    width: 100px;
+}
+#current_course_navigation ul li span a:hover,#current_course_navigation ul li span a.selected{
+    background:  url("/images/hover_1.png");
+    height: 30px;
+    left: -15px;
+    padding-left: 10px;
+    position: absolute;
+    width: 114px;
+}
+#profile_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 91px -54px -319px 39px;
+}
+#profile_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#profile_navigation ul li {
+    font-size: 17px;
+    line-height: 29px;
+    margin: 9px -27px;
+    top: -9px;
+    width: 100px;
+}
+
+#profile_navigation ul li:hover,#profile_navigation ul li.current{
+    background-image:  url("/images/hover_2.png");
+    width: 110px;
+    height: 27px;
+    padding-left: 10px;
+    margin: 4px -42px;
+}
+#message_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 91px -54px -319px 39px;
+}
+#message_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#message_navigation ul li {
+    font-size: 17px;
+    line-height: 29px;
+    margin: 11px -27px;
+    width: 100px;
+}
+
+#message_navigation ul li span a:hover,#message_navigation ul li span a.selected{
+    background-image:  url("/images/hover_2.png");
+    height: 12px;
+    left: -15px;
+    padding-left: 10px;
+    position: absolute;
+    width: 110px;
+}
+#other_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 124px -54px -406px 39px;
+}
+#other_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#other_navigation ul li {
+    font-size: 15px;
+    margin: 16px -27px;
+    width: 100px;
+}
+
+
+#other_navigation ul li span a:hover,#other_navigation ul li span a.selected{
+    background:  url("/images/hover_1.png");
+    height: 30px;
+    left: -15px;
+    padding-left: 10px;
+    position: absolute;
+    width: 114px;
+}
+#user_profile_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 91px -54px -319px 39px;
+}
+#user_profile_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#user_profile_navigation ul li {
+    font-size: 17px;
+    line-height: 29px;
+    margin: 11px -27px;
+    width: 100px;
+}
+
+#user_profile_navigation ul li:hover,#user_profile_navigation ul li.current, #message_navigation ul li.current{
+    background-image:  url("/images/hover_2.png");
+    width: 110px;
+    height: 27px;
+    padding-left: 10px;
+    margin: 4px -42px;
+}
+#other_profile_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 183px -54px -450px 39px
+}
+#other_profile_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#other_profile_navigation ul li {
+    font-size: 17px;
+    line-height: 29px;
+    margin: 11px -27px;
+    width: 100px;
+}
+
+#other_profile_navigation ul li:hover,#other_profile_navigation ul li.current{
+    background-image:  url("/images/hover_2.png");
+    width: 110px;
+    height: 27px;
+    padding-left: 10px;
+    margin: 4px -42px;
+}
+.message:hover, .message.current{
+    background-image:  url("/images/hover_2.png");
+    width: 110px;
+    height: 27px;
+    padding-left: 10px;
+    margin: 4px -42px;
+}
+#sub_account_navigation{
+    background-image:  url('/images/navigation bg_1.png');
+    width: 122px;
+    height: 94px;
+    float: left;
+    margin: 34px -70px -65px;
+}
+#account_navigation{
+    width: 122px;
+    height: 94px;
+    float: left;
+    margin: 91px -54px -319px 39px;
+}
+#account_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#account_navigation ul li {
+    font-size: 17px;
+    line-height: 29px;
+    margin: 11px -27px;
+    width: 100px;
+}
+
+#account_navigation ul li:hover,#account_navigation ul li.current{
+    background-image:  url("/images/hover_2.png");
+    width: 110px;
+    height: 27px;
+    padding-left: 10px;
+    margin: 4px -42px;
+
+}
+#sub_search_navigation{
+    background-image: url('/images/menu bg.png');
+    width: 122px;
+    height: 245px;
+    float: left;
+    margin: 34px -70px;
+}
+#search_navigation{
+    width: 122px;
+    height: 226px;
+    float: left;
+    margin: 91px -54px -319px 39px;
+}
+
+#search_navigation ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#search_navigation ul li {
+    font-size: 17px;
+    margin: 15px -31px;
+    width: 100px;
+}
+
+#search_navigation ul li:hover,#search_navigation ul li.current{
+    background-image:  url("/images/searchhover.png");
+    width: 110px;
+    height: 40px;
+    padding-left: 10px;
+    margin: 2px -42px;
+
+}
+#sub_course_navigation{
+    background-image: url('/images/coursenavigation bg.png');
+    width: 122px;
+    height: 183px;
+    float: left;
+    margin: 34px -70px -65px;
+}
+#course_navigation {
+    width: 122px;
+    height: 183px;
+    float: left;
+    margin: 91px -54px -319px 39px;
+}
+
+#course_navigation  ul {
+    color: #4F4F4F;
+    background: none;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+}
+
+#course_navigation  ul li {
+    font-size: 17px;
+    margin: 12px -32px;
+    width: 93px;
+}
+
+#course_navigation ul li:hover,#course_navigation ul li.current{
+    background-image:  url("/images/coursehover.png");
+    width: 110px;
+    height: 42px;
+    padding-left: 10px;
+    margin: 7px -42px;
+
+}
+
+#basic_form{
+    font-size:15px;
+    margin: 1px 25px;
+}
+
+#basic_form label{
+    width: 8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0.01em 4px;
+    display:inline-table;
+    font-size: 16px;
+    color: #6D6B6B;
+}
+#basic_form input{
+    background:#545151;
+    color: white;
+    margin: 0.1em 0;
+    -moz-border-radius: 5px;
+    width: 244px;
+    height: 26px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+
+#basic_form .text{
+    background:#545151;
+    color: white;
+    margin: 0.1em 0;
+    -moz-border-radius: 5px;
+    width: 65px;
+    height: 26px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+
+#basic_form select{
+    color: white;
+    background:#545151;
+    height: 30px;
+    margin: 4px 0 0;
+    width: 85px;
+}
+#basic_form img {
+    margin: -13px -27px;
+}
+
+#interest_form label{
+    width: 12.8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 4px 4px;
+    display:inline-table;
+    font-size: 16px;
+    color: #4D4D4D;
+}
+
+#interest_form textarea{
+    background:#545151;
+    color: white;
+    margin: 0.1em 0;
+    -moz-border-radius: 10px;
+    width: 373px;
+    height: 95px;
+    font-size: 16px;
+    padding: 1px 9px;
+    font-size: 20px;
+}
+
+#interest_form{
+    font-size:15px;
+    color: black;
+    margin: 1px 25px;
+}
+#search_form label{
+    width: 8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0.01em 4px;
+    display:inline-table;
+    font-size: 16px;
+    color: #6D6B6B;
+}
+#search_form input{
+    background:#545151;
+    color: white;
+    margin: 4px 36px;;
+    -moz-border-radius: 5px;
+    width: 261px;
+    height: 26px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+
+#search_form select{
+    color: white;
+    background:#545151;
+    height: 30px;
+    margin: 4px 39px 0;
+    width: 130px;
+}
+#search_form img {
+    margin: -12px -65px;
+}
+
+#course_design_form{
+    font-size:15px;
+    color: black;
+    margin: 57px 30px;
+}
+
+#course_design_form label{
+    width: 8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0.01em 4px;
+    display:inline-table;
+    font-size: 16px;
+    color: #6D6B6B;
+}
+#course_design_form input{
+    background:#545151;
+    color: white;
+    margin:5px 33px;
+    -moz-border-radius: 5px;
+    width: 185px;
+    height: 26px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+#course_design_form textarea{
+    background:#545151;
+    color: white;
+    margin:5px 33px;
+    -moz-border-radius: 5px;
+    width: 185px;
+    height: 52px;
+    font-size: 16px;
+    padding: 1px 9px;
+}
+#course_design_form select{
+    color: white;
+    background:#545151;
+    /*    background: url('file:///home/vivek/Documents/books/MAIN_TEMPLATES/mentor/mcp%20course%20design/drop%20down%20box.png');*/
+    height: 30px;
+    margin: 6px 34px;
+    width: 130px;
+    font-size: 18px;
+}
+.fields a{
+    margin: 1px 16px 0 120px;
+}
+.fields button{
+    background-color: #ccc;
+    border: none;
+    color: #666;
+    padding: 3px 5px;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+
+}
+
+#course_design_form img {
+    margin: -12px -54px;
+}
+
+.control_checkbox{
+    background: url('/images/green box1.png');
+    height: 224px;
+    width: 212px;
+    margin: 3px 182px 22px;
+    color: #ffffff;
+}
+#course_control_form{
+    font-size:15px;
+    color: black;
+    margin: 57px 30px;
+}
+
+#course_control_form label{
+    width: 8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 0.01em 4px;
+    display:inline-table;
+    font-size: 16px;
+    color: #6D6B6B;
+}
+.control_checkbox input{
+    margin: 8px 19px;
+}
+#start_date img{
+    border: 0 none;
+    cursor: pointer;
+    margin: -1px -22px;
+    height: 19px;
+    width: 19px;
+}
+#end_date img{
+    border: 0 none;
+    cursor: pointer;
+    margin: -1px -22px;
+    height: 19px;
+    width: 19px;
+}
+#feedback_form label{
+    width: 12.8em;
+    float: left;
+    text-align: left;
+    padding-top: 10px;
+    margin: 4px 4px;
+    display:inline-table;
+    font-size: 16px;
+    color: #6D6B6B;
+}
+
+#feedback_form textarea{
+    background:#545151;
+    color: white;
+    margin: 10px 189px;
+    -moz-border-radius: 5px;
+    width: 225px;
+    height: 95px;
+    font-size: 16px;
+    padding: 1px 9px;
+    font-size: 20px;
+}
+
+#feedback_form{
+    font-size:15px;
+    color: black;
+    margin: 1px 25px;
+}
+#feedback_form select{
+    color: white;
+    background:#545151;
+    -moz-border-radius: 5px;
+    height: 30px;
+    margin: 4px 191px 0;
+    width: 243px;
+}
+#feedback_sub_form select{
+    width: 83px;
+    -moz-border-radius: 5px;
+    color: white;
+    background:#545151;
+    height: 30px;
+}
+/* styles for education profile*/
+#education_profile_form table tr td select,#education_profile_form table tr td input, #education_profile_form table tr td textarea{
+    background-color: #FFFFFF;
+    -moz-border-radius: 1px;
+    width:131px;
+    color: #5F5F5F;
+}
+#education_profile_form table{
+    background-color:#5F5F5F;
+   margin: 25px 12px 2px 34px;
+    -moz-border-radius: 5px;
+}
+
+#education_profile_form table tr td{
+    font:  15px "solid";
+    color: #FFFFFF;
+}
+.td_profile_education{
+    -moz-border-radius: 5px 5px 5px 5px;
+    background: url("/images/white paper.png") repeat scroll 0 0 transparent;
+    color: #6D6C6C;
+    height: 299px;
+    width: 281px;
+}
+.td_profile_education input{
+    margin: 14px 14px 10px 37px;
+}
+#education_profile_sub_form table tr td select,#education_profile_sub_form table tr td input, #education_profile_sub_form table tr td textarea{
+    background-color: #FFFFFF;
+    -moz-border-radius: 1px;
+    width:171px;
+    color: #5F5F5F;
+    margin: 1px 7px 3px 30px;
+}
+#education_profile_sub_form table{
+    background-color:#5F5F5F;
+    margin: -7px 16px 2px 3px;
+    width: 355px;
+    -moz-border-radius: 2px;
+}
+
+#education_profile_sub_form table tr  td{
+    font: 15px "solid";
+    color: #FFFFFF;
+}
+
+/* style for invite_friends */
+#invite_others{
+    background: url('/images/invite other bg.png');
+    width: 192px;
+    padding: 0 106px 0 11px;
+    height: 373px;
+    left:auto;
+    clear: both;
+    float: left;
+    margin: -121px 22px 2px;
+}
+
+#invite_others form label{
+    display:inline-block;
+    font:17px "solid";
+    width:203px;
+    margin: 0 1px -14px 4px;
+    color: #5F5F5F;
+}
+#invite_others form input{
+    margin: 5px -6px 14px 9px;
+    background-color: #FFFFFF;
+    width:150px;
+    color: #5F5F5F;
+    -moz-border-radius: 3px;
+}
+#invitation{
+    background: url('/images/invite other bg.png');
+    width: 192px;
+    padding: 0 104px 0 13px;
+    margin: -375px 24px;
+    height: 373px;
+    left:auto;
+    clear: both;
+    float: right;
+
+}
+#invitation textarea{
+    margin: 4px 0 24px 10px;
+    background-color: #FFFFFF;
+    width:251px;
+    color: #5F5F5F;
+    height: 100px;
+}
+
+#invitation button,#invite_others button {
+    background:url("/images/continue & send button.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#333333;
+    display:inline-block;
+    font:12px "solid";
+    height:32px;
+    margin:24px -86px;
+    padding:  0 15px 8px 2px;
+    text-align:center;
+    vertical-align:middle;
+    width:109px;
+    float: right;
+    color: #5F5F5F;
+}
+#default_page{
+    background-image: url('/images/bg- form.png');
+    margin: 14px 12px;
+    width: 945px;
+    height:1128px;
+    clear: both;
+    padding: 6px;
+}
+#default_sub_page{
+    padding-top: 2em;
+    padding-left: 3em;
+    background-image: url('/images/form bg.png');
+    width :607px;
+    height: 1010px;
+    margin: 4px -4px 20px 71px;
+}
+
+/* style for drop down select background*/
+
+.drop_down_bg{
+    background-color: #84CE4C;
+    color: #ffffff;
+}
+

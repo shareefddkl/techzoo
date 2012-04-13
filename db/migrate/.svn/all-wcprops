@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/techzoo/!svn/ver/272/trunk/db/migrate
+END
+20111221073112_create_ads.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/268/trunk/db/migrate/20111221073112_create_ads.rb
+END
+20111019130806_add_missing_columns_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/techzoo/!svn/ver/257/trunk/db/migrate/20111019130806_add_missing_columns_to_user.rb
+END
+20111203050350_create_notifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/techzoo/!svn/ver/257/trunk/db/migrate/20111203050350_create_notifications.rb
+END
+20110930081105_add_missing_columns_to_student.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/techzoo/!svn/ver/149/trunk/db/migrate/20110930081105_add_missing_columns_to_student.rb
+END
+20110906123425_add_non_technical_to_mentors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/techzoo/!svn/ver/128/trunk/db/migrate/20110906123425_add_non_technical_to_mentors.rb
+END
+20111001132112_add_employer_to_student.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/techzoo/!svn/ver/257/trunk/db/migrate/20111001132112_add_employer_to_student.rb
+END
+20111209115341_create_invites.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/259/trunk/db/migrate/20111209115341_create_invites.rb
+END
+20111202105040_create_contents.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/techzoo/!svn/ver/257/trunk/db/migrate/20111202105040_create_contents.rb
+END
+20110806101957_create_students.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/1/trunk/db/migrate/20110806101957_create_students.rb
+END
+20110808063806_create_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/techzoo/!svn/ver/188/trunk/db/migrate/20110808063806_create_messages.rb
+END
+20111215065038_create_imported_contacts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/techzoo/!svn/ver/262/trunk/db/migrate/20111215065038_create_imported_contacts.rb
+END
+20110928045328_create_feedbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/techzoo/!svn/ver/246/trunk/db/migrate/20110928045328_create_feedbacks.rb
+END
+20111222073037_add_notification_column_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/techzoo/!svn/ver/270/trunk/db/migrate/20111222073037_add_notification_column_to_user.rb
+END
+20111003122604_create_documents.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/techzoo/!svn/ver/234/trunk/db/migrate/20111003122604_create_documents.rb
+END
+20110910063158_create_videos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/234/trunk/db/migrate/20110910063158_create_videos.rb
+END
+20110930084445_addtechnical_to_student.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/techzoo/!svn/ver/149/trunk/db/migrate/20110930084445_addtechnical_to_student.rb
+END
+20110811115717_add_attachment_avatar_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/techzoo/!svn/ver/128/trunk/db/migrate/20110811115717_add_attachment_avatar_to_users.rb
+END
+20110406063353_create_chats.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/218/trunk/db/migrate/20110406063353_create_chats.rb
+END
+20110906122958_add_technical_to_mentors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/techzoo/!svn/ver/128/trunk/db/migrate/20110906122958_add_technical_to_mentors.rb
+END
+20111105063657_add_title_to_students.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/techzoo/!svn/ver/257/trunk/db/migrate/20111105063657_add_title_to_students.rb
+END
+20111224130057_create_suggestions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/techzoo/!svn/ver/272/trunk/db/migrate/20111224130057_create_suggestions.rb
+END
+20110728044535_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/128/trunk/db/migrate/20110728044535_create_users.rb
+END
+20110930084456_addnontechnical_to_student.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/techzoo/!svn/ver/149/trunk/db/migrate/20110930084456_addnontechnical_to_student.rb
+END
+20110826044225_create_courses_students.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/techzoo/!svn/ver/132/trunk/db/migrate/20110826044225_create_courses_students.rb
+END
+20111011102046_create_comments_videos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/techzoo/!svn/ver/210/trunk/db/migrate/20111011102046_create_comments_videos.rb
+END
+20110806105135_create_mentors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/1/trunk/db/migrate/20110806105135_create_mentors.rb
+END
+20100622160553_add_is_online_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/techzoo/!svn/ver/218/trunk/db/migrate/20100622160553_add_is_online_to_users.rb
+END
+20111010050008_create_discussions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/techzoo/!svn/ver/210/trunk/db/migrate/20111010050008_create_discussions.rb
+END
+20110406202950_add_last_accessed_at_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/techzoo/!svn/ver/218/trunk/db/migrate/20110406202950_add_last_accessed_at_to_users.rb
+END
+20110808134452_create_courses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/257/trunk/db/migrate/20110808134452_create_courses.rb
+END
+20110930085036_add_missing_columns_to_mentor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/techzoo/!svn/ver/149/trunk/db/migrate/20110930085036_add_missing_columns_to_mentor.rb
+END

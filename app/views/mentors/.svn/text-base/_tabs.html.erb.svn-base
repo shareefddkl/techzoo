@@ -1,0 +1,34 @@
+<table>
+  <tr>
+    <td id="tabs" style="margin: 1px;">
+      <% if mentor = current_user.mentor %>
+        <%if params[:action] == 'edit' %>
+          <%= link_to "Personal Details", edit_mentor_path(mentor), :class => "personal_button" %>
+          <%= link_to "Education Details",education_mentor_path(mentor), :class => "education_details" %>
+          <%= image_tag('circle divider.png', :class => "personal_divider") %>
+          <%= link_to "Invite Others", others_mentor_path(mentor), :class => "other_details" %>
+        <%elsif params[:action] == 'education'%>
+          <%= link_to "Personal Details", edit_mentor_path(mentor), :class => "personal_details" %>
+          <%= link_to "Education Details", education_mentor_path(mentor), :class => "education_button" %>
+          <%= link_to "Invite Others", others_mentor_path(mentor), :class => "other_details" %>
+          <%= image_tag('circle divider.png', :class => "education_divider") %>
+        <%else%>
+          <%= link_to "Personal Details", edit_mentor_path(mentor), :class => "personal_details" %>
+          <%= link_to "Education Details", education_mentor_path(mentor), :class => "education_details" %>
+          <%= link_to "Invite Others", others_mentor_path(mentor), :class => "other_button" %>
+          <%= image_tag('circle divider.png', :class => "education_divider") %>
+        <%end%>
+  <%#= link_to "Education Details", education_mentor_path(mentor), :class => "education_button" %>
+  <%#= link_to "Others", others_mentor_path(mentor), :class => "other_button" %>
+  <%#= link_to image_tag("personal detail white button.png", :alt => "Persanal", :width => 100, :height => 50, :title => "Persanal", :border=>0) , edit_mentor_path(mentor) %>
+  <%#= link_to image_tag("ed details white button.png", :alt => "Education", :width => 100, :height => 50, :title => "Education", :border=>0), education_mentor_path(mentor) %>
+  <%#= link_to image_tag("other white button.png", :alt => "Others", :width => 100, :height => 50, :title => "Others", :border=>0), others_mentor_path(mentor) %>
+      <% else %>
+        <%= link_to "Personal Details", new_mentor_path(), :class => "personal_button"  %>
+        Education
+        Others
+      <% end %>
+    </td>
+  </tr>
+
+</table>

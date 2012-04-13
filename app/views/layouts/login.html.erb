@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Information</title>
+        <script type="text/javascript" src="/javascripts/flowplayer-3.2.6.min.js"></script>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+
+    <div>
+      <% ['notice', 'error', 'warning'].each do |flash_key| %>
+        <% if flash[flash_key.to_sym] %>
+          <span class="<%= flash_key %>">
+            <%= flash[flash_key.to_sym] %>
+          </span>
+        <% end %>
+      <% end %>
+      <div>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
+
+

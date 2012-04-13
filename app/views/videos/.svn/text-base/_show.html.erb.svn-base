@@ -1,0 +1,52 @@
+<div class="titletext">
+  <table width="500" align="center" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+      <td height="350" bgcolor="#E9EEFA" style="border: 1px solid #7593DB;padding-top: 10px;" align="left">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td width="65%" valign="top">
+              <table width="100%" align="left" cellpadding="5" cellspacing="5" class="griditem2">
+                <tr>
+                  <td valign="top">
+                    <a
+                      href="<%= @video.video.url %>"
+                      style="display:block;width:438px;height:293px;z-index: 1px;"
+                      id="player">
+                    </a>
+
+                    <!-- this will install flowplayer inside previous A- tag. -->
+                    <script>
+                      flowplayer("player", {src: "/flowplayer/flowplayer-3.2.6.swf", wmode: "transparent"},
+                      {
+                        clip: {
+                          autoPlay:false,
+                          autoBuffering:true
+                        }});
+                    </script>
+                    <div style="font-size: 12px;font-weight: bold">
+                      <%= @video.title %>
+                    </div>
+                    <div style="font-size: 12px;font-weight: normal">
+                      <%= @video.description %>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>&nbsp;</div>
+<div style="overflow:auto;height: 342px;width: 272px;clear: both;">
+  <h1 style="font-size:16px; color: black;">Discussion</h1>
+  <img alt="" src="/images/lcpcurrentcourseline.png" style="margin:0px 0 7px; height: 5px;width: 200px; "/>
+  <%= render :partial => 'comments_videos/comments_video' %>
+
+  <%= render :partial => 'comments_videos/form' %>
+</div>
+
+
+

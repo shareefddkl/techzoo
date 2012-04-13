@@ -1,0 +1,23 @@
+<html>
+    <head>
+      <%= javascript_include_tag 'jquery', 'json', 'juggernaut/juggernaut', 'juggernaut/jquerynaut', 'juggernaut/swfobject' %>
+      
+    </head>
+    <body>
+      <form action="/chat/send_data" method="get">
+        <div style="margin:0;padding:0">
+        <input id="chat_input" name="chat_input" size="20" type="text" value="" />
+        <input name="commit" type="submit" value="Add" />
+      </form>
+
+      <script>
+      $(document).ready(function(){
+        $('form').submit(function(){
+          $.get('/chat/send_data', { chat_input: $('#chat_input').val() } )
+          return false;
+        })
+      })
+      </script>
+      <ul id="chat_data" style="list-style:none"></ul>
+    </body>
+  </html>

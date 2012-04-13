@@ -1,0 +1,19 @@
+<table  width="37%" border="0" cellpadding="8px" cellspacing="0px" style="margin: 135px 20px 0 -166px;float: right; " >
+  <!--<tr  style="background-color:#f0f0f0;color:black;height: 30px;">
+    <th>Learner List - <%#=@course.name %></th>
+    <th></th>
+    <th></th>
+  </tr>-->
+  <tr style="background-color:#333232; font-size: 14px; color: white; font-family:'Liberation Sans';">
+    <th class="table_border">IDCode</th>
+    <th class="table_border">Name</th>
+    <th>Category</th>
+  </tr>
+  <% for courses_student in @courses_students %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" style="font-family:'Liberation Sans'; font-size: 11px;">
+      <th class="table_border"><%= link_to courses_student.user.account_id, student_path(courses_student.user.student.id)%></th>
+      <th class="table_border"><%= link_to courses_student.user.display_name, student_path(courses_student.user.student.id) %></th>
+      <th><%= courses_student.user.student.education_type%></th>
+    </tr>
+  <%end%>
+</table>

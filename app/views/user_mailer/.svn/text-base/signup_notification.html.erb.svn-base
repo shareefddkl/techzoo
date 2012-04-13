@@ -1,0 +1,9 @@
+Dear <%= @user.email %>,
+
+Your account has been created. Please follow bellow link to activate <br /> <br />
+
+<%= @activation_url %>
+
+<br /><br /><br /><br />
+Thanks,
+Team

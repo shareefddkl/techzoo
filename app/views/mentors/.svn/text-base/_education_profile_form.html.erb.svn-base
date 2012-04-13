@@ -1,0 +1,201 @@
+<% @profile_subtab = true %>
+<%= form_for @mentor, :url => update_education_profile_mentor_path(@mentor), :method => :put, :remote => true do |f| %>
+  <%= f.hidden_field :education_type, :value => education_type %>
+  <table cellspacing="2px" cellpadding="6px">
+    <% if education_type == 'professor' %>
+      <tr>
+        <td>College Name</td>
+        <td>
+          <%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'professor' ? @mentor.college_name : "")%>
+          <%= validation_error(@mentor.errors["college_name"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>University</td>
+        <td><%= f.text_field :university, :value => (params[:mentor] and params[:mentor][:university]) ? params[:mentor][:university] :( @mentor.education_type == 'professor' ? @mentor.university : "")%>
+          <%= validation_error(@mentor.errors["university"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'professor' ? @mentor.city : "")%>
+          <%= validation_error(@mentor.errors["city"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Board</td>
+        <td> <%= f.select :board, %w{SSC Inter Others}, :value => (params[:mentor] and params[:mentor][:board]) ? params[:mentor][:board] :( @mentor.education_type == 'professor' ? @mentor.board : "")%>
+          <%= validation_error(@mentor.errors["board"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Stream/field</td>
+        <td>  <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'professor' ? @mentor.stream : "")%>
+          <%= validation_error(@mentor.errors["stream"]) %>
+        </td>
+      </tr>
+    <% elsif education_type == 'school' %>
+      <tr>
+        <td>School Name</td>
+        <td><%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'school' ? @mentor.college_name : "")%>
+          <%= validation_error(@mentor.errors["college_name"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Class</td>
+        <td><%= f.text_field :standard, :value => (params[:mentor] and params[:mentor][:standard]) ? params[:mentor][:standard] :( @mentor.education_type == 'school' ? @mentor.standard : "")%>
+          <%= validation_error(@mentor.errors["standard"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Board</td>
+        <td> <%= f.select :board, %w{SSC Inter Others}, :value => (params[:mentor] and params[:mentor][:board]) ? params[:mentor][:board] :( @mentor.education_type == 'school' ? @mentor.board : "")%>
+          <%= validation_error(@mentor.errors["board"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'school' ? @mentor.city : "")%>
+          <%= validation_error(@mentor.errors["city"]) %>
+        </td>
+      </tr>
+    <% elsif education_type == 'corporate' %>
+      <tr>
+        <td>Corporate Exp.</td>
+        <td> <%= f.text_field :corexp , :value => (params[:mentor] and params[:mentor][:corexp]) ? params[:mentor][:corexp] :( @mentor.education_type == 'corporate' ? @mentor.corexp : "")%>
+          <%= validation_error(@mentor.errors["corexp"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td><%= f.text_field :qualification, :value => (params[:mentor] and params[:mentor][:qualification]) ? params[:mentor][:qualification] :( @mentor.education_type == 'corporate' ? @mentor.qualification : "")%>
+          <%= validation_error(@mentor.errors["qualification"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'corporate' ? @mentor.city : "")%>
+          <%= validation_error(@mentor.errors["city"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>degree</td>
+        <td> <%= f.select :degree, %w{MCA MBA Others}, :value => (params[:mentor] and params[:mentor][:degree]) ? params[:mentor][:degree] :( @mentor.education_type == 'corporate' ? @mentor.degree : "")%>
+          <%= validation_error(@mentor.errors["degree"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Stream/field</td>
+        <td>  <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'corporate' ? @mentor.stream : "")%>
+          <%= validation_error(@mentor.errors["stream"]) %>
+        </td>
+      </tr>
+    <% elsif education_type == 'research' %>
+      <tr>
+        <td>Company</td>
+        <td><%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'research' ? @mentor.college_name : "")%>
+          <%= validation_error(@mentor.errors["college_name"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Designation</td>
+        <td> <%= f.text_field :designation, :value => (params[:mentor] and params[:mentor][:designation]) ? params[:mentor][:designation] :( @mentor.education_type == 'research' ? @mentor.designation : "")%>
+          <%= validation_error(@mentor.errors["designation"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td><%= f.text_field :qualification, :value => (params[:mentor] and params[:mentor][:qualification]) ? params[:mentor][:qualification] :( @mentor.education_type == 'research' ? @mentor.qualification : "")%>
+          <%= validation_error(@mentor.errors["qualification"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'research' ? @mentor.city : "")%>
+          <%= validation_error(@mentor.errors["city"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>degree</td>
+        <td> <%= f.select :degree, %w{MCA MBA Others}, :value => (params[:mentor] and params[:mentor][:degree]) ? params[:mentor][:degree] :( @mentor.education_type == 'research' ? @mentor.degree : "")%>
+          <%= validation_error(@mentor.errors["degree"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Stream/field</td>
+        <td>  <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'research' ? @mentor.stream : "")%>
+          <%= validation_error(@mentor.errors["stream"]) %>
+        </td>
+      </tr>
+    <% elsif education_type == 'professional' %>
+      <tr>
+        <td>Company</td>
+        <td><%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'professional' ? @mentor.college_name : "")%>
+          <%= validation_error(@mentor.errors["college_name"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Designation</td>
+        <td> <%= f.text_field :designation, :value => (params[:mentor] and params[:mentor][:designation]) ? params[:mentor][:designation] :( @mentor.education_type == 'professional' ? @mentor.designation : "")%>
+          <%= validation_error(@mentor.errors["designation"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td><%= f.text_field :qualification, :value => (params[:mentor] and params[:mentor][:qualification]) ? params[:mentor][:qualification] :( @mentor.education_type == 'professional' ? @mentor.qualification : "")%>
+          <%= validation_error(@mentor.errors["qualification"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'professional' ? @mentor.city : "")%>
+          <%= validation_error(@mentor.errors["city"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>degree</td>
+        <td> <%= f.select :degree, %w{MCA MBA Others}, :value => (params[:mentor] and params[:mentor][:degree]) ? params[:mentor][:degree] :( @mentor.education_type == 'professional' ? @mentor.degree : "")%>
+          <%= validation_error(@mentor.errors["degree"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Stream/field</td>
+        <td>  <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'professional' ? @mentor.stream : "")%>
+          <%= validation_error(@mentor.errors["stream"]) %>
+        </td>
+      </tr>
+    <% elsif education_type == 'good' %>
+      <tr>
+        <td>Education</td>
+        <td> <%= f.text_field :education, :value => (params[:mentor] and params[:mentor][:education]) ? params[:mentor][:education] :( @mentor.education_type == 'good' ? @mentor.education : "")%>
+          <%= validation_error(@mentor.errors["education"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Occupation</td>
+        <td> <%= f.text_field :occupation, :value => (params[:mentor] and params[:mentor][:occupation]) ? params[:mentor][:occupation] :( @mentor.education_type == 'good' ? @mentor.occupation : "")%>
+          <%= validation_error(@mentor.errors["occupation"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Work Area</td>
+        <td> <%= f.text_field :work, :value => (params[:mentor] and params[:mentor][:work]) ? params[:mentor][:work] :( @mentor.education_type == 'good' ? @mentor.work : "")%>
+          <%= validation_error(@mentor.errors["work"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td> <%= f.text_field :location, :value => (params[:mentor] and params[:mentor][:location]) ? params[:mentor][:location] :( @mentor.education_type == 'good' ? @mentor.location : "")%>
+          <%= validation_error(@mentor.errors["location"]) %>
+        </td>
+      </tr>
+      <tr>
+        <td>Good In</td>
+        <td> <%= f.text_area :corexp , :rows => 2, :cols => 30, :value => (params[:mentor] and params[:mentor][:corexp]) ? params[:mentor][:corexp] :( @mentor.education_type == 'good' ? @mentor.corexp : "")%>
+          <%= validation_error(@mentor.errors["corexp"]) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <button type="submit" style="background: none; border: none;  left: 925px;    position: absolute;    top: 243px;"><%=  image_tag('save button.png') %></button>
+<% end %>

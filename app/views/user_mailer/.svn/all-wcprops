@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/270/trunk/app/views/user_mailer
+END
+send_invitation_to_friends.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/techzoo/!svn/ver/262/trunk/app/views/user_mailer/send_invitation_to_friends.html.erb
+END
+signup_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/techzoo/!svn/ver/1/trunk/app/views/user_mailer/signup_notification.html.erb
+END
+send_invitation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/techzoo/!svn/ver/259/trunk/app/views/user_mailer/send_invitation.html.erb
+END
+new_course_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/techzoo/!svn/ver/270/trunk/app/views/user_mailer/new_course_details.html.erb
+END
+password_reset.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/1/trunk/app/views/user_mailer/password_reset.html.erb
+END

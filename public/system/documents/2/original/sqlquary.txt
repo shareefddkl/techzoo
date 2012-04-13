@@ -1,0 +1,2 @@
+select u.id, u.account_id,s.first_name,s.middle_name,s.last_name,m.first_name,m.middle_name,m.last_name from users u LEFT JOIN students s ON u.id = s.user_id LEFT JOIN mentors m ON u.id = m.user_id 
+

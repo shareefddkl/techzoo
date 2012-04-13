@@ -1,0 +1,73 @@
+<div id="background_form">
+    <div id="sub_navigation">
+    <% @report_subtab = true %>
+  </div>
+    <div id="default_sub_page">
+    <%= form_tag member_search_reports_path, :method => 'get' do %>
+      <table>
+        <tr>
+          <td>Search</td>
+          <td><%= text_field_tag(:name, "#{params[:name] || 'Name'}",:onFocus => "if(this.value=='Name') this.value='';",:onBlur => "if(this.value=='') this.value='Name';", :style => "background:#545151;color: white;-moz-border-radius: 5px;width: 181px;height: 24px;") %>
+          </td>
+          <td> OR </td>
+          <td><%= text_field_tag(:id, "#{params[:id] || 'ID'}",:onFocus => "if(this.value=='ID') this.value='';",:onBlur => "if(this.value=='') this.value='ID';", :style => "background:#545151;color: white;-moz-border-radius: 5px;width: 181px;height: 24px;") %>
+          </td>
+          <td><button type="submit"  style="background: -moz-image-rect; size: '20px' border: MintCream Blue;"><%=  image_tag('search button.png') %></button>
+          </td>
+        </tr>
+      </table>
+    <% end %>
+    <% if @users && @name || @users1 && @id%>
+       <table cellpadding="8px" cellspacing="0px"  width="50%" border="0" style="margin: 16px -30px;">
+        <tr style="background-color:#333232; font-size: 14px; color: white; font-family:'Liberation Sans';" >
+          <th class="table_border">Id code</th>
+          <th class="table_border">Full Name</th>
+          <th class="table_border">user_type</th>
+          <th>Category</th>
+        </tr>
+        <% if @users && @name %>
+           <% @users.each do |a| %>
+          <% if a.user_type == 'student' %>
+            <tr  style="font-size: 13px; font-family:'Liberation Sans';" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border"><%= link_to a.account_id, student_view_student_path(a.student.id), :remote => true %></td>
+              <td class="table_border"><%= link_to a.display_name, student_view_student_path(a.student.id), :remote => true %></td>
+              <td class="table_border"><%= a.user_type %></td>
+              <td><%= a.student.education_type %></td>
+            </tr>
+          <% else %>
+            <tr  style="font-size: 13px; font-family:'Liberation Sans';" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border"><%= link_to a.account_id, mentor_view_mentor_path(a.mentor.id), :remote => true %></td>
+              <td class="table_border"><%= link_to a.display_name, mentor_view_mentor_path(a.mentor.id), :remote => true %></td>
+              <td class="table_border"><%= a.user_type %></td>
+              <td><%= a.mentor.education_type %></td>
+            </tr>
+          <% end %>
+        <% end %>
+            <% end %>
+            <% if @users1 && @id %>
+          <% @users1.each do |a| %>
+          <% if a.user_type == 'student' %>
+            <tr  style="font-size: 13px; font-family:'Liberation Sans';" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border"><%= link_to a.account_id, student_view_student_path(a.student.id), :remote => true %></td>
+              <td class="table_border"><%= link_to a.display_name, student_view_student_path(a.student.id), :remote => true %></td>
+              <td class="table_border"><%= a.user_type %></td>
+              <td><%= a.student.education_type %></td>
+            </tr>
+          <% else %>
+            <tr  style="font-size: 13px; font-family:'Liberation Sans';" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border"><%= link_to a.account_id, mentor_view_mentor_path(a.mentor.id), :remote => true %></td>
+              <td class="table_border"><%= link_to a.display_name, mentor_view_mentor_path(a.mentor.id), :remote => true %></td>
+              <td class="table_border"><%= a.user_type %></td>
+              <td><%= a.mentor.education_type %></td>
+            </tr>
+          <% end %>
+        <% end %>
+            <% end %>
+         </table>
+    <% end %>
+                
+    <div id="show_div">
+
+    </div>
+  </div>
+</div>

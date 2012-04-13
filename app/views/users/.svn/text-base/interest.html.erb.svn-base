@@ -1,0 +1,22 @@
+<tr>
+  <td valign="top">
+    <a href="/users/basic">Basic Info</a><br />
+    <a href="/users/picture">Picture</a><br />
+    <a href="/users/education">Education</a><br />
+    <a href="/users/work">Work</a><br />
+    <a href="/users/interest">Interest</a><br />
+  </td>
+
+  <td width="85%">
+    <table>
+      <tr>
+        <td>Technical Interest</td>
+        <td><%= text_area_tag :first_name %></td>
+      </tr>
+      <tr>
+        <td>Non Technical Interest</td>
+        <td><%= text_area_tag :first_name %></td>
+      </tr>
+    </table>
+  </td>
+</tr>

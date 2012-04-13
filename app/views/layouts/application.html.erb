@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Techzoo</title>
+    <%= stylesheet_link_tag "users", "style" %>
+    <%= javascript_include_tag "prototype", "application",  "effects", "dragdrop", "rails" %>
+    
+
+    <%= csrf_meta_tag %>
+
+    
+  </head>
+  <body>
+    <div id="main_div">
+      <div id="sign">
+        <% if !current_user %>
+          <%= link_to_function image_tag('sign up.png'), 'signup()' %>
+          <%= link_to_function  image_tag('login.png'),'show_login_form()'%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div style="color: white;    left: 934pt;    position: absolute;    top: 2px;color :white;">click here for a<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to '<font color=black>DEMO</font>'.html_safe,demo_defaults_path %></div>
+        <%end%>
+      </div>
+      <div id="banner" style="color:#ffffff;font-size: 40px;padding-left: 5.3em">
+        <p style="color:#ffffff;font-size: 40px;margin: 0 -11px;padding: 29px;"> LOGO</p>
+        <div  class="chromemenu">
+          <table>
+            <tr>
+              <td  style="font-size: small">
+                <ul>
+                  <li><span><%= link_to 'Home',home_index_path, :class => params[:controller] == "home" ? "selected" : ""%></span></li>
+                  <li><span><%= link_to 'About us',about_defaults_path, :class => (params[:controller] == "defaults" && params[:action] == 'about') ? "selected" : ""%></span></li>
+                  <li><span><%= link_to 'Career',career_defaults_path, :class => (params[:controller] == "defaults"&& params[:action] == 'career') ? "selected" : ""%></span>
+                    <!--<ul align="right">
+                        <li>Englishcourses</li><br />
+                        <li>Telugucourses</li><br />
+                        <li>Hindicourses</li>
+                    </ul>-->
+                  </li>
+                  <li><span><%= link_to 'News & Events',news_events_defaults_path, :class => (params[:controller] == "defaults"&& params[:action] == 'news_events') ? "selected" : ""%></span></li>
+                  <li><span><%= link_to 'FAQ',faq_defaults_path, :class => (params[:controller] == "defaults"&& params[:action] == 'faq') ? "selected" : ""%></span></li>
+                  <div style="padding-left: 127px;margin: -16px 467px;"><%= render :partial => "courses/search" %><%#= text_field_tag(:search, "Search",:style => "color:#768d9b;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %></div>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <img alt="" src="/images/banner shadow.png" style="height: 9px;margin: -2px 16px 32px;width: 954px;"/>
+        </div>
+        <div id="container">
+          <%= yield %>
+          
+        </div>
+        <div id="content1" style="width :85%;float: left;position: absolute;margin: 27px 3px;top: 1002pt;left: 158pt;">
+          <div id="leftbar">
+            <% if current_user %>
+            <% I18n.t('layout.friends_to_chat') %>
+            <% render :partial => "chat/widget_template" %>
+          <% end %>
+            <p style="font-family: 'Liberation Sans',sans-serif; font-size: 16px;color:white; margin: -74px 0 10px;">Current Courses</p>
+            <% Course.all(:limit => 5, :order => 'created_at Desc').each do |course| %>
+              <%= course.name %><br />
+            <%end%>
+          </div>
+          <div id="inform1" style="float :left;width :168px;padding-left :1em;font-size: 15px;color :white;">
+            <p style="float :left;width :223px;padding-left :1em;font-family: 'Liberation Sans',sans-serif; font-size: 16px;color :white; margin: -12px -14px;"> Upcoming Courses</p>
+            <p style='color: #768d9b;   font-family:"Liberation Sans"; font-size:12px;    line-height: 20px;    margin: 18px 3px;    padding-top: 1em;    width: 253px;'>Lorem ipsum dolor sit amet, consectetur adipicising elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna ali. Ut enim ad minim veniam, quis nostrud exercitation ullam co. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+          </div>
+          <div id="bottom">
+            <p style="font-family: 'Liberation Sans',sans-serif; font-size: 16px;color:white; margin:-72px 0 12px;">News & Events</p>
+            <%= link_to "In nec nisi quis dui volutpat.", ''%><br />
+            <%= link_to "Cras pharetra,enim id nullam.", ''%><br />
+            <%=  link_to "Donec luctus egestas elit sed.", ""%><br />
+            <%=  link_to "Morbi vehicula risus a nullam.",''%><br />
+            <%=  link_to "Pellentesque sodales, odio id.", ''%>
+          </div>
+          <div style="color :#768d9b;padding-top :2.5em;font-family:'Liberation Sans'; font-size:12px;  left: 766px;position: absolute;width: 230px; line-height: 19px;">
+            <p style="font-family: 'Liberation Sans',sans-serif; font-size: 16px;padding-left :1em;float :left;color :white;width: 130px; margin: -43px -19px;">Get In Touch</p>
+            Firm:Fake Firm<br />
+            Address :123 FakeStreet<br />
+            25 Newyork<br />
+            phone:+1233213432<br />
+            Fax +4332 434235 5453<br />
+            Email :info@companysite.com<br />
+          </div>
+          <div id="footer" style="background: url('/images/footer.png'); width: 969px; height: 30px; margin: 242px 3px 0;">
+            <span style="font-size: 11px;float :left;color: #748c9a; margin: -15px 17px;font-family:'Arial';">@copyright Sitename. All Rights Reserved.</span><span style="font-size: 11px;float :right;color:#748c9a; margin: -15px 39px;font-family:'Arial';">&nbsp;&nbsp;<%= link_to 'Home',home_index_path%>&nbsp;&nbsp;| &nbsp;&nbsp;<%= link_to 'About us',about_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Career',career_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'News',news_events_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'FAQ',faq_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Suggestion',new_suggestion_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Feedback',new_suggestion_path%>&nbsp;&nbsp;</span>
+          </div>
+
+        </div>
+        <div id='overlay' onclick='hide_popup()' style='filter:alpha(opacity=50);'></div>
+        <div align='center' id='popup_box'>
+          <div style='float: right; margin-top: -40px;margin-right:-40px'>
+            <a href="#" onclick="hide_popup(); return false;"></a>
+          </div>
+          <div id='popup_body' style='float:right'></div>
+        </div>
+        <div align='center' id='popup_box3'>
+          <div style='float: right; margin-top: -40px;margin-right:-40px'>
+            <a href="#" onclick="hide_popup(); return false;"></a>
+          </div>
+          <div id='popup_body3' style='float:right'></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

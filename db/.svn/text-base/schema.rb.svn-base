@@ -1,0 +1,154 @@
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended to check this file into your version control system.
+
+ActiveRecord::Schema.define(:version => 20110906123425) do
+
+  create_table "blogs", :force => true do |t|
+    t.string   "title",        :limit => 40
+    t.text     "description"
+    t.date     "published_at"
+    t.string   "published_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "blog_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name",           :limit => 50
+    t.text     "abstract"
+    t.text     "prerequisites"
+    t.text     "course_content"
+    t.string   "language",       :limit => 50
+    t.string   "duration",       :limit => 30
+    t.string   "categories",     :limit => 40
+    t.integer  "strength"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "course_type",    :limit => 30
+    t.string   "status",         :limit => 20
+    t.string   "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "homes", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mentors", :force => true do |t|
+    t.string   "user_id"
+    t.string   "first_name",     :limit => 100
+    t.string   "middle_name",    :limit => 100
+    t.string   "last_name",      :limit => 100
+    t.date     "date_of_birth"
+    t.text     "address"
+    t.string   "city",           :limit => 50
+    t.string   "state",          :limit => 50
+    t.string   "country",        :limit => 30
+    t.integer  "pincode"
+    t.integer  "lande_line_no"
+    t.string   "mobile",         :limit => 15
+    t.string   "college_name",   :limit => 50
+    t.string   "standard"
+    t.string   "board",          :limit => 100
+    t.string   "university"
+    t.string   "degree",         :limit => 50
+    t.string   "stream",         :limit => 50
+    t.string   "designation",    :limit => 50
+    t.string   "qualification",  :limit => 50
+    t.string   "corexp"
+    t.string   "education"
+    t.string   "occupation"
+    t.string   "work"
+    t.string   "location"
+    t.string   "education_type", :limit => 15
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "technical"
+    t.string   "non_technical"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "receiver_id"
+    t.string   "subject",         :limit => 70
+    t.text     "body"
+    t.string   "user_status",     :limit => 10
+    t.string   "receiver_status", :limit => 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", :force => true do |t|
+    t.string   "user_id"
+    t.string   "first_name",     :limit => 40
+    t.string   "middle_name",    :limit => 40
+    t.string   "last_name",      :limit => 40
+    t.date     "date_of_birth"
+    t.text     "address"
+    t.string   "city",           :limit => 20
+    t.string   "state",          :limit => 30
+    t.string   "country",        :limit => 40
+    t.integer  "pincode"
+    t.integer  "land_line_no"
+    t.string   "mobile"
+    t.string   "college_name",   :limit => 40
+    t.string   "standard",       :limit => 30
+    t.string   "university",     :limit => 40
+    t.string   "degree",         :limit => 20
+    t.string   "stream",         :limit => 30
+    t.string   "company",        :limit => 40
+    t.string   "designation",    :limit => 40
+    t.string   "qualification",  :limit => 30
+    t.string   "education_type", :limit => 15
+    t.string   "education"
+    t.string   "occupation"
+    t.string   "working_domain"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                    :limit => 100
+    t.string   "hashed_password",          :limit => 100
+    t.string   "salt",                     :limit => 100
+    t.string   "activation_code",          :limit => 100
+    t.datetime "activated_at"
+    t.string   "user_type",                :limit => 20
+    t.string   "account_id",               :limit => 100
+    t.string   "email_encrypted",          :limit => 100
+    t.string   "reset_password_code",      :limit => 100
+    t.date     "last_password_reseted_at"
+    t.string   "role",                     :limit => 20
+    t.string   "status",                   :limit => 20
+    t.date     "last_logged_in_at"
+    t.integer  "login_failed_count"
+    t.integer  "auth_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+end

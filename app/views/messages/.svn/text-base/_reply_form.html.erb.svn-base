@@ -1,0 +1,3 @@
+<%= form_for :message , :as => @message, :url => reply_message_path(params[:id]), :method => 'post' do |f| %>
+  <%= f.text_area :body, :rows => '3', :cols => '40' %><button type="submit"><%=  "Reply" %></button>
+<% end %>

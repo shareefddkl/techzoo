@@ -1,0 +1,35 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/><div id="topic" style="float:left; margin: 30px 29px;">
+      <h1 style="font-size:18px;text-align: center;color: #333232;">Course Content</h1>
+      <table style="font-size: 15px;color: #686565;background: url('/images/content bg.png');width: 283px;" width="200%" border="0"  cellpadding="10px" cellspacing="1px">
+        <tr>
+          <td><%= @course.course_content%></td>
+        </tr>
+      </table>
+    </div>
+    <div id="student" style=" left: 55%;    position: absolute;    top: 260px;">
+      <h1 style="font-size:18px;text-align: center;color: #333232; margin-left: -63px;">Learner's List</h1>
+      <table cellpadding="12px" cellspacing="0px"  width="70%" border="0"style="">
+        <tr style="background-color:#333232; font-size: 14px; color: white; font-family:'Liberation Sans';">
+          <th class="table_border">IDCode</th>
+          <th class="table_border">Name</th>
+          <th>Category</th>
+        </tr>
+        <% for courses_student in @courses_students %>
+          <tr style="font-size: 11px; font-family:'Liberation Sans';" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+            <th class="table_border"><%= link_to courses_student.user.account_id, student_path(courses_student.user.student.id)%></th>
+            <th class="table_border"><%= link_to courses_student.user.display_name, student_path(courses_student.user.student.id) %></th>
+            <th><%= courses_student.user.student.education_type%></th>
+          </tr>
+        <%end%>
+      </table>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+

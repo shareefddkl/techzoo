@@ -1,0 +1,78 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab_tab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h2 style=" width: 609px; height: 21px; margin: 6px 5px 1px;padding: 5px 20px; font-size: 18px; color: #FFFFFF;font-style: italic; background-color: #545151;   ">Feedback</h2><br/>
+    <table >
+      <tr>
+        <td><%=image_tag("course name.png", :style=>'margin:1px -162px 4px 28px;;') %></td>
+        <td><%= select_tag :id, options_for_select(current_user.courses.select("id, name").map{|course| [course.name, course.id]}, params[:id]), :onchange => "window.location.href = '/courses/feedback?id='+this.value", :style=>"margin: -1px 250px 6px; background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;float: right;font-size: 18px; padding: 0 3px;" %></td>
+      </tr>
+      <% for feedback in @course_feedbacks %>
+      <table cellspacing="10%" cellpadding="6%" style="background:url('/images/grey box.png'); width:603px;margin: 18px 33px -13px;">
+          <tr>
+            <td style="color: white;">&nbsp;&nbsp;<%= feedback.user.account_id%></td>
+            <td style="color: greenyellow;"><%= feedback.user.student.first_name %></td>
+            <td></td>
+          </tr>
+          <tr style="color: #FFFFFF;font-size: 16px;font-style: italic;">
+            <td>&nbsp;&nbsp;Ratings</td>
+            <td style="color: greenyellow;font-style: normal;font-size: 15px;">Overall rating</td>
+            <td style="float:left; margin: 5px -11px 5px -130px;"><div class="meter">
+                <span style="width :<%= ((feedback.communication_skills+feedback.teaching_skill+feedback.course_material+feedback.doubt_clearence+feedback.subject_knowledge)/5) %>%"></span>
+              </div>
+            </td>
+            <td><%=(feedback.communication_skills+feedback.teaching_skill+feedback.course_material+feedback.doubt_clearence+feedback.subject_knowledge)/5%>/10</td>
+          </tr>
+          <tr style="color: #FFFFFF;font-size: 14px;">
+            <td>&nbsp;&nbsp;Communication Skills</td>
+            <td><div class="meter">
+                <span style="width: <%= (feedback.communication_skills/10)*100 %>%"></span>
+              </div>
+            </td>
+            <td><%= feedback.communication_skills %>/10</td>
+          </tr>
+          <tr style="color: #FFFFFF;font-size: 14px;">
+            <td>&nbsp;&nbsp;Teaching skill</td>
+            <td><div class="meter">
+                <span style="width: <%= (feedback.teaching_skill/10)*100 %>%"></span>
+              </div>
+            </td>
+            <td><%= feedback.teaching_skill %>/10</td>
+          </tr>
+          <tr style="color: #FFFFFF;font-size: 14px;">
+            <td>&nbsp;&nbsp;Course Material</td>
+            <td><div class="meter">
+                <span style="width: <%= (feedback.course_material/10)*100 %>%"></span>
+              </div>
+            </td>
+            <td><%= feedback.course_material %>/10</td>
+          </tr>
+          <tr style="color: #FFFFFF;font-size: 14px;">
+            <td>&nbsp;&nbsp;Doubt Clearence</td>
+            <td><div class="meter">
+                <span style="width: <%= (feedback.doubt_clearence/10)*100 %>%"></span>
+              </div>
+            </td>
+            <td><%= feedback.doubt_clearence%>/10</td>
+          </tr>
+          <tr style="color: #FFFFFF;font-size: 14px;">
+            <td >&nbsp;&nbsp;Subject Knowledge</td>
+            <td><div class="meter">
+                <span style="width: <%= (feedback.subject_knowledge/10)*100 %>%"></span>
+                </div>
+              </td>
+              <td><%= feedback.subject_knowledge %>/10</td>
+            </tr>
+            <tr style="color: #FFFFFF;">
+              <td>&nbsp;&nbsp;Comment</td>
+              <td style="color: greenyellow;"><%= feedback.comment%></td>
+              <td></td>
+            </tr>
+          </table><br/>
+        <% end %>
+      </table>
+    </div>
+    <%= image_tag('banner shadow.png', :style=>"height: 11px;margin: 35px -96px 10px;width: 962px;") %>
+  </div>

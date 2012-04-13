@@ -1,0 +1,205 @@
+<%= form_for @mentor, :url => update_education_mentor_path(@mentor), :remote => true  do |f| %>
+  <%= f.hidden_field :education_type, :value => education_type %>
+  <% if education_type == 'professor' %>
+    <div id="professor_form">
+      <b> Details </b>
+      <div>
+        <%= f.label :college_name, "College Name"%>
+        <%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'professor' ? @mentor.college_name : "")%>
+        <%= validation_error(@mentor.errors["college_name"]) %>
+      </div>
+      <div>
+        <%= f.label :university, "University" %>
+        <%= f.text_field :university, :value => (params[:mentor] and params[:mentor][:university]) ? params[:mentor][:university] :( @mentor.education_type == 'professor' ? @mentor.university : "")%>
+        <%= validation_error(@mentor.errors["university"]) %>
+      </div>
+      <div>
+        <%= f.label :city %>
+        <%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'professor' ? @mentor.city : "")%>
+        <%= validation_error(@mentor.errors["city"]) %>
+      </div>
+      <div>
+        <%= f.label :board %>
+        <%= f.select :board, %w{SSC Inter Others}, :value => (params[:mentor] and params[:mentor][:board]) ? params[:mentor][:board] :( @mentor.education_type == 'professor' ? @mentor.board : "")%>
+        <%= validation_error(@mentor.errors["board"]) %>
+      </div>
+      <div>
+        <%= f.label :stream, "Stream/field" %>
+        <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'professor' ? @mentor.stream : "")%>
+        <%= validation_error(@mentor.errors["stream"]) %>
+      </div>
+      <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Professors/lectorers who are would to share theire knowledge with others falls under this category</p>-->
+      <h1><%= link_to_function image_tag("question_mark.jpeg"), "mentor_professor_help()" %></h1>
+      <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+    </div>
+  <% elsif education_type == 'school' %>
+    <div id="school_form">
+      <b> Details </b>
+      <div>
+        <%= f.label :school_name, "School Name" %>
+        <%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'school' ? @mentor.college_name : "")%>
+        <%= validation_error(@mentor.errors["college_name"]) %>
+      </div>
+      <div>
+        <%= f.label :class, "Class" %>
+        <%= f.text_field :standard, :value => (params[:mentor] and params[:mentor][:standard]) ? params[:mentor][:standard] :( @mentor.education_type == 'school' ? @mentor.standard : "")%>
+        <%= validation_error(@mentor.errors["standard"]) %>
+      </div>
+      <div>
+        <%= f.label :board, "Board"%>
+        <%= f.select :board, %w{SSC Inter Others}, :value => (params[:mentor] and params[:mentor][:board]) ? params[:mentor][:board] :( @mentor.education_type == 'school' ? @mentor.board : "")%>
+        <%= validation_error(@mentor.errors["board"]) %>
+      </div>
+      <div>
+        <%= f.label :city %>
+        <%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'school' ? @mentor.city : "")%>
+        <%= validation_error(@mentor.errors["city"]) %>
+      </div>
+      <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;School Teacher who are would like to share their knowledge students, falls under this</p>-->
+      <h1><%= link_to_function image_tag("question_mark.jpeg"), "mentor_school_help()" %></h1>
+      <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+    </div>
+  <% elsif education_type == 'corporate' %>
+    <div id="corporate_form">
+      <b> Details </b>
+      <div>
+        <%= f.label :corexp, "Corporate Exp." %>
+        <%= f.text_field :corexp , :value => (params[:mentor] and params[:mentor][:corexp]) ? params[:mentor][:corexp] :( @mentor.education_type == 'corporate' ? @mentor.corexp : "")%>
+        <%= validation_error(@mentor.errors["corexp"]) %>
+      </div>
+      <div>
+        <%= f.label :qualification%>
+        <%= f.text_field :qualification, :value => (params[:mentor] and params[:mentor][:qualification]) ? params[:mentor][:qualification] :( @mentor.education_type == 'corporate' ? @mentor.qualification : "")%>
+        <%= validation_error(@mentor.errors["qualification"]) %>
+      </div>
+      <div>
+        <%= f.label :city%>
+        <%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'corporate' ? @mentor.city : "")%>
+        <%= validation_error(@mentor.errors["city"]) %>
+      </div>
+      <div>
+        <%= f.label :degree %>
+        <%= f.select :degree, %w{MCA MBA Others}, :value => (params[:mentor] and params[:mentor][:degree]) ? params[:mentor][:degree] :( @mentor.education_type == 'corporate' ? @mentor.degree : "")%>
+        <%= validation_error(@mentor.errors["degree"]) %>
+      </div>
+      <div>
+        <%= f.label :stream, "Stream/field" %>
+        <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'corporate' ? @mentor.stream : "")%>
+        <%= validation_error(@mentor.errors["stream"]) %>
+      </div>
+      <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;The trainers who trains people in corporate world, falls under this category.</p>-->
+      <h1><%= link_to_function image_tag("question_mark.jpeg"), "mentor_corporate_help()" %></h1>
+      <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+    </div>
+  <% elsif education_type == 'research' %>
+    <div id="research_form">
+      <b> Details </b>
+      <div>
+        <%= f.label :company, "Company" %>
+        <%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'research' ? @mentor.college_name : "")%>
+        <%= validation_error(@mentor.errors["college_name"]) %>
+      </div>
+      <div>
+        <%= f.label :designation %>
+        <%= f.text_field :designation, :value => (params[:mentor] and params[:mentor][:designation]) ? params[:mentor][:designation] :( @mentor.education_type == 'research' ? @mentor.designation : "")%>
+        <%= validation_error(@mentor.errors["designation"]) %>
+      </div>
+      <div>
+        <%= f.label :qualification %>
+        <%= f.text_field :qualification, :value => (params[:mentor] and params[:mentor][:qualification]) ? params[:mentor][:qualification] :( @mentor.education_type == 'research' ? @mentor.qualification : "")%>
+        <%= validation_error(@mentor.errors["qualification"]) %>
+      </div>
+      <div>
+        <%= f.label :city %>
+        <%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'research' ? @mentor.city : "")%>
+        <%= validation_error(@mentor.errors["city"]) %>
+      </div>
+      <div>
+        <%= f.label :degree %>
+        <%= f.select :degree, %w{MCA MBA Others}, :value => (params[:mentor] and params[:mentor][:degree]) ? params[:mentor][:degree] :( @mentor.education_type == 'research' ? @mentor.degree : "")%>
+        <%= validation_error(@mentor.errors["degree"]) %>
+      </div>
+      <div>
+        <%= f.label :stream, "Stream/field" %>
+        <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'research' ? @mentor.stream : "")%>
+        <%= validation_error(@mentor.errors["stream"]) %>
+      </div>
+      <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Those people who are doing some kind of research in any field and would like to share knowledge with others, falls under this category</p>-->
+      <h1><%= link_to_function image_tag("question_mark.jpeg"), "mentor_research_help()" %></h1>
+      <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+    </div>
+  <% elsif education_type == 'professional' %>
+    <div id="professional_form">
+      <b> Details </b>
+      <div>
+        <%= f.label :company %>
+        <%= f.text_field :college_name, :value => (params[:mentor] and params[:mentor][:college_name]) ? params[:mentor][:college_name] :( @mentor.education_type == 'professional' ? @mentor.college_name : "")%>
+        <%= validation_error(@mentor.errors["college_name"]) %>
+      </div>
+      <div>
+        <%= f.label :designation %>
+        <%= f.text_field :designation, :value => (params[:mentor] and params[:mentor][:designation]) ? params[:mentor][:designation] :( @mentor.education_type == 'professional' ? @mentor.designation : "")%>
+        <%= validation_error(@mentor.errors["designation"]) %>
+      </div>
+      <div>
+        <%= f.label :qualification %>
+        <%= f.text_field :qualification, :value => (params[:mentor] and params[:mentor][:qualification]) ? params[:mentor][:qualification] :( @mentor.education_type == 'professional' ? @mentor.qualification : "")%>
+        <%= validation_error(@mentor.errors["qualification"]) %>
+      </div>
+      <div>
+        <%= f.label :city %>
+        <%= f.text_field :city, :value => (params[:mentor] and params[:mentor][:city]) ? params[:mentor][:city] :( @mentor.education_type == 'professional' ? @mentor.city : "")%>
+        <%= validation_error(@mentor.errors["city"]) %>
+      </div>
+      <div>
+        <%= f.label :degree %>
+        <%= f.select :degree, %w{MCA MBA Others}, :value => (params[:mentor] and params[:mentor][:degree]) ? params[:mentor][:degree] :( @mentor.education_type == 'professional' ? @mentor.degree : "")%>
+        <%= validation_error(@mentor.errors["degree"]) %>
+      </div>
+      <div>
+        <%= f.label :stream, "Stream/field" %>
+        <%= f.text_field :stream, :value => (params[:mentor] and params[:mentor][:stream]) ? params[:mentor][:stream] :( @mentor.education_type == 'professional' ? @mentor.stream : "")%>
+        <%= validation_error(@mentor.errors["stream"]) %>
+      </div>
+      <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Any kind of professional in any field and would like to share knowledge with others, fall under this category</p>-->
+      <h1><%= link_to_function image_tag("question_mark.jpeg"), "mentor_professional_help()" %></h1>
+      <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+    </div>
+  <% elsif education_type == 'good' %>
+    <div id="good_form">
+      <b> Details </b>
+      <div>
+        <%= f.label :education %>
+        <%= f.text_field :education, :value => (params[:mentor] and params[:mentor][:education]) ? params[:mentor][:education] :( @mentor.education_type == 'good' ? @mentor.education : "")%>
+        <%= validation_error(@mentor.errors["education"]) %>
+      </div>
+      <div>
+        <%= f.label :occupation%>
+        <%= f.text_field :occupation, :value => (params[:mentor] and params[:mentor][:occupation]) ? params[:mentor][:occupation] :( @mentor.education_type == 'good' ? @mentor.occupation : "")%>
+        <%= validation_error(@mentor.errors["occupation"]) %>
+      </div>
+      <div>
+        <%= f.label :work, "Work Area" %>
+        <%= f.text_field :work, :value => (params[:mentor] and params[:mentor][:work]) ? params[:mentor][:work] :( @mentor.education_type == 'good' ? @mentor.work : "")%>
+        <%= validation_error(@mentor.errors["work"]) %>
+      </div>
+      <div>
+        <%= f.label :location %>
+        <%= f.text_field :location, :value => (params[:mentor] and params[:mentor][:location]) ? params[:mentor][:location] :( @mentor.education_type == 'good' ? @mentor.location : "")%>
+        <%= validation_error(@mentor.errors["location"]) %>
+      </div>
+      <div>
+        <%= f.label :good, "Good In" %>
+        <%= f.text_area :corexp , :rows => 2, :cols => 30, :value => (params[:mentor] and params[:mentor][:corexp]) ? params[:mentor][:corexp] :( @mentor.education_type == 'good' ? @mentor.corexp : "")%>
+        <%= validation_error(@mentor.errors["corexp"]) %>
+      </div>
+      <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;This category is interesting.if you feel you are good in anything(doesn't matter it's cooking, music, art, language, calligraphy, etc), regardless of educational background and would like to share knowledge and experience with others, falls under this category </p>-->
+      <h1><%= link_to_function image_tag("question_mark.jpeg"), "mentor_others_help()" %></h1>
+      <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+    </div>
+  <% else %>
+    <p> Select any one category, you fit best, as per you teaching your going to offer others.<br/>
+      <b>Note: </b> You can only select one category per account. if you would like go for more than one category, you need to make a separate account for each category.(as per current feature of the site)
+    </p>
+  <%end%>
+<%end%>

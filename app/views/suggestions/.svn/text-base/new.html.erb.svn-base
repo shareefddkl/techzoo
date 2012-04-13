@@ -1,0 +1,41 @@
+<div id="default_page">
+  <div id="default_sub_page">
+    <h4 style="margin: 0px 6px 21px; font-size: 18px;color: #545353;">Feedbacks & Suggestions</h4>
+    <%= form_for @suggestion do |f| %>
+      <table style="margin: 0 93px 0px;">
+        <tr>
+          <td><%= f.text_field :email, :style => "background:#545151;color: white; -moz-border-radius: 3px;   width: 223px;    height: 23.2px;",
+              :value => 'Email id',
+              :onfocus => "if(this.getValue()=='Email id'){this.clear();this.style.color = '#FFFFFF';}",
+              :onblur => "if(this.getValue()==''){this.setValue('Email id');this.style.color = '#FFFFFF';}" %></td>
+          <td> <%= validation_error(@suggestion.errors["email"]) %></td>
+        </tr>
+        <tr>
+          <td><%= f.text_field :subject, :style => "background:#545151;color: white; -moz-border-radius: 3px;   width: 223px;    height: 23.2px;",
+              :value => 'Subject',
+              :onfocus => "if(this.getValue()=='Subject'){this.clear();this.style.color = '#FFFFFF';}",
+              :onblur => "if(this.getValue()==''){this.setValue('Subject');this.style.color = '#FFFFFF';}" %></td>
+          <td> <%= validation_error(@suggestion.errors["subject"]) %></td>
+        </tr>
+        <tr>
+          <td><%= f.select :suggestion_type, [["Select", "", {:class => "drop_down_bg"}],["Feedback", "feedback", {:class => "drop_down_bg"}], ["Suggestion","suggestion", {:class => "drop_down_bg"}]],{} ,:style=>"background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;font-size: 18px; padding: 0 3px;"%>
+  <%#= f.select :suggestion_type, [["Select", "", {:class => "drop_down_bg"}],["Feedback", "feedback", {:class => "drop_down_bg"}], ["Suggestion","suggestion", {:class => "drop_down_bg"}],['select', {:disabled => 'restricted'}, {:class => "drop_down_bg"}]],{} ,:style=>"background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;font-size: 18px; padding: 0 3px;"%></td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td><%= f.text_area :body,  :style => "background:#545151;color: white;    width:360px;    height:162px;-moz-border-radius: 5px;",
+              :value => 'Text',
+              :onfocus => "if(this.getValue()=='Text'){this.clear();this.style.color = '#FFFFFF';}",
+              :onblur => "if(this.getValue()==''){this.setValue('Text');this.style.color = '#FFFFFF';}" %></td>
+          <td> <%= validation_error(@suggestion.errors["body"]) %></td>
+        </tr>
+        <tr>
+          <td><button type="submit"  style="background: none; border: none;height: 30px;width: 111px;"><%=  image_tag('submit button_1.png') %></button>
+          </td>
+          <td> </td>
+        </tr>
+      </table>
+    <%end%>
+  </div>
+</div>
+<%#= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 15px 0px 17px;    width: 980px;") %>

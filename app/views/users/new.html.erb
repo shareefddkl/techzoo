@@ -1,0 +1,70 @@
+<div id="registor_form">
+  <div style='float: right; margin-top: -51px;margin-right:-46px;'>
+    <%=image_tag("close button.png", :style => "cursor: pointer", :border =>0, :onclick => "hide_popup();")%>
+  </div>
+  <%= form_for @user, :remote => true do |f| %>
+    <div id="fields">
+      <div id="registor_error" style="color:red"></div>
+      <div id="registor_notice" style="color:green; font-size: 10px;"></div>
+      <div style="float:left; padding-left: 2em; color: black;">I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.radio_button :user_type, 'student' %> Learner <%= f.radio_button :user_type, 'mentor' %> Mentor </div>
+      <div style="margin-right: -32px;">
+  <%#= f.label :email, 'Email Id*:' %>
+  <%#= f.text_field :email, :type => "email", :placeholder => "john@example.com"  %>
+        <%= f.text_field :email,
+          :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 4px 0 -10px;   height: 23.2px;",
+          :value => 'User Email',
+          :onfocus => "if(this.getValue()=='User Email'){this.clear();this.style.color = '#3F3F3F';}",
+          :onblur => "if(this.getValue()==''){this.setValue('User Email');this.style.color = '#3F3F3F';}" %>
+  <%#= f.text_field :email, "Username",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;" %>
+        <%= validation_error(@user.errors["email"]) %>
+      </div>
+      <div style="margin-right: -32px;">
+        <div id="current_password_text">
+          <%= text_field_tag :placeholder, "Password",
+            :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 14px 11px 0;   height: 23.2px;",
+            :onfocus => "current_setPass();"
+        %>
+        </div>
+        <div id="current_password" style="display: none;">
+          <%= f.password_field :password, :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 14px 11px 0;   height: 23.2px;",
+            :value => '',
+            :onblur => "current_checkPass();" %>
+        </div>
+  <%#= f.label :password, 'Password*:' %>
+  <%#= f.password_field :password,:style => "color:#3F3F3F;",
+  :value => '*********',
+  :onfocus => "if(this.getValue()=='*********'){this.clear();this.style.color = '#3F3F3F;';}",
+  :onblur => "if(this.getValue()==''){this.setValue('*********');this.style.color = '#3F3F3F;';}" %>
+        <%= validation_error(@user.errors["password"]) %>
+      </div>
+      <div style="margin-right: -32px;">
+        <div id="confirm_password_text">
+          <%= text_field_tag :placeholder, "Retype Password",
+            :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 8px 10px 0;   height: 23.2px;",
+            :onfocus => "confirm_setPass();"
+        %>
+        </div>
+        <div id="confirm_password" style="display: none;">
+          <%= f.password_field :password_confirmation, :style => "color:#3F3F3F;-moz-border-radius: 12px;background-color: white;    width: 223px; margin: 8px 10px 0;   height: 23.2px;",
+            :value => '',
+            :onblur => "conform_checkPass();" %>
+        </div>
+  <%#= f.label :password_confirmation, 'Password Confirmation*:'%>
+  <%#= f.password_field :password_confirmation,:style => "color:#3F3F3F;",
+  :value => '*********',
+  :onfocus => "if(this.getValue()=='*********'){this.clear();this.style.color = '##3F3F3F;';}",
+  :onblur => "if(this.getValue()==''){this.setValue('*********');this.style.color = '##3F3F3F;';}" %>
+        <%= validation_error(@user.errors["password_confirmation"]) %>
+      </div><br/>
+      <div style="margin: -7px 28px 7px -25px; font-size: 9px; width: 174px;color: black; ">
+        <%=f.check_box :terms_of_service %>I agree with<%=link_to 'Terms and Conditons',terms_defaults_path, :onclick => "window.open('#{BASE_URL}/defaults/terms');return false;"%>
+        <%= validation_error(@user.errors["i_agree"]) %>
+      </div>
+    </div>
+    <div id="action">
+      <button type="submit"><%=  "Register me" %></button>
+  <%#= f.submit "Register me", :type => :image%>
+  <%#= link_to "Cancel", login_path %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,9 @@
+<div id="default_page">
+  <div id="default_sub_page">
+    <div style="color: #CF5810;font-size: 40px;font-style: italic;padding-left: 0em;">
+      DEMO<p style="color :#ADAEAF;float: right;font-size: 17px;padding-right: 7em;"><%= link_to "Back to Home", home_index_path,:class => "demo_button"%> </p><br />
+
+    </div>
+  </div>
+</div>
+<%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 15px 0px 17px;    width: 980px;") %>

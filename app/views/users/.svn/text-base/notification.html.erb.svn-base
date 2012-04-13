@@ -1,0 +1,47 @@
+<div id="background_form">
+  <div id="sub_account_navigation">
+    <% @setting_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h2 style=" width: 640px; height: 30px; margin: 5px 16px;padding: 0 0 4px; font-size: 16px; color: #4F4D4D; ">Notification Settings</h2><br/>
+    <div style="margin:-20px 29px;font-size: 15px; color: #6D6C6C;">
+      <%= form_for current_user, :url => update_notification_users_path(current_user), :method => :put do |f| %>
+        <p style="font-size: 16px; color: #4F4D4D;">New Course Notification</p>
+        <div style="margin: -6px 42px 0px;">
+          Every New Course <%= f.select :every_new_course,[['No','no', {:class => "drop_down_bg"}],['Yes', 'yes', {:class => "drop_down_bg"}]],{},:onchange => "display_categories(this.value)" , :style=>"background:#545151;color: white;-moz-border-radius: 4px;width: 80px;height: 30px;font-size: 18px; padding: 0 3px;"%><br/><br/>
+          <div id="categories" style="display: none; -moz-border-radius: 10px; background-color: white;background-color: white;    left: 842px;    margin: -36px -6px;    padding: 7px;   position: absolute;    width: 153px;">
+            <input type="radio"  name="user[categories_type]"  value="in_school"  /> I am in school
+            <br />
+            <input type="radio"  name="user[categories_type]" value="college"  /> College student
+            <br />
+            <input type="radio" name="user[categories_type]" value="pg"  /> PG student
+            <br />
+            <input type="radio"  name="user[categories_type]" value="phd"  /> Ph.D student
+            <br />
+            <input type="radio"  name="user[categories_type]"  /> Professional
+            <br />
+            <input type="radio"  name="user[categories_type]" value="others"  /> Others
+          </div>
+          Course related to <%= f.text_field :course_related, :style => "background:#545151;color: white; -moz-border-radius: 3px;   width: 150px;    height: 23.2px;",
+            :value => "#{params[:course_related] || 'Enter key word'}",
+            :onfocus => "if(this.getValue()=='Enter key word'){this.clear();this.style.color = '#FFFFFF';}",
+            :onblur => "if(this.getValue()==''){this.setValue('Enter key word');this.style.color = '#FFFFFF';}"  %>
+        </div>
+        <p style="font-size: 16px; color: #4F4D4D;">Other Course Related Notification</p>
+        <div style="margin: -6px 42px 0px;">
+          Course acceptance/Rejection <%= f.select :course_accept_reject,[['No','no', {:class => "drop_down_bg"}],['Yes', 'yes', {:class => "drop_down_bg"}]],{}, :style=>"background:#545151;color: white;-moz-border-radius: 4px;width: 80px;height: 30px;font-size: 18px; padding: 0 3px;" %>
+        </div>
+        <button type="submit" style=" background: none repeat scroll 0 0 transparent;
+                border: medium none;
+                float: none;
+                height: 20px;
+                position: absolute;
+                right: 346px;
+                top: 266px;
+                width: 80px;"><%=  image_tag('save button.png') %></button>
+      <%end%>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

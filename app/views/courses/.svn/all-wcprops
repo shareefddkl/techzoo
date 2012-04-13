@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/techzoo/!svn/ver/274/trunk/app/views/courses
+END
+course_apply.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/272/trunk/app/views/courses/course_apply.html.erb
+END
+student_course.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/258/trunk/app/views/courses/student_course.html.erb
+END
+_student_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/274/trunk/app/views/courses/_student_list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/253/trunk/app/views/courses/show.html.erb
+END
+_current.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/271/trunk/app/views/courses/_current.html.erb
+END
+mentor_course.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/253/trunk/app/views/courses/mentor_course.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/253/trunk/app/views/courses/edit.html.erb
+END
+course_design.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/195/trunk/app/views/courses/course_design.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/251/trunk/app/views/courses/new.html.erb
+END
+course_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/273/trunk/app/views/courses/course_view.html.erb
+END
+student_course_display.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/techzoo/!svn/ver/258/trunk/app/views/courses/student_course_display.html.erb
+END
+accept.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/147/trunk/app/views/courses/accept.html.erb
+END
+_accept_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/254/trunk/app/views/courses/_accept_message.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/273/trunk/app/views/courses/_form.html.erb
+END
+search_result.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/268/trunk/app/views/courses/search_result.html.erb
+END
+_document_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/256/trunk/app/views/courses/_document_fields.html.erb
+END
+_student_current_course.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/techzoo/!svn/ver/274/trunk/app/views/courses/_student_current_course.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/258/trunk/app/views/courses/index.html.erb
+END
+view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/111/trunk/app/views/courses/view.html.erb
+END
+reject.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/147/trunk/app/views/courses/reject.html.erb
+END
+topic.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/274/trunk/app/views/courses/topic.html.erb
+END
+_reject_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/254/trunk/app/views/courses/_reject_message.html.erb
+END
+_course_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/273/trunk/app/views/courses/_course_form.html.erb
+END
+status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/140/trunk/app/views/courses/status.html.erb
+END
+feedback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/256/trunk/app/views/courses/feedback.html.erb
+END
+course_all.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/140/trunk/app/views/courses/course_all.html.erb
+END
+learner.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/272/trunk/app/views/courses/learner.html.erb
+END
+student_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/258/trunk/app/views/courses/student_status.html.erb
+END
+_video_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/256/trunk/app/views/courses/_video_fields.html.erb
+END
+course.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/260/trunk/app/views/courses/course.html.erb
+END
+course_control.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/273/trunk/app/views/courses/course_control.html.erb
+END
+_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/268/trunk/app/views/courses/_search.html.erb
+END

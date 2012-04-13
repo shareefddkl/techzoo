@@ -1,0 +1,12 @@
+<div id="background_form">
+  <table>
+    <tr>
+      <td>
+        <ul>
+        <%= select_tag "student", options_from_collection_for_select(@learner, "id", "first_name"),:prompt => "Select student",:style=>"margin: 10px 12px 0; background:#545151;color: white;-moz-border-radius: 4px;width: 148px;height: 23px;float: left;font-size: 15px; padding: 0 3px;" %>
+       <%= select_tag "category", options_from_collection_for_select(@learner, "id", "education_type"), :prompt => "Select category", :style=>"margin: 10px 12px 0; background:#545151;color: white;-moz-border-radius: 4px;width: 148px;height: 23px;float: left;font-size: 15px; padding: 0 3px;" %>
+        <%= select_tag "strtdate", options_from_collection_for_select(@learner, "id", "created_at"), :prompt => "Select something",:style=>"margin: 10px 12px 0; background:#545151;color: white;-moz-border-radius: 4px;width: 148px;height: 23px;float: left;font-size: 15px; padding: 0 3px;" %>
+        <%= select_tag "enddate", options_from_collection_for_select(@learner, "id", "updated_at"), :prompt => "Select something", :style=>"margin: 10px 12px 0; background:#545151;color: white;-moz-border-radius: 4px;width: 148px;height: 23px;float: left;font-size: 15px; padding: 0 3px;" %>
+        </ul></td></tr></table>&nbsp;&nbsp;&nbsp;&nbsp;
+        <center><button type="submit"><%=  "GO" %></button></center>
+</div>

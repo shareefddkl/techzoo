@@ -1,0 +1,3 @@
+<%= stylesheet_link_tag "chat/base", "chat/layout", "chat/users", "chat/widget" %>
+
+<%= javascript_include_tag "jquery.tmpl.min", "chat/chat", "chat/messages", "chat/users", "chat/widgets" %>

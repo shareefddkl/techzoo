@@ -1,0 +1,16 @@
+<%@ads.each do |ad|%>
+  <%if ad.active == true%>
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><%= ad.title %></td>
+        <td><%= ad.matter %></td>
+        <td></td>
+      </tr>
+    </table>
+  <%end%>
+<%end%>

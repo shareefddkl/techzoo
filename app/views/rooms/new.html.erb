@@ -1,0 +1,17 @@
+<% @message_subtab = true %>
+<table>
+  Course1 Name - Live <br /> <br />
+  Class Timings - <%=   Time.now %> <br /> <br />
+  Current Class Status - On <br /> <br />
+   Course Content <br /> <br />
+  <% form_for(@new_room) do |f| %>
+    Party Name: <%= f.text_field :name %><br/><br/>
+    <%= f.submit %>
+  <% end %>
+  <% @rooms.each do |room| %>
+    <tr>
+      <td align="" width="300px"><a href="/party/<%= room.id %>"><%= room.name %></a></td>
+      <td><%= room.created_at%></td>
+    </tr>
+  <% end %>
+</table>

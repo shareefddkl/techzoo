@@ -1,0 +1,55 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab_tab = true %>
+  </div>
+  <div id="home_sub_form">
+<%#@profile_subtab_tab=true%>
+    <br/> <h2 style=" width: 609px; height: 21px; margin: 6px 5px 1px;padding: 5px 20px; font-size: 18px; color: #FFFFFF;font-style: italic; background-color: #545151;   ">Feedback</h2><br/>
+    <%= form_for @feedback do |f| %>
+      <div id="feedback_form">
+        <img alt="" src="/images/course name and comment.png" style="float:left; margin: 24px -7px -98px;"/>
+        <%=f.select :course_id, current_user.student.courses.map{|course| [course.name, course.id]} %>
+        <p style="margin:10px -5px; font-size: 10px;">Note:Please give the feedback sincerely. This can affect the reputation of Mentor. All fields are mandatory.</p>
+        <%=f.text_area :comment,:rows => 3, :cols => 20%>
+        <%= validation_error(@feedback.errors["comment"]) %>
+      </div>
+      <div id="feedback_sub_form"style=" margin: 21px 15px;">
+        <h1 style="font-size: 18px; font-style: italic; color: #545151;">Ratings</h1>
+        <table style="font-size:12px; color: #6D6B6B;">
+          <tr height="35px">
+            <td>Communication Skill*:</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.select :communication_skills,(1 .. 10)%>/10</td>
+            <%= validation_error(@feedback.errors["communication_skills"]) %>
+          </tr>
+          <tr height="35px">
+            <td>Teaching Skill*:</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.select :teaching_skill,(1 .. 10)%>/10</td>
+            <%= validation_error(@feedback.errors["teaching_skill"]) %>
+          </tr>
+          <tr height="35px">
+            <td>Course Material*:</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.select :course_material,(1 .. 10)%>/10</td>
+            <%= validation_error(@feedback.errors["course_material"]) %>
+          </tr>
+          <tr height="35px">
+            <td>Doubt Clearence*:</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.select :doubt_clearence,(1 .. 10)%>/10</td>
+            <%= validation_error(@feedback.errors["doubt_clearence"]) %>
+          </tr>
+          <tr height="35px">
+            <td>Subject Knowledge*:</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=f.select :subject_knowledge,(1 .. 10)%>/10</td>
+            <%= validation_error(@feedback.errors["subject_knowledge"]) %>
+          </tr>
+          <tr height="70px">
+            <td></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" style="background: none; border: none; "><%=  image_tag('send button.png') %></button>
+</td>
+          </tr>
+        </table>
+      </div>
+    <% end %>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

@@ -1,0 +1,51 @@
+<tr>
+  <td valign="top">
+    <a href="/users/basic">Basic Info</a><br />
+    <a href="/users/picture">Picture</a><br />
+    <a href="/users/education">Education</a><br />
+    <a href="/users/work">Work</a><br />
+    <a href="/users/interest">Interest</a><br />
+  </td>
+
+  <td width="85%">
+    <table>
+      <%=link_to "Personal Details"%>
+      <td>Name:</td>
+      <td><%= current_user.mentor.middle_name %> </td><br />
+      <tr>
+        <td>Date Of Birth:</td>
+        <td><%= current_user.mentor.date_of_birth %> </td>
+      </tr>
+      <tr>
+        <td>Location:</td>
+        <td><%= current_user.mentor.city %>, <%= current_user.mentor.state %>, <%= current_user.mentor.country %></td>
+      </tr>
+      <td><%= link_to "Contact Info" %></td>
+      <tr>
+        <td>Mobile No:</td>
+        <td><%=  current_user.mentor.mobile %> </td>
+      </tr>
+      <tr>
+        <td>LandLine No::</td>
+        <td><%= current_user.mentor.lande_line_no %> </td>
+      </tr>
+      <tr>
+        <td>Email Id:</td>
+        <td><%= current_user.email %> </td>
+      </tr>
+      <tr>
+        <td>Website:</td>
+        <td>www.gmail.com </td>
+      </tr>
+      <%= @user.created_at %>
+      <tr>
+        <td><%= link_to "Education Details" %></td></tr>
+      <tr>
+        <td><%= link_to "Work" %></td>
+      </tr><tr>
+        <td><%= link_to "Interest" %></td>
+
+      </tr>
+    </table>
+  </td>
+</tr>

@@ -1,0 +1,29 @@
+<% form_tag do %>
+<table>
+  <tr>
+    <td>
+    <th>
+      Title
+    </th>
+      <% text_field_tag:title %>
+    </td>
+  </tr>
+  <td align="right">
+   <% submit_tag "save" %>
+  </td>
+  <tr>
+    <td>
+    <th>
+      Description:
+    </th>
+    <% text_area_tag:description %>
+    </td>
+    <td>
+      <% link_to 'Preview' %>
+    </td>
+    <br />
+    <br />
+    <% link_to 'publish' %>
+  </tr>
+ </table>
+<%  end %>

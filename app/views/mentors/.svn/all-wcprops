@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/techzoo/!svn/ver/274/trunk/app/views/mentors
+END
+_mentor_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/272/trunk/app/views/mentors/_mentor_message.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/270/trunk/app/views/mentors/index.html.erb
+END
+invite_friends.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/264/trunk/app/views/mentors/invite_friends.html.erb
+END
+education.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/254/trunk/app/views/mentors/education.html.erb
+END
+_education_profile_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/techzoo/!svn/ver/265/trunk/app/views/mentors/_education_profile_form.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/270/trunk/app/views/mentors/show.html.erb
+END
+work.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/253/trunk/app/views/mentors/work.html.erb
+END
+feedback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/199/trunk/app/views/mentors/feedback.html.erb
+END
+other_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/152/trunk/app/views/mentors/other_message.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/70/trunk/app/views/mentors/edit.html.erb
+END
+_mentor_current_course.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/techzoo/!svn/ver/271/trunk/app/views/mentors/_mentor_current_course.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/269/trunk/app/views/mentors/_tabs.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/70/trunk/app/views/mentors/new.html.erb
+END
+_education_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/techzoo/!svn/ver/274/trunk/app/views/mentors/_education_profile.html.erb
+END
+education_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/techzoo/!svn/ver/274/trunk/app/views/mentors/education_profile.html.erb
+END
+basic_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/274/trunk/app/views/mentors/basic_info.html.erb
+END
+interest.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/274/trunk/app/views/mentors/interest.html.erb
+END
+_education_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/240/trunk/app/views/mentors/_education_form.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/techzoo/!svn/ver/272/trunk/app/views/mentors/_form.html.erb
+END
+others.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/264/trunk/app/views/mentors/others.html.erb
+END
+_invite_others_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/techzoo/!svn/ver/264/trunk/app/views/mentors/_invite_others_form.html.erb
+END

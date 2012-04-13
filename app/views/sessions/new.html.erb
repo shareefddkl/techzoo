@@ -1,0 +1,62 @@
+<%#=image_tag("close button.png", :style => "cursor: pointer")%>
+<div id="user_login_form">
+  <div style='float: right; margin-top: -43px;margin-right:-35px'>
+    <%=image_tag("close button.png", :style => "cursor: pointer", :border =>0, :onclick => "hide_popup();")%>
+  </div>
+  <%= form_tag sessions_path, :remote => true do  %>
+    <div id="fields">
+      <div id="login_error" style="color: red;"></div>
+      <div>
+        <!--<label for = "name">Email*:</label>-->
+  <%#= text_field_tag :email, params[:email] %>
+        <%= text_field_tag(:email, "User Email",:style => "color:#3F3F3F;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %>
+      </div>
+      <div id="login_password_text">
+        <%= text_field_tag :placeholder, "Password",
+          :style => "color:#3F3F3F;-moz-border-radius: 10px;background-color: white;    width: 211px; margin: 4px 3px 0;   height: 29px;",
+          :onfocus => "login_setPass();"
+      %>
+      </div>
+      <div id="login_password" style="display: none;">
+        <%= password_field_tag :password,"", :style => "color:#3F3F3F;-moz-border-radius: 10px;background-color: white;    width: 211px; margin: 4px 3px 0;   height: 29px;",
+          :onblur => "login_checkPass();" %>
+      </div>
+      <!-- <#label for = "password">Password:<#/label>-->
+  <%#= password_field_tag 'password', '', :size => 20,:height => 120%>
+  <%#= password_field_tag(:password, "******",:style => "color:#3F3F3F;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %>
+    </div>
+    <div id="action">
+       <%#= submit_tag "Sign-in", :type => :image%>
+      <button type="submit"><%=  "Sign-in" %></button>
+    </div>
+    <p style="width: 116px; padding-right: 121px;  margin: 13px 0 0 -7px;color: black;"><%= radio_button_tag "remember_me", "" , false %>Remember Me </p>
+    <p style="margin-left: -14px; width:250px; font-size: 8.7px;"><%= link_to_function "Forgotten Password?", "show_forgot_password()"  %>/<%= link_to_function "Not received activation detail?" %></p>
+  <% end %>
+</div>
+<div id="forgot_form">
+  <%= form_tag send_reset_password_instructions_users_path, :remote => true, :method => :post do %>
+    <table width="30%" cellpadding="5px" cellspacing="0px" border="0" style="margin-top: 30%;font-size: 15px;background-color: #F7F7F7;-moz-border-radius: 12px;padding: 3px;">
+      <tr>
+        <td width="20px" style="margin:-9px 220px; position: absolute;">
+          <%=image_tag("close button.png", :style => "cursor: pointer", :border =>0, :onclick => "hide_popup();")%>
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color:#FC870A;-moz-border-radius: 0px 0px 12px 12px;text-align: center;margin:-3px 78px;;color: black; position: absolute;">
+          Reset Password
+        </td>
+      </tr>
+      <div id="forgot_error" style="color:red"></div>
+      <tr style="background-color:#FFFFFF;color:black;height: 20px;">
+        <td> <%= text_field_tag(:email, "Enter Email",:style => "color:#3F3F3F;-moz-border-radius: 10px;background-color: white;    width: 211px; margin: 48px 14px 36px;   height: 29px;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %></td>
+
+      </tr>
+      <tr>
+        <td style="background-color:#FFFFFF;color:black;height: 20px;">
+         <%#= submit_tag "Reset", :type => :image, :class => "reset_button"%>
+          <button type="submit" class = "reset_button"><%=  "Reset" %></button>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>

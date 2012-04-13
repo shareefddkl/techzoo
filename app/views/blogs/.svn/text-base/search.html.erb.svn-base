@@ -1,0 +1,23 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @blog_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <%= form_tag search_blogs_path, :method => 'get'  do %>
+      <%= text_field_tag :query, params[:query], :style => "margin: 33px 185px 0; background:#545151;color: white;-moz-border-radius: 5px;width: 281px;height: 24px;float: right;" %>
+      <button type="submit"  style="background: none; border: none; float: right;margin: -31px 74px 0;"><%=  image_tag('search button.png') %></button>
+    <%end%>
+    <br/> <div style="margin: 76px 49px 10px;">
+      <% if @contents && params[:query] %>
+        <br/><h1 style="margin: -9px -9px; font-size: 18px; color:#545151;" >Search Result</h1>
+        <%=image_tag("line (separater).png",  :style=>"margin: 9px -9px 9px") %>
+        <%@contents.each do |content|%>
+          <%= link_to content.title, "#{BLOG_URL}/#{content.published_at.strftime('%Y/%m/%d')}/#{content.title.downcase.gsub(/ /,'-')}"%><br/>
+          <%= content.body.gsub(/<\/?[^>]*>/, "").slice(0..100) %>...<br/><br/>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

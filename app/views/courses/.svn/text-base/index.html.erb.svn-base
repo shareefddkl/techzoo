@@ -1,0 +1,84 @@
+<div id="background_form">
+  <div id="sub_course_navigation">
+    <% @course_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <!--<h1 style="float: left; margin: 27px 20px -35px; font-size: 16px;color: #545353;">Course List</h1>-->
+    <% if current_user.user_type == 'mentor' %>
+      <h4 style="float: left; margin: 27px 23px 20px; font-size: 16px;color: #545353;">Published Courses</h4>
+      <table width="94%" border="0" cellpadding="8px" cellspacing="0" style=" background-color: white;margin: -5px 0 0 19px;float: left; ">
+        <tr height ="40px" style="background-color:#333232; color: white; font-size: 14px;font-family:'Liberation Sans';">
+          <th class="table_border">Name</th>
+          <!--<th>Course Language</th>-->
+          <th class="table_border">Duration</th>
+          <th class="table_border">Category</th>
+          <th class="table_border">Strength</th>
+          <th class="table_border">Start Date</th>
+          <th class="table_border">End Date</th>
+          <th class="table_border">Course fee</th>
+          <th class="table_border">Status</th>
+        </tr>
+        <% for course in @courses %>
+          <% if course.status == 'published'%>
+            <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" height ="40px" style="font-size:11px; margin: 1px;color: #686565;font-family:'Liberation Sans';">
+              <td class="table_border">&nbsp;&nbsp;<%=link_to course.name , course_path(course)%></td>
+              <!--<td><%#= course.language %></td>-->
+              <td class="table_border">&nbsp;&nbsp;
+                <% if((((course.end_date-course.start_date).to_i)/30)>=1) %>
+                  <%=(((course.end_date-course.start_date).to_i)/30) %>months
+                <% else %>
+                <% end %>
+                <%=(((course.end_date-course.start_date).to_i)%30) %>days
+              </td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.user.mentor.education_type %></td>
+              <td class="table_border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= course.strength %></td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.start_date %></td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.end_date %></td>
+              <td class="table_border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= course.course_fee %></td>
+              <td>&nbsp;&nbsp;<%= course.end_date < Date.today ? 'close' : 'open' %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </table>
+      <h4 style="float: left; margin: 27px 23px 20px; font-size: 16px;color: #545353;">Unpublished Courses</h4>
+      <table width="94%" border="0" cellpadding="8px" cellspacing="0" style=" background-color: white;margin: -5px 0 0 19px;float: left; ">
+         <tr height ="40px" style="background-color:#333232; color: white; font-size: 14px;font-family:'Liberation Sans';">
+          <th class="table_border">Name</th>
+          <!--<th>Course Language</th>-->
+          <th class="table_border">Duration</th>
+          <th class="table_border">Category</th>
+          <th class="table_border">Strength</th>
+          <th class="table_border">Start Date</th>
+          <th class="table_border">End Date</th>
+          <th class="table_border">Course fee</th>
+          <th class="table_border">Status</th>
+        </tr>
+        <% for course in @courses %>
+          <% if course.status == 'unpublished'%>
+            <tr class="<%= cycle('list-line-odd', 'list-line-even') %>" height ="40px" style="font-size:11px; margin: 1px;color: #686565;font-family:'Liberation Sans';">
+              <td class="table_border">&nbsp;<%=link_to course.name , edit_course_path(course)%></td>
+              <!--<td><%#= course.language %></td>-->
+              <td class="table_border">&nbsp;&nbsp;
+                <% if((((course.end_date-course.start_date).to_i)/30)>=1) %>
+                  <%=(((course.end_date-course.start_date).to_i)/30) %>months
+                <% else %>
+                <% end %>
+                <%=(((course.end_date-course.start_date).to_i)%30) %>days
+              </td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.user.mentor.education_type %></td>
+              <td class="table_border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= course.strength %></td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.start_date %></td>
+              <td class="table_border">&nbsp;&nbsp;<%= course.end_date %></td>
+              <td class="table_border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= course.course_fee %></td>
+              <td>&nbsp;&nbsp;<% if course.status == 'unpublished' %>pending<% end %> </td>
+            </tr>
+          <% else %>
+          <% end %>
+        <% end %>
+      </table>
+    <% end %>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+

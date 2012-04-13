@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/techzoo/!svn/ver/128/trunk/log
+END
+test.log
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/techzoo/!svn/ver/1/trunk/log/test.log
+END
+development.log
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/techzoo/!svn/ver/128/trunk/log/development.log
+END
+searchd.development.pid
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/techzoo/!svn/ver/128/trunk/log/searchd.development.pid
+END
+production.log
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/techzoo/!svn/ver/1/trunk/log/production.log
+END
+server.log
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/techzoo/!svn/ver/1/trunk/log/server.log
+END
+searchd.log
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/techzoo/!svn/ver/128/trunk/log/searchd.log
+END
+searchd.query.log
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/128/trunk/log/searchd.query.log
+END

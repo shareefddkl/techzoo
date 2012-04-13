@@ -1,0 +1,307 @@
+<div id="background_form" style="clear: both;">
+  <div id="sub_navigation">
+    <% @profile_subtab = true %>
+  </div>
+  <div style="left: 898px;    position: absolute;    top: 283px; "><%= image_tag(current_user.avatar.url(:original), :style=>"height: 112px;    width: 113px;") %></div>
+  <div style="margin-top: 2%; margin-left: 7.3% ;
+       background: url('/images/form bg.png');width: 660px; height: 99%;">
+    <table id="profile_table" width="649px;" cellpadding="6px" cellspacing="2px" border="0" style="margin: 0 5px;border-collapse: collapse;font-size: 16px; color: #555555;">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr  style="background-color: rgb(84, 81, 81);font-style:italic; color:white; -moz-border-radius: 10px;">
+
+        <td><b style="">Personal Details</b>
+        </td>
+        <td><b style="float:right; margin: 0 50px;"><%=current_user.account_id%></b></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;" width ="30%">Name:</td>
+        <td><%= current_user.display_name  %> </td><!--<td style="padding-left: 42em" valign="top"> <%#= image_tag current_user.avatar.url(:small) %></td>--></tr>
+      <tr>
+        <td style="font-weight: bold;">Date Of Birth:</td>
+        <td><%= current_user.mentor.date_of_birth %> </td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Location:</td>
+        <td><%= current_user.mentor.city %>, <%= current_user.mentor.state %>, <%= current_user.mentor.country %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr  style="background-color: rgb(84, 81, 81);font-style:italic; color:white;height: 20px;padding: 1px;">
+        <td><b style="">Contact Info</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <%if current_user.mentor.mobile?%>
+        <tr>
+          <td style="font-weight: bold;">Mobile No:</td>
+          <td><%=  current_user.mentor.mobile %> </td>
+        </tr>
+      <%end%>
+      <% if current_user.mentor.lande_line_no? %>
+        <tr>
+          <td style="font-weight: bold;">LandLine No:</td>
+          <td><%= current_user.mentor.lande_line_no %> </td>
+        </tr>
+      <%end%>
+      <tr>
+        <td style="font-weight: bold;">Email Id:</td>
+        <td><%= current_user.email %> </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <!--<%# if current_user.mentor.college_name? || current_user.mentor.standard? || current_user.mentor.board? || current_user.mentor.university? || current_user.mentor.degree? || current_user.mentor.stream? || current_user.mentor.designation? || current_user.mentor.qualification? || current_user.mentor.corexp? || current_user.mentor.education? || current_user.mentor.occupation? || current_user.mentor.work? || current_user.mentor.location?%>-->
+      <tr style="background-color: rgb(84, 81, 81);font-style:italic; color:white;padding: 1px;">
+        <td><b>Education Details</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <%  if current_user.mentor.education_type == 'professor' %>
+        <tr>
+          <td style="font-weight: bold;">College Name:</td>
+          <td><%= current_user.mentor.college_name %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">University:</td>
+          <td><%= current_user.mentor.university %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City:</td>
+          <td><%= current_user.mentor.city %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Board:</td>
+          <td><%= current_user.mentor.board %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Stream:</td>
+          <td><%= current_user.mentor.stream %></td>
+        </tr>
+      <%  elsif current_user.mentor.education_type == 'school' %>
+        <tr>
+          <td style="font-weight: bold;">School Name:</td>
+          <td><%= current_user.mentor.college_name %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Class:</td>
+          <td><%= current_user.mentor.standard %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City:</td>
+          <td><%= current_user.mentor.city %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Board:</td>
+          <td><%= current_user.mentor.board %></td>
+        </tr>
+      <%  elsif current_user.mentor.education_type == 'corporate' %>
+        <tr>
+          <td style="font-weight: bold;">Corporate Exp</td>
+          <td><%= current_user.mentor.corexp %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Qualification</td>
+          <td><%= current_user.mentor.qualification %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City:</td>
+          <td><%= current_user.mentor.city %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Degree:</td>
+          <td><%= current_user.mentor.degree %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Stream:</td>
+          <td><%= current_user.mentor.stream %></td>
+        </tr>
+      <%  elsif current_user.mentor.education_type == 'research' %>
+        <tr>
+          <td style="font-weight: bold;">Company:</td>
+          <td><%= current_user.mentor.college_name %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Designation:</td>
+          <td><%= current_user.mentor.designation %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Qualification</td>
+          <td><%= current_user.mentor.qualification %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City:</td>
+          <td><%= current_user.mentor.city %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Degree:</td>
+          <td><%= current_user.mentor.degree %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Stream:</td>
+          <td><%= current_user.mentor.stream %></td>
+        </tr>
+      <%  elsif current_user.mentor.education_type == 'professional' %>
+        <tr>
+          <td style="font-weight: bold;">Company:</td>
+          <td><%= current_user.mentor.college_name %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Designation:</td>
+          <td><%= current_user.mentor.designation %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Qualification</td>
+          <td><%= current_user.mentor.qualification %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City:</td>
+          <td><%= current_user.mentor.city %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Degree:</td>
+          <td><%= current_user.mentor.degree %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Stream:</td>
+          <td><%= current_user.mentor.stream %></td>
+        </tr>
+      <% elsif current_user.mentor.education_type == 'good' %>
+        <tr>
+          <td style="font-weight: bold;">Education:</td>
+          <td><%= current_user.mentor.education %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Occupation:</td>
+          <td><%= current_user.mentor.occupation%></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Work Area</td>
+          <td><%= current_user.mentor.work %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Location</td>
+          <td><%= current_user.mentor.location %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Good In</td>
+          <td><%= current_user.mentor.good %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <% if current_user.mentor.employer? || current_user.mentor.working? || current_user.mentor.more_work_details? || current_user.mentor.research_paper? || current_user.mentor.research_work? || current_user.mentor.misc? %>
+        <tr style="background-color: rgb(84, 81, 81);font-style:italic; color:white;padding: 1px;">
+          <td><b>Work Details</b></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      <% end %>
+      <%  if current_user.mentor.employer? %>
+        <tr>
+          <td style="font-weight: bold;">Employer:</td>
+          <td><%= current_user.mentor.employer %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if current_user.mentor.working? %>
+        <tr>
+          <td style="font-weight: bold;">Designation:</td>
+          <td><%= current_user.mentor.working %></td>
+        </tr>
+      <% else %>
+
+      <% end %>
+      <% if current_user.mentor.more_work_details? %>
+        <tr>
+          <td style="font-weight: bold;">More Work:</td>
+          <td><%= current_user.mentor.more_work_details %></td>
+        </tr>
+      <% else %>
+
+      <% end %>
+      <% if current_user.mentor.research_paper? %>
+        <tr>
+          <td style="font-weight: bold;">Research Paper:</td>
+          <td><%= current_user.mentor.research_paper %></td>
+        </tr>
+      <% else %>
+
+      <% end %>
+      <% if current_user.mentor.research_work? %>
+        <tr>
+          <td style="font-weight: bold;">Research Work:</td>
+          <td><%= current_user.mentor.research_work %></td>
+        </tr>
+      <% else %>
+
+      <% end %>
+      <% if current_user.mentor.misc? %>
+        <tr>
+          <td style="font-weight: bold;">Misc:</td>
+          <td><%= current_user.mentor.misc %></td>
+        </tr>
+      <% else %>
+
+      <% end %>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <% if current_user.mentor.technical? || current_user.mentor.nontechnical? %>
+        <tr style="background-color: rgb(84, 81, 81);font-style:italic; color:white;padding: 1px;">
+          <td><b style="">Interest</b></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      <% end %>
+      <%  if current_user.mentor.technical? %>
+        <tr>
+          <td style="font-weight: bold;">Technical:</td>
+          <td><%= current_user.mentor.technical %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if current_user.mentor.nontechnical? %>
+        <tr>
+          <td style="font-weight: bold;">Non-Technical:</td>
+          <td><%= current_user.mentor.nontechnical %></td>
+        </tr>
+      <% else %>
+      <% end %>
+    </table>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;
+  left: 214px;
+  position: absolute;
+  top: 1305px;
+  width: 977px;"   ) %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

@@ -1,0 +1,38 @@
+<%#=image_tag("close button.png", :style => "cursor: pointer")%>
+<div id="user_login_form">
+  <div style='float: right; margin-top: -43px;margin-right:-35px'>
+    <%=image_tag("close button.png", :style => "cursor: pointer", :border =>0, :onclick => "hide_popup();")%>
+  </div>
+  <%= form_tag sessions_path, :remote => true do  %>
+    <div id="fields">
+      <div id="login_error" style="color: red;"></div>
+      <div>
+        <!--<label for = "name">Email*:</label>-->
+  <%#= text_field_tag :email, params[:email] %>
+        <%= text_field_tag(:email, "User Name",:style => "color:#3F3F3F;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %>
+      </div>
+      <div>
+        <!--<label for = "name">Email*:</label>-->
+  <%#= text_field_tag :email, params[:email] %>
+        <%= text_field_tag(:employee, "Employee Code",:style => "color:#3F3F3F;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %>
+      </div>
+      <div id="login_password_text">
+        <%= text_field_tag :placeholder, "Password",
+          :style => "color:#3F3F3F;-moz-border-radius: 10px;background-color: white;    width: 211px; margin: 4px 3px 0;   height: 29px;",
+          :onfocus => "login_setPass();"
+      %>
+      </div>
+      <div id="login_password" style="display: none;">
+        <%= password_field_tag :password,"", :style => "color:#3F3F3F;-moz-border-radius: 10px;background-color: white;    width: 211px; margin: 4px 3px 0;   height: 29px;",
+          :onblur => "login_checkPass();" %>
+      </div>
+      <!-- <#label for = "password">Password:<#/label>-->
+  <%#= password_field_tag 'password', '', :size => 20,:height => 120%>
+  <%#= password_field_tag(:password, "******",:style => "color:#3F3F3F;",:onFocus => "if(this.value==this.defaultValue) this.value='';",:onBlur => "if(this.value=='') this.value=this.defaultValue;") %>
+    </div>
+    <div id="action">
+       <%#= submit_tag "Sign-in", :type => :image%>
+      <button type="submit"><%=  "Enter" %></button>
+    </div>
+    <% end %>
+</div>

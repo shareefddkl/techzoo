@@ -1,0 +1,45 @@
+<%= hidden_field_tag "authenticity-token", form_authenticity_token %>
+
+<script id="widgetTemplate" type="text/x-jquery-tmpl">
+  <div id="${id}" class="widget-outer hidden">
+    <div class="widget-inner">
+      <div class="widget-header-container">
+        <div class="widget-close">X</div>
+        <div class="widget-header">
+          <div class="chat-user chat-user-${friendId}">${friendName}</div>
+        </div>
+      </div>
+
+      <div class="messages-container">
+        <div class="messages">
+        </div>
+      </div>
+
+      <div class="form-container">
+        <%= hidden_field_tag "friend_id", "${friendId}" %>
+        <div class="offline_chat_note">Offline messages will be delivered to his inbox.</div>
+        <%= text_area_tag "message" %>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+<script id="messageTemplateWithSender" type="text/x-jquery-tmpl">
+  <div><b>${sender.name}:</b> ${text}</div>
+</script>
+
+<script id="messageTemplateWithoutSender" type="text/x-jquery-tmpl">
+  <div class='chat-message'>${text}</div>
+</script>
+
+
+<script id="user-template" type="text/x-jquery-tmpl">
+  <div id="chat-user-${id}" class="chat-user chat-user-${id} ${status}">
+    ${name}
+  </div>
+</script>
+
+<script>
+  var thisUser = <%= current_user.json_data.to_json %>;
+</script>

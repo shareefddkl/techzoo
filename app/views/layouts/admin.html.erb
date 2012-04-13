@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admino</title>
+    <script type="text/javascript" src="/javascripts/flowplayer-3.2.6.min.js"></script>
+<%#= javascript_include_tag  'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+
+<%#= javascript_include_tag 'http://cdn.pandastream.com/u/1.3/jquery.panda-uploader.min.js' %>
+
+    <!-- For swf player -->
+<%#= javascript_include_tag 'swfobject','application' %>
+    <%= stylesheet_link_tag  "style","mentor" %>
+    <%= javascript_include_tag "prototype", "application",  "effects", "dragdrop", "rails"%>
+    <%= calendar_date_select_includes %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <% ['notice', 'error', 'warning'].each do |flash_key| %>
+      <% if flash[flash_key.to_sym] %>
+        <span class="<%= flash_key %>">
+          <%= flash[flash_key.to_sym] %>
+        </span>
+      <% end %>
+    <% end %>
+    <div id="mentor_main_div">
+      <div id="sign_out">
+        <%= link_to image_tag('logout button.png'), logout_path %>
+      </div>
+      <div id="mentor_banner" style="margin: 0 210px;">
+        <p style="color:#ffffff;font-size: 40px;margin: 0 -11px;padding: 29px;"> LOGO</p>
+        <div  class="mentor_chromemenu">
+          <table>
+            <tr>
+              <td>
+                <ul>
+                  <li><span><%= link_to "Status",statuses_path, :class => params[:controller] == "admin/status" ? "selected" : ""   %></span></li>
+                  <li><span><%= link_to "Report",reports_path,:class => params[:controller] == "reports" ? "selected" : ""  %></span></li>
+                  <li><span><%= link_to "Transation" %></span></li>
+                  <li><span><%= link_to "Site Notice"%></span></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+          <img alt="" src="/images/banner shadow.png" style="height: 9px;margin: -35px 16px 10px;width: 954px;"/>
+        </div>
+        <% if @report_subtab %>
+           <div id="message_navigation">
+            <ul>
+              <li><span><%= nav_link "Overview",overview_reports_path %></span></li></ul>
+          </div>
+          <div id="current_course_navigation">
+            <ul>
+              <li><span><%= link_to "Traffic Source",traffic_source_reports_path %></span></li>
+            </ul>
+          </div>
+          <div id="navigation">
+            <ul>
+              <li><span><%=  link_to "Members Report", member_report_reports_path%></span></li>
+              <li><span><%=nav_link "Member Search", member_search_reports_path %></span></li>
+            </ul>
+          </div>
+        <%end%>
+        <div id="mentor_container">
+          <%= yield %>
+        </div>
+        <div id="mentor_content" style="width :85%;float: left;position: absolute;margin: 27px 3px;top: 1002pt;left: 158pt;">
+          <div id="mentor_footer" style="background: url('/images/footer.png'); width: 969px; height: 30px; margin: 242px 3px 0;">
+            <span style="font-size: 11px;float :left;color: #748c9a; margin: -15px 17px;font-family:'Arial';">@copyright Sitename. All Rights Reserved.</span><span style="font-size: 11px;float :right;color:#748c9a; margin: -15px 39px;font-family:'Arial';">&nbsp;&nbsp;<%= link_to 'Home',home_index_path%>&nbsp;&nbsp;| &nbsp;&nbsp;<%= link_to 'About us',about_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Career',career_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'News',news_events_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'FAQ',faq_defaults_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Suggestion',new_suggestion_path%>&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Feedback',new_suggestion_path%>&nbsp;&nbsp;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,13 @@
+<div id="background_form">
+  <div id="sub_course_navigation">
+    <% @course_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <!--<br/><div id="course_design_form" style="font-size:15px;color: black;">-->
+<%#= render :partial => "form", :locals => {:course_type => params[:course_type]} %>
+      <%= render :partial => "course_form", :locals => {:course_type => params[:course_type]} %>
+    <!--</div>-->
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

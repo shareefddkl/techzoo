@@ -1,0 +1,13 @@
+<%if @courses.to_a.empty? %>
+  <div style="color:red;"> No Course Found</div>
+<%else%>
+  <%  @courses.each do |course| %>
+    <% if course.end_date.blank? %>
+    <%else%>
+      <% if (course.end_date > Date.today) %>
+        <%= link_to course.name, topic_course_path(course) %><br/>
+      <%else%>
+      <% end %>
+    <%end%>
+  <% end %>
+<%end%>

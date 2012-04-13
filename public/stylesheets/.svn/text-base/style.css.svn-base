@@ -1,0 +1,102 @@
+#overlay{
+    display: none;
+    background-color:#000000;
+    height:500px;
+    left:0;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 1000;
+    width: 100000px;
+    height: 941px;
+    opacity: 0.5;
+}
+#overlay1{
+    display: none;
+    height:500px;
+    left:0;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 1000;
+    width: 100000px;
+    height: 941px;
+    opacity: 0.5;
+}
+#popup_box {
+    display:none;
+    height:auto;
+    width:auto;
+    left:50%;
+    margin: -220px 0 0 -250px;
+    padding:15px;
+    position:fixed;
+    top:43%;
+    z-index:1001;
+    font-size: 12px;
+}
+
+
+#popup_box2 {
+    display:none;
+    height:250px;
+    width:379px;
+    left:50%;
+    margin:250px 0 0 -176px;
+    padding:15px;
+    position:absolute;;
+    top:35%;
+    z-index:1001;
+    background: url('/images/message bg.png');
+    font-size: 12px;
+}
+
+#popup_box3 {
+    display:none;
+    height:auto;
+    width:336px;
+    left:50%;
+    margin: -112px 0 0 83px;;
+    padding:15px;
+    position:fixed;
+    top:43%;
+    z-index:1001;
+    font-size: 12px;
+    background-color: white;
+    -moz-border-radius: 6px;
+    color: black;
+}
+
+#popup_box4 {
+    display:none;
+    height:353px;
+    width:611px;
+    left:50%;
+    margin:10px 0 0 -306px;
+    padding:15px;
+    position:absolute;;
+    top:43%;
+    z-index:1001;
+    font-size: 12px;
+    background: url('/images/message bg.png');
+}
+
+#popup_box5 {
+    display:none;
+    -moz-border-radius: 10px;
+    background: none repeat scroll 0 0 #A9A9A9;
+    left: 375px;
+    padding: 0 12px;
+    position: absolute;
+    text-decoration: none;
+    top: 301px;
+    z-index: 1001;
+    height:auto;
+    width:auto;
+}
+
+#popup_box5 a{
+    color: #686666;
+    padding: 0 12px;
+    text-decoration: none;
+}

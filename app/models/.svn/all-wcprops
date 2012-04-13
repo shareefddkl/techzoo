@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/techzoo/!svn/ver/274/trunk/app/models
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/techzoo/!svn/ver/268/trunk/app/models/user.rb
+END
+document.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/techzoo/!svn/ver/222/trunk/app/models/document.rb
+END
+chat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/techzoo/!svn/ver/207/trunk/app/models/chat.rb
+END
+discussion.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/techzoo/!svn/ver/210/trunk/app/models/discussion.rb
+END
+feedback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/techzoo/!svn/ver/252/trunk/app/models/feedback.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/210/trunk/app/models/message.rb
+END
+ad.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/techzoo/!svn/ver/268/trunk/app/models/ad.rb
+END
+student.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/272/trunk/app/models/student.rb
+END
+suggestion.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/techzoo/!svn/ver/272/trunk/app/models/suggestion.rb
+END
+home.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/techzoo/!svn/ver/18/trunk/app/models/home.rb
+END
+courses_student.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/270/trunk/app/models/courses_student.rb
+END
+invite.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/techzoo/!svn/ver/264/trunk/app/models/invite.rb
+END
+imported_contact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/262/trunk/app/models/imported_contact.rb
+END
+course.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/techzoo/!svn/ver/271/trunk/app/models/course.rb
+END
+mentor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/techzoo/!svn/ver/274/trunk/app/models/mentor.rb
+END
+video.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/techzoo/!svn/ver/267/trunk/app/models/video.rb
+END
+content.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/258/trunk/app/models/content.rb
+END
+comments_video.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/210/trunk/app/models/comments_video.rb
+END
+room.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/techzoo/!svn/ver/150/trunk/app/models/room.rb
+END

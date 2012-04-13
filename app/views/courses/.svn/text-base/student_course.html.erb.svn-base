@@ -1,0 +1,30 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <h1 style="float:left;font-size: 16px;margin: 29px 27px; color: #4F4E4E;">Application Status</h1>
+    <table  width="94%" border="0" cellpadding="10px" cellspacing="0px" style=" background-color: white;margin: -5px 0 0 19px;float: left; ">
+      <tr height="30px" style="background-color:#333232; color: white;font-family:'Liberation Sans';font-size: 14px;">
+        <th class="table_border">IDCode</th>
+        <th class="table_border">Name</th>
+        <th class="table_border">Course</th>
+        <th class="table_border">Starting Date</th>
+        <th>Ending Date</th>
+      </tr>
+      <%for courses_student in @courses_students%>
+        <% if (courses_student.course.end_date < Date.today)%>
+          <tr style="font-family:'Liberation Sans';font-size: 14px;" class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+            <td class="table_border">&nbsp;&nbsp;<%=link_to courses_student.course.user.account_id, mentor_path(courses_student.course.user.mentor.id) %></td>
+            <td class="table_border">&nbsp;&nbsp;<%=link_to courses_student.course.user.display_name, mentor_path(courses_student.course.user.mentor.id) %></td>
+            <td class="table_border">&nbsp;&nbsp;<%= courses_student.course.name %></td>
+            <td class="table_border">&nbsp;&nbsp;<%= courses_student.course.start_date%></td>
+            <td>&nbsp;&nbsp;<%= courses_student.course.end_date %></td>
+          </tr>
+        <%end%>
+      <%end%>
+    </table>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

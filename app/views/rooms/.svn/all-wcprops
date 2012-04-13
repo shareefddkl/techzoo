@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/techzoo/!svn/ver/177/trunk/app/views/rooms
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/177/trunk/app/views/rooms/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/177/trunk/app/views/rooms/new.html.erb
+END
+_newform.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/177/trunk/app/views/rooms/_newform.html.erb
+END
+party.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/techzoo/!svn/ver/177/trunk/app/views/rooms/party.html.erb
+END

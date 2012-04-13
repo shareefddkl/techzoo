@@ -1,0 +1,35 @@
+/*------------ Floats -------------*/
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+/*--------------------------------*/
+
+/*------------ Alignments -------------*/
+  .align-left {
+    text-align: left;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .align-top {
+    vertical-align: top;
+  }
+
+  .align-middle {
+    vertical-align: middle;
+  }
+
+  .align-bottom {
+    vertical-align: bottom;
+  }
+/*--------------------------------*/

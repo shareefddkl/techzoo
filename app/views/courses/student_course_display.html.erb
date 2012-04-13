@@ -1,0 +1,58 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <%  if @course.course_type == 'Webinar' %>
+      <% if (@course.end_date > Date.today)%>
+   <br/> <br/><br/><h1 style="float:left;font-size: 16px;margin: -27px 27px; color: #4F4E4E; font-style: italic;"><em><%=  @course.name %>-</em><%= @course.course_type %></h1>
+        <table style="font-size: small;margin-left: 3%; margin-top: 1.5%;font-size: 15px;color:#ffffff;padding: 2px;" width="94%" border="0"  cellpadding="10px" cellspacing="0px">
+          <tr style="background-color:#333232; color: white;font-size: 14px;font-family:'Liberation Sans';">
+            <th class="table_border">Topic</th>
+            <th class="table_border">File Name</th>
+            <th class="table_border">File Type</th>
+            <th class="table_border">Discussion</th>
+          </tr>
+          <% @course.documents.each do |course_document|  %>
+            <tr  class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border"><%=link_to course_document.title, course_document_path(@course,course_document), :remote => true%></td>
+              <td class="table_border"><%=link_to course_document.document_file_name, course_document_path(@course,course_document), :remote => true%></td>
+              <td class="table_border"><%= course_document.present? ? 'Doc' : ''%></td>
+              <td>D(<%= course_document.discussions.count %>)</td>
+            </tr>
+          <%end%>
+          <% @course.videos.each do |course_video|  %>
+            <tr  class="<%= cycle('list-line-odd', 'list-line-even') %>">
+              <td class="table_border"><%=link_to course_video.title, course_video_path(@course,course_video), :remote => true%></td>
+              <td class="table_border"><%=link_to course_video.video_file_name, course_video_path(@course,course_video), :remote => true%></td>
+              <td class="table_border"><%= course_video.present? ? 'video' : ''%></td>
+              <td>D(<%= course_video.comments.count %>)</td>
+            </tr>
+          <%end%>
+        </table>
+      <% end %>
+    <%else%>
+   <br/> <br/><br/><h1 style="float:left;font-size: 16px;margin: -27px 27px; color: #4F4E4E; font-style: italic;"><em><%=  @course.name %>-</em><%= @course.course_type %></h1>
+      <h1 style="font-size: 15px; margin-left:  80em;"><% if @course.end_date < Date.today %><%else%><%=button_to "Join Class"%><%end%>
+      </h1>
+      <table style="margin:-23px 29px; font-size: 16px;color: #6D6B6B;">
+        <tr height="30px">
+          <td>Class Timings:</td>
+          <td style="color:#00A4FF;">&nbsp;&nbsp;<%= @course.time.strftime("%I:%M%p") %></td>
+        </tr>
+        <tr height="30px">
+          <td>Current class Status</td>
+          <td style="color:#00A4FF;">&nbsp;&nbsp;<%= @course.end_date < Date.today ? 'Off' : 'On' %></td>
+        </tr>
+        <tr height="30px">
+          <td>Course Content</td>
+          <td style="color:#00A4FF;">&nbsp;&nbsp;<%= @course.course_content %></td>
+        </tr>
+      </table>
+    <%end%>
+    <div id="document_div" style="margin-left: 30px; margin-top: 30px; width: 100px;">
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

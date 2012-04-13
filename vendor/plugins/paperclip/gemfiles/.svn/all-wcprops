@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles
+END
+rails2.gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles/rails2.gemfile
+END
+rails3.gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles/rails3.gemfile
+END
+rails3_1.gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles/rails3_1.gemfile
+END
+rails2.gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles/rails2.gemfile.lock
+END
+rails3.gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles/rails3.gemfile.lock
+END
+rails3_1.gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/techzoo/!svn/ver/5/trunk/vendor/plugins/paperclip/gemfiles/rails3_1.gemfile.lock
+END

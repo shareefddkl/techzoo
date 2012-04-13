@@ -1,0 +1,20 @@
+
+<div id="background_form">
+   <% unless current_user.user_type == 'admin' %>
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <%end%>
+  <div id="home_sub_form">
+    <p style="margin: 7px 34px -24px;  color :#4F4F4F;font-size: 16px;padding: 17px 0;">Welcome,<b> 
+   <%  if current_user.user_type == 'student' %><%= current_user.student.first_name %><%end%>
+   <%  if current_user.user_type == 'mentor' %><%= current_user.mentor.first_name %><%end%>
+   <%  if current_user.user_type == 'admin' %><%= "Admin" %><%end%></b></p>
+    <% unless current_user.user_type == 'admin' %>
+    <p style="margin: 7px 34px;  color :#4F4F4F;font-size: 16px;padding: 17px 0;">Your's ID -<b>
+   <%  if current_user.user_type == 'student' %><%= current_user.account_id %><%else%><%= current_user.account_id %><%end%></b></p>
+   <%end%>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

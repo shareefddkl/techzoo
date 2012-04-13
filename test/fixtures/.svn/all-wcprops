@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/techzoo/!svn/ver/181/trunk/test/fixtures
+END
+rooms.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/techzoo/!svn/ver/181/trunk/test/fixtures/rooms.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/1/trunk/test/fixtures/users.yml
+END
+products.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/techzoo/!svn/ver/128/trunk/test/fixtures/products.yml
+END
+comments.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/techzoo/!svn/ver/128/trunk/test/fixtures/comments.yml
+END
+articles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/techzoo/!svn/ver/128/trunk/test/fixtures/articles.yml
+END
+blogs.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/techzoo/!svn/ver/128/trunk/test/fixtures/blogs.yml
+END
+mentors.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/techzoo/!svn/ver/1/trunk/test/fixtures/mentors.yml
+END
+feedbacks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/techzoo/!svn/ver/181/trunk/test/fixtures/feedbacks.yml
+END
+students.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/techzoo/!svn/ver/1/trunk/test/fixtures/students.yml
+END

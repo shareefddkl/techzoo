@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/techzoo/!svn/ver/253/trunk/app/views/discussions
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/233/trunk/app/views/discussions/new.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/253/trunk/app/views/discussions/_form.html.erb
+END

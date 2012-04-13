@@ -1,0 +1,212 @@
+<%= form_for @student, :url => update_education_student_path(@student), :remote => true do |f| %>
+  <%= f.hidden_field :education_type, :value => education_type %>
+  <div id="education">
+    <% if education_type == 'in_school' %>
+      <div id="in_school_form">
+        <b><%= "School Details" %></b>
+        <div>
+          <%= f.label :college_name, "Scholl Name"%>
+          <%= f.text_field :college_name, :value => (params[:student] and params[:student][:college_name]) ? params[:student][:college_name] : ( @student.education_type == 'in_school' ? @student.college_name : "") %>
+          <%= validation_error(@student.errors["college_name"]) %>
+        </div>
+        <div>
+          <%= f.label  :standard, "Class"%>
+          <%= f.select :standard, (1..10),:value => (params[:student] and params[:student][:standard]) ? params[:student][:standard] : ( @student.education_type == 'in_school' ? @student.standard : "")%>
+          <%= validation_error(@student.errors["standard"]) %>
+        </div>
+        <div>
+          <%= f.label  :university, "Board"%>
+          <%= f.select :university, %w{SSC Inter Others},:value => (params[:student] and params[:student][:university]) ? params[:student][:university] : ( @student.education_type == 'in_school' ? @student.university : "")%>
+          <%= validation_error(@student.errors["university"]) %>
+        </div>
+        <div>
+          <%= f.label  :city, "City"%>
+          <%= f.text_field :city,:value => (params[:student] and params[:student][:city]) ? params[:student][:city] : ( @student.education_type == 'in_school' ? @student.city : "") %>
+          <%= validation_error(@student.errors["city"]) %>
+        </div>
+        <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Primary,secondary and High school students falls under this category</p>-->
+        <h1 style="float: right;margin:-186px 7px;"><%= link_to_function image_tag("question_mark.jpeg"), "student_school_help()" %></h1>
+        <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+      </div>
+    <% elsif education_type == 'college' %>
+      <div id="college_form">
+        <b><%= "College Details" %></b>
+        <div>
+          <%= f.label :college_name, "College Name"%>
+          <%= f.text_field :college_name, :value => (params[:student] and params[:student][:college_name]) ? params[:student][:college_name] : ( @student.education_type == 'college' ? @student.college_name : "") %>
+          <%= validation_error(@student.errors["college_name"]) %>
+        </div>
+        <div>
+          <%= f.label  :standard, "Semister"%>
+          <%= f.text_field :standard, :value => (params[:student] and params[:student][:standard]) ? params[:student][:standard] : ( @student.education_type == 'college' ? @student.standard : "") %>
+          <%= validation_error(@student.errors["standard"]) %>
+        </div>
+        <div>
+          <%= f.label  :university, "University"%>
+          <%= f.text_field :university, :value => (params[:student] and params[:student][:university]) ? params[:student][:university] : ( @student.education_type == 'college' ? @student.university : "") %>
+          <%= validation_error(@student.errors["university"]) %>
+        </div>
+        <div>
+          <%= f.label  :city, "City"%>
+          <%= f.text_field :city, :value => (params[:student] and params[:student][:city]) ? params[:student][:city] : ( @student.education_type == 'college' ? @student.city : "") %>
+          <%= validation_error(@student.errors["city"]) %>
+        </div>
+        <div>
+          <%= f.label  :degree, "Degree"%>
+          <%= f.select :degree,%w(Bsc Bcom Electronics Maths Others), :value => (params[:student] and params[:student][:university]) ? params[:student][:university] : ( @student.education_type == 'college' ? @student.university : "") %>
+          <%= validation_error(@student.errors["degree"]) %>
+        </div>
+        <div>
+          <%= f.label  :stream, "Stream"%>
+          <%= f.text_field :stream, :value => (params[:student] and params[:student][:university]) ? params[:student][:university] : ( @student.education_type == 'college' ? @student.university : "") %>
+          <%= validation_error(@student.errors["stream"]) %>
+        </div>
+        <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Under-graduate students who are pursuing their bachelor degree course falls under this category.</p>-->
+        <h1 style="float: right; margin:-254px 7px;"><%= link_to_function image_tag("question_mark.jpeg"), "student_college_help()" %></h1>
+        <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+      </div>
+    <% elsif education_type == 'phd' %>
+      <div id="phd_form">
+        <b><%= "Phd Details" %></b>
+        <div>
+          <%= f.label :college_name, "College Name"%>
+          <%= f.text_field :college_name, :value => (params[:student] and params[:student][:college_name]) ? params[:student][:college_name] : ( @student.education_type == 'phd' ? @student.college_name : "") %>
+          <%= validation_error(@student.errors["college_name"]) %>
+        </div>
+        <div>
+          <%= f.label  :university, "University"%>
+          <%= f.text_field :university, :value => (params[:student] and params[:student][:university]) ? params[:student][:university] : ( @student.education_type == 'phd' ? @student.university : "") %>
+          <%= validation_error(@student.errors["university"]) %>
+        </div>
+        <div>
+          <%= f.label  :city, "City"%>
+          <%= f.text_field :city, :value => (params[:student] and params[:student][:city]) ? params[:student][:city] : ( @student.education_type == 'phd' ? @student.city : "") %>
+          <%= validation_error(@student.errors["city"]) %>
+        </div>
+        <div>
+          <%= f.label  :degree, "Degree"%>
+          <%= f.select :degree,%w(Bsc Bcom Electronics Maths Others), :value => (params[:student] and params[:student][:degree]) ? params[:student][:degree] : ( @student.education_type == 'phd' ? @student.degree : "") %>
+          <%= validation_error(@student.errors["degree"]) %>
+        </div>
+        <div>
+          <%= f.label  :stream, "Stream"%>
+          <%= f.text_field :stream, :value => (params[:student] and params[:student][:stream]) ? params[:student][:stream] : ( @student.education_type == 'phd' ? @student.stream : "") %>
+          <%= validation_error(@student.errors["stream"]) %>
+        </div>
+        <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Ph.D students doing doctorate in any stream/field, falls under this category.</p>-->
+        <h1 style="float: right; margin:-221px 7px;"><%= link_to_function image_tag("question_mark.jpeg"), "student_phd_help()" %></h1>
+        <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+      </div>
+    <% elsif education_type == 'pg' %>
+      <div id="pg_form">
+        <b><%= "PG Details" %></b>
+        <div>
+          <%= f.label :college_name, "College Name"%>
+          <%= f.text_field :college_name, :value => (params[:student] and params[:student][:college_name]) ? params[:student][:college_name] : ( @student.education_type == 'pg' ? @student.college_name : "") %>
+          <%= validation_error(@student.errors["college_name"]) %>
+        </div>
+        <div>
+          <%= f.label  :standard, "Semister"%>
+          <%= f.text_field :standard, :value => (params[:student] and params[:student][:standard]) ? params[:student][:standard] : ( @student.education_type == 'pg' ? @student.standard : "") %>
+          <%= validation_error(@student.errors["standard"]) %>
+        </div>
+        <div>
+          <%= f.label  :university, "University"%>
+          <%= f.text_field :university, :value => (params[:student] and params[:student][:university]) ? params[:student][:university] : ( @student.education_type == 'pg' ? @student.university : "") %>
+          <%= validation_error(@student.errors["university"]) %>
+        </div>
+        <div>
+          <%= f.label  :city, "City"%>
+          <%= f.text_field :city, :value => (params[:student] and params[:student][:city]) ? params[:student][:city] : ( @student.education_type == 'pg' ? @student.city : "") %>
+          <%= validation_error(@student.errors["city"]) %>
+        </div>
+        <div>
+          <%= f.label  :degree, "Degree"%>
+          <%= f.select :degree,%w(Bsc Bcom Electronics Maths Others), :value => (params[:student] and params[:student][:degree]) ? params[:student][:degree] : ( @student.education_type == 'pg' ? @student.degree : "") %>
+          <%= validation_error(@student.errors["degree"]) %>
+        </div>
+        <div>
+          <%= f.label  :stream, "Stream"%>
+          <%= f.text_field :stream, :value => (params[:student] and params[:student][:stream]) ? params[:student][:stream] : ( @student.education_type == 'pg' ? @student.stream : "") %>
+          <%= validation_error(@student.errors["stream"]) %>
+        </div>
+        <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Post-Graduate students doing master's in any stream/fields, falls under this category.</p>-->
+        <h1 style="float: right; margin:-254px 7px;"><%= link_to_function image_tag("question_mark.jpeg"), "student_pg_help()" %></h1>
+        <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+      </div>
+    <% elsif education_type == 'professional' %>
+      <div id="student_profrssional_form">
+        <b><%= "Professional Details" %></b>
+        <div>
+          <%= f.label  :company, "Company"%>
+          <%= f.text_field :company, :value => (params[:student] and params[:student][:company]) ? params[:student][:company] : ( @student.education_type == 'professional' ? @student.company : "") %>
+          <%= validation_error(@student.errors["company"]) %>
+        </div>
+        <div>
+          <%= f.label  :designation, "Designation"%>
+          <%= f.text_field :designation, :value => (params[:student] and params[:student][:designation]) ? params[:student][:designation] : ( @student.education_type == 'professional' ? @student.designation : "") %>
+          <%= validation_error(@student.errors["designation"]) %>
+        </div>
+        <div>
+          <%= f.label  :qualification, "Qualification"%>
+          <%= f.text_field :qualification, :value => (params[:student] and params[:student][:qualification]) ? params[:student][:qualification] : ( @student.education_type == 'professional' ? @student.qualification : "") %>
+          <%= validation_error(@student.errors["qualification"]) %>
+        </div>
+        <div>
+          <%= f.label  :city, "City"%>
+          <%= f.text_field :city, :value => (params[:student] and params[:student][:city]) ? params[:student][:city] : ( @student.education_type == 'professional' ? @student.city : "") %>
+          <%= validation_error(@student.errors["city"]) %>
+        </div>
+        <div>
+          <%= f.label  :degree, "Degree"%>
+          <%= f.select :degree,%w(Bsc Bcom Electronics Maths Others), :value => (params[:student] and params[:student][:degree]) ? params[:student][:degree] : ( @student.education_type == 'professional' ? @student.degree : "") %>
+          <%= validation_error(@student.errors["degree"]) %>
+        </div>
+        <div>
+          <%= f.label  :stream, "Stream"%>
+          <%= f.text_field :stream, :value => (params[:student] and params[:student][:stream]) ? params[:student][:stream] : ( @student.education_type == 'others' ? @student.stream : "") %>
+          <%= validation_error(@student.errors["stream"]) %>
+        </div>
+        <!--<p><strong>Hint:</strong>&nbsp;&nbsp;&nbsp;&nbsp;This category is for professionals who are working in any stream/field, and would like to learn something new develop or en chance their skills. </p>-->
+        <h1 style="float: right; margin:-254px 7px;"><%= link_to_function image_tag("question_mark.jpeg"), "student_professional_help()" %></h1>
+        <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+      </div>
+    <% elsif education_type == 'others' %>
+      <div id="others_form">
+        <b><%= "Details" %></b>
+        <div>
+          <%= f.label  :title, "Title"%>
+          <%= f.text_field :title, :value => (params[:student] and params[:student][:title]) ? params[:student][:title] : ( @student.education_type == 'others' ? @student.education : "") %>
+          <%= validation_error(@student.errors["title"]) %>
+        </div>
+        <div>
+          <%= f.label  :education, "Education"%>
+          <%= f.text_field :education, :value => (params[:student] and params[:student][:education]) ? params[:student][:education] : ( @student.education_type == 'others' ? @student.education : "") %>
+          <%= validation_error(@student.errors["education"]) %>
+        </div>
+        <div>
+          <%= f.label  :occupation, "Occupation"%>
+          <%= f.text_field :occupation, :value => (params[:student] and params[:student][:occupation]) ? params[:student][:occupation] : ( @student.education_type == 'others' ? @student.occupation : "") %>
+          <%= validation_error(@student.errors["occupation"]) %>
+        </div>
+        <div>
+          <%= f.label  :working_domain, "Work Area"%>
+          <%= f.text_field :working_domain, :value => (params[:student] and params[:student][:working_domain]) ? params[:student][:working_domain] : ( @student.education_type == 'others' ? @student.working_domain : "") %>
+          <%= validation_error(@student.errors["working_domain"]) %>
+        </div>
+        <div>
+          <%= f.label  :location, "Location"%>
+          <%= f.text_field :location, :value => (params[:student] and params[:student][:location]) ? params[:student][:location] : ( @student.education_type == 'others' ? @student.location : "") %>
+          <%= validation_error(@student.errors["location"]) %>
+        </div>
+        <!--<p><strong>Help:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Those people who belongs in none of above category will register under OTHERS category</p>-->
+        <h1 style="float: right; margin:-220px 7px;"><%= link_to_function image_tag("question_mark.jpeg"), "student_others_help()" %></h1>
+        <em><%="<font color='green'>*</font><font color='white'>Fields that must be completed.</font>".html_safe%></em><button type="submit"><%=  "SAVE & NEXT" %></button>
+      </div>
+    <%else%>
+      <p style="font-size: 14px; color: #ffffff; padding: 1px"> Select any one category, you fit best, as per you teaching your going to offer others.<br/><br/>
+        Note:  You can only select one category per account. if you would like go for more than one category, you need to make a separate account for each category.(as per current feature of the site).
+      </p>
+    <% end %>
+  </div>
+<% end %>

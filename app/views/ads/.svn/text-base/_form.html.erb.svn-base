@@ -1,0 +1,43 @@
+<div id="background_form">
+  <div id="sub_account_navigation">
+    <% @setting_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <%= form_for @ad do |f| %>
+    <br/><table cellpadding="6px" cellspacing="2px" border="0" style="margin: 1px 14px;font-size: 15px; color: #6D6C6C;">
+      <tr>
+        <td><%= f.check_box :active_all %>Activate All Ads</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><%= f.collection_select(:course_id, current_user.courses.where("status = 'published'" && "end_date > '#{Date.today}'"), :id, :name, {},:style=>"background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;font-size: 18px; padding: 0 3px;") %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><%= f.text_field :title, :style => "background:#545151;color: white; -moz-border-radius: 3px;   width: 223px;    height: 23.2px;",
+            :value => 'Title',
+            :onfocus => "if(this.getValue()=='Title'){this.clear();this.style.color = '#FFFFFF';}",
+            :onblur => "if(this.getValue()==''){this.setValue('Title');this.style.color = '#FFFFFF';}" %></td>
+        <td><%= f.check_box :active %>Activate</td>
+      </tr>
+       <tr>
+        <td><%= f.text_area :matter,  :style => "background:#545151;color: white;    width: 223px;    height: 241.2px;-moz-border-radius: 5px;",
+            :value => 'Matter',
+            :onfocus => "if(this.getValue()=='Matter'){this.clear();this.style.color = '#FFFFFF';}",
+            :onblur => "if(this.getValue()==''){this.setValue('Matter');this.style.color = '#FFFFFF';}"%></td>
+        <td></td>
+      </tr>
+    </table>
+    <button type="submit" style=" background: none repeat scroll 0 0 transparent;
+          border: medium none;
+          float: none;
+          height: 20px;
+          position: absolute;
+          right: 346px;
+          top: 266px;
+          width: 80px;"><%=  image_tag('save button.png') %></button>
+    <%end%>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

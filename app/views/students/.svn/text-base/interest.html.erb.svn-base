@@ -1,0 +1,35 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h2 style=" background-color: rgb(84, 81, 81); width: 649px; height: 25px; margin: 5px 5px;padding: 0 0 4px; font-size: 16px; color: white; "><b style="font-style:italic; margin: 5px 20px;float: left;">Interest</b></h2><br/>
+    <div id="interest_form">
+      <%= form_for current_user.student, :url => update_interest_students_path(current_user.student), :method => :put do |f| %>
+        <table>
+          <tr>
+            <td></td>
+            <td style="font-size: 10px;  color:#4D4D4D">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: #538ED1;">Note:</b>Should not exceed 1000 words limit</td>
+          </tr>
+          <tr>
+            <td valign="top" style="font-size: 14px;">Technical Interest</td>
+            <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_area :technical, :size => '50*20' %></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="font-size: 10px;  color:#4D4D4D">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: #538ED1;">Note:</b>Should not exceed 1000 words limit</td>
+          </tr>
+          <tr>
+            <td valign="top" style="font-size: 14px;">Non-Technical Interest</td>
+            <td valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.text_area :nontechnical, :size => '50*20' %></td>
+          </tr>
+          <td style="left: 920px;    position: absolute;    top: 243px;">
+            <button type="submit" style="background: none; border: none;"><%=  image_tag('save button.png') %></button>
+          </td>
+        </table>
+      <% end %>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

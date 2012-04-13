@@ -1,0 +1,61 @@
+<div id="background_form">
+  <div id="sub_account_navigation">
+    <% @setting_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h2 style=" width: 640px; height: 30px; margin: 5px 16px;padding: 0 0 4px; font-size: 16px; color: #4F4D4D; ">Account Settings</h2><br/>
+    <div style="margin: 0px 10px;  font-size: 15px;  color: #6D6B6B;">
+      <table>
+        <tr height="50px">
+          <td width="220px">
+            Email Address
+          </td>
+          <td width="320px" style="font-size:15px; color: #538ED1;"><%#= image_tag('/images/bullet.png') %><%= current_user.email %></td>
+          <td><%= link_to_function image_tag("/images/change button.png", :border=>0), 'show_email_form()'%></td>
+        </tr>
+        <tr>
+          <td width="220px">
+            Password
+          </td>
+          <td width="320px" style="font-size:15px; color: #538ED1;"><%#= image_tag('/images/bullet.png') %><%= current_user.updated_at%></td>
+          <td><%= link_to_function image_tag("/images/change button.png", :border=>0), 'password_change_form()'%></td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+<script>
+  function show_email_form(){
+    new Ajax.Request("/users/email_setting",
+    {
+      evalScripts: true,
+      asynchronous: true,
+      method: 'get',
+      onSuccess: function(transport) {
+        $('popup_body').innerHTML = transport.responseText;
+        $('overlay').style.display = "block"
+        $('popup_box').style.display = "block"
+        $('email_setting').style.display = "block"
+      }
+    })
+  }
+</script>
+<script>
+  function password_change_form(){
+    new Ajax.Request("/users/email_setting",
+    {
+      evalScripts: true,
+      asynchronous: true,
+      method: 'get',
+      onSuccess: function(transport) {
+        $('popup_body').innerHTML = transport.responseText;
+        $('overlay').style.display = "block"
+        $('popup_box').style.display = "block"
+        $('password_change').style.display = "block"
+      }
+    })
+  }
+</script>

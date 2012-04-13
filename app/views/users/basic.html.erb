@@ -1,0 +1,45 @@
+<tr>
+  <td valign="top">
+    <%= link_to "Basic Info", basic_users_path(@user) %>
+    <%= link_to "Picture", picture_users_path(@user) %>
+    <%= link_to "Education", education_users_path(@user) %>
+    <%= link_to "Work", work_users_path(@user) %>
+   <%= link_to "Interest", interest_users_path(@user) %>
+  </td>
+
+  <td width="85%">
+    <table>
+      <%= submit_tag "save" %>
+      <tr>
+        <td>First Name</td>
+        <td><%= text_field_tag :first_name, current_user.mentor.first_name %></td>
+      </tr>
+      <tr>
+        <td>Middle Name</td>
+        <td><%= text_field_tag :middle_name, current_user.mentor.middle_name %></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><%= text_field_tag :date_, current_user.mentor.last_name %></td>
+      </tr>
+      <tr>
+        <td>Date Of Birth:</td>
+        <td><%= text_field_tag :date_of_birth, current_user.mentor.date_of_birth %></td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td><%= text_field_tag :city, current_user.mentor.city %></td>
+      </tr>
+      <tr>
+        <td>Mobile No:</td>
+        <td><%= text_field_tag :state, current_user.mentor.mobile%></td>
+      </tr>
+      <tr>
+        <td>LandLine No:</td>
+        <td><%= text_field_tag :country, current_user.mentor.land_line_no %></td>
+      </tr>
+
+    </table>
+  </td>
+</tr>
+

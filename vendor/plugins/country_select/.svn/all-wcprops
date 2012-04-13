@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/243/trunk/vendor/plugins/country_select
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/243/trunk/vendor/plugins/country_select/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/techzoo/!svn/ver/243/trunk/vendor/plugins/country_select/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/243/trunk/vendor/plugins/country_select/MIT-LICENSE
+END
+uninstall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/243/trunk/vendor/plugins/country_select/uninstall.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/243/trunk/vendor/plugins/country_select/README
+END

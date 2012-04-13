@@ -1,0 +1,137 @@
+<table cellspacing="2px" cellpadding="6px" style="font-size: 16px; margin: 1px 2px;color: #555555;-moz-border-radius: 5px;">
+  <%  if current_user.student.education_type == 'in_school' %>
+    <tr height="35px">
+      <td >School Name</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Class</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.standard %></td>
+    </tr>
+    <tr height="35px">
+      <td >Board</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.university %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.city %></td>
+    </tr>
+  <%  elsif current_user.student.education_type == 'college' %>
+    <tr height="35px">
+      <td >College Name</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Semister</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.standard %></td>
+    </tr>
+    <tr height="35px">
+      <td >University</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.university %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.stream %></td>
+    </tr>
+  <%  elsif current_user.student.education_type == 'phd' %>
+    <tr height="35px">
+      <td >College Name</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >University</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.university %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.stream %></td>
+    </tr>
+  <%  elsif current_user.student.education_type == 'pg' %>
+    <tr height="35px">
+      <td >College Name</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Semister</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.standard %></td>
+    </tr>
+    <tr height="35px">
+      <td >University</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.university %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.stream %></td>
+    </tr>
+  <%  elsif current_user.student.education_type == 'professional' %>
+    <tr height="35px">
+      <td >Company</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.college_name %></td>
+    </tr>
+    <tr height="35px">
+      <td >Designation</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.designation %></td>
+    </tr>
+    <tr height="35px">
+      <td >Qualification</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.qualification %></td>
+    </tr>
+    <tr height="35px">
+      <td >City</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.city %></td>
+    </tr>
+    <tr height="35px">
+      <td >Degree</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.degree %></td>
+    </tr>
+    <tr height="35px">
+      <td >Stream</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.stream %></td>
+    </tr>
+  <% elsif current_user.student.education_type == 'others' %>
+     <tr height="35px">
+      <td >Title</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.title %></td>
+    </tr>
+    <tr height="35px">
+      <td >Education</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.education %></td>
+    </tr>
+    <tr height="35px">
+      <td >Occupation</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.occupation%></td>
+    </tr>
+    <tr height="35px">
+      <td >Work Area</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.working_domain %></td>
+    </tr>
+    <tr height="35px">
+      <td >Location</td>
+      <td style="color:#759F31;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= current_user.student.location %></td>
+    </tr>
+  <% end %>
+</table>

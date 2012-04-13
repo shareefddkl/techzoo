@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit
+END
+state_transition_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/state_transition_spec.rb
+END
+active_record_persistence_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/active_record_persistence_spec.rb
+END
+i18n_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/i18n_spec.rb
+END
+state_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/state_spec.rb
+END
+aasm_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/aasm_spec.rb
+END
+event_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/event_spec.rb
+END
+before_after_callbacks_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/spec/unit/before_after_callbacks_spec.rb
+END

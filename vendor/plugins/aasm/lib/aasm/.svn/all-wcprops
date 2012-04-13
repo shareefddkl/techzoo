@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm
+END
+i18n.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/i18n.rb
+END
+state.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/state.rb
+END
+aasm.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/aasm.rb
+END
+event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/event.rb
+END
+persistence.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/persistence.rb
+END
+state_machine.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/state_machine.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/version.rb
+END
+supporting_classes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/supporting_classes.rb
+END
+state_transition.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/techzoo/!svn/ver/244/trunk/vendor/plugins/aasm/lib/aasm/state_transition.rb
+END

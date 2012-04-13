@@ -1,0 +1,72 @@
+<table width="100%" border="0" cellpadding="10" cellspacing="0" style="background: wheat;margin: 0 10px 10px -28px;">
+  <tr>
+    <td>
+      <table  width="70%" border="0" cellpadding="4px" cellspacing="0"  style="font-size: 12px;">
+        <tr>
+          <td>IDCode:</td>
+          <td><%=link_to @student.user.account_id, student_path(@student.id)%></td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td><%=link_to @student.user.display_name, student_path(@student.id)%></td>
+        </tr>
+        <tr>
+          <td>Type:</td>
+          <td><%=@student.user.user_type%></td>
+        </tr>
+        <tr>
+          <td>Category:</td>
+          <td><%=@student.education_type%></td>
+        </tr>
+      </table></td><td>
+      <table width="75%" border="0" cellpadding="4px" cellspacing="0"  style="margin: 0 33px 0 0;font-size: 12px;">
+        <tr>
+          <td>Last login:</td>
+          <td><% if !@student.user.last_logged_in_at.blank? %><%=@student.user.last_logged_in_at%><%end%></td>
+        </tr>
+        <tr>
+          <td>No of courses:</td>
+          <td><%=@student.courses_students.count%></td>
+        </tr>
+        <tr>
+          <td>No of free courses:</td>
+          <td><%=@student_free_course.count%></td>
+        </tr>
+        <tr>
+          <td>No of Paid courses:</td>
+          <td><%=@student_paid_course.count%></td>
+        </tr>
+      </table >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table width="83%" border="0" cellpadding="4px" cellspacing="0"  style="font-size: 12px;">
+        <tr>
+          <td>List Of Courses:</td>
+          <td></td>
+        </tr>
+        <%@student_courses.each do |course|%>
+          <tr>
+            <td><%=course.course_name%>:</td>
+            <td><%= course.start_date %>&nbsp;&nbsp;&nbsp;<%= course.end_date %></td>
+          </tr>
+        <%end%>
+      </table>
+    </td>
+    <td>
+    </td>
+  </tr>
+ <tr>
+    <td>
+      <table>
+        <tr>
+          <td>Delete</td>
+          <td>Block</td>
+          <td>Message</td>
+        </tr>
+      </table>
+    </td>
+    <td></td>
+  </tr>
+</table>

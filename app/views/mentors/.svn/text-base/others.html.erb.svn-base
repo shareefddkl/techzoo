@@ -1,0 +1,12 @@
+<div id="main_education_form">
+  <h1 style="padding:16px 10px 10px 145px; color: black; font-size: 40px">Sign Up Form</h1>
+  <div id="image" style="padding-left: 7.2em; font-size: 21px; color: black;">I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em><%= image_tag('green dot.png') %></em>&nbsp;&nbsp;Mentor&nbsp;&nbsp;<%= image_tag('white dot.png') %>&nbsp;&nbsp;Learner
+    <%= render :partial => "tabs" %>
+    <div id="student_others">
+     <%= render :partial => "invite_others_form" %>
+      <div><%= link_to "Skip&Continue", home_index_path,:class => "skip_button"  %></div>
+    </div>
+  </div>
+</div>
+<%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 43px 0 19px;    width: 980px;") %>
+

@@ -1,0 +1,38 @@
+<div id="faq">
+  <div id="sub_faq">
+    <h1> FAQs</h1>
+    <p><b>Technical</b><br /><br />
+      <em style="color :#4F4F4F">Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry?</em><br /><br />
+      <em>All audio file should play with in a couple of seconds. if the lesson is very
+        long and the file is big, it might take upto 10 seconds to load</em><br /><br />
+      <em>it's taking longer than usual for the sound to come out? Why is it taking
+        so long to play an audio file?</em><br /><br />
+      <em style="width:511px;">If you notice a decrease in speed, it is likely that you are lacking
+        memory. Memory is used frequently, and if you never turn of your
+        computer,your memory might be tied up. Try rebooting your computer.
+        This should help. If it doesn't, then it could be a problem on our end and
+        we will look into it.</em><br /><br />
+      <em style="color :#4F4F4F">Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry?</em><br /><br />
+      <em>The most common that the users are not clicking on the
+        &nbsp;&nbsp;&nbsp;  sentence.Each audio file does not play automatically. A sentence that is
+        blue (which turns orange when you hover your mouse over on it) needs to
+        be clicked in order to here the audio file.</em><br /><br />
+      <em>TalkEnglish.com uses Flash for the audio files. If you are on Firefox or
+        Safari and you do not have the Flash Player plugin, you can download it
+        at http://get.adobe.com/flashplayer/. After installing the plug in, you
+        should be able to here the audio files.</em></p>
+        <p style="margin:-22px -59px;"><b>General</b><br /><br />
+      <em style="color :#4F4F4F">Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry?</em><br /><br />
+      <em>The fastest way to become fluent in English is constantly surround
+        yourself in English. You can download all the audio files and completely
+        surround yourself in English by using all the audio files offline. There are
+        over 13.5 hours of full length audio files which includes all the conversations.
+        Use your MP3 player to study everywhere you go without Internet
+        connection and you will learn English speaking much faster.</em>
+    </p>
+  </div>
+</div>
+ <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 15px 0px 17px;    width: 980px;") %>

@@ -1,0 +1,47 @@
+<div id="background_form">
+  <div id="sub_search_navigation">
+    <% @search_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <p style="float:left;font-size: 16px;margin: 33px 19px; color: #545151">Search By <b style="color: #545151">ID</b></p>
+    <%= form_tag accountid_search_searches_path, :method => 'get'  do %>
+      <%=image_tag("id code.png",  :style=>"float: left; margin:  124px -104px 0;") %>
+      <%= text_field_tag :query, params[:query], :style => "margin: 33px 185px 0; background:#545151;color: white;-moz-border-radius: 5px;width: 281px;height: 24px;float: right;" %>
+  <%#= submit_tag '<img alt="" src="/images/search button.png" style="float: right;margin: -31px 89px 0;"/>', :account_id => nil %>
+      <button type="submit"  style="background: none; border: none; float: right;margin: -31px 74px 0;"><%=  image_tag('search button.png') %></button>
+      <%=image_tag("line (separater).png",  :style=>"left: 391px;position: absolute;top: 401px;") %>
+    <% end %>
+    <% if @users && params[:query] %>
+     <br/><h1 style="margin: 59px 23px 20px;float: left; font-size: 18px; color:#545151;" >Search Result</h1>
+      <table cellpadding="8px" cellspacing="0px"  width="80%" border="0" style="margin: 0px 23px;">
+        <tr style="color:#545151; font-size: 15px;" >
+          <th>Id code</th>
+          <th>Full Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+          <th>Mentor/Learner</th>
+          <th>Category</th>
+        </tr>
+        <% @users.each do |a| %>
+          <% if params[:query] == a.account_id %>
+            <% if a.user_type == 'student' %>
+              <tr  style=" color:#5B5A5A;font-size:13px;">
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to a.account_id , student_path(a.student.id) %></td>
+                <td>&nbsp;&nbsp;<%= link_to a.display_name, student_path(a.student.id) %></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= a.user_type %></td>
+                <td>&nbsp;&nbsp;<%= a.student.education_type %></td>
+              </tr>
+            <% else %>
+              <tr  style=" color:#5B5A5A;font-size:13px;">
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to a.account_id, mentor_path(a.mentor.id) %></td>
+                <td>&nbsp;&nbsp;<%= link_to a.display_name, mentor_path(a.mentor.id) %></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= a.user_type %></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= a.mentor.education_type %></td>
+              </tr>
+            <% end %>
+          <% end %>
+        <%end%>
+      </table>
+    <%end%>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

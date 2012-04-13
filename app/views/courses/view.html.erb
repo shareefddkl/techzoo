@@ -1,0 +1,58 @@
+<% @course_subtab = true %>
+<% for course in @courses %>
+  <table>
+   <% if(course.status == 'published') %>
+    <tr>
+      <td>Course Name:</td>
+      <td>
+        <%= course.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>Starting Date:</td>
+      <td>
+        <%= course.start_date %>
+      </td>
+    </tr>
+    <tr>
+      <td>Ending Date:</td>
+      <td>
+        <%= course.end_date %>
+      </td>
+    </tr>
+    <tr>
+      <td>Duration:</td>
+      <td>
+        <%=  (((course.end_date-course.start_date).to_i)/30) %>months<%=(((course.end_date-course.start_date).to_i)%30) %>days
+      </td>
+    </tr>
+    <tr>
+      <td>Class Strength:</td>
+      <td>
+        <%= course.strength %>
+      </td>
+    </tr>
+    <tr>
+      <td>Categories:</td>
+      <td>
+        <%= course.categories %>
+      </td>
+    </tr>
+    <tr>
+      <td>Type:</td>
+      <td>
+        <%= course.course_type %>
+      </td>
+    </tr>
+    <tr>
+    <td>Amount:</td>
+      <td>
+        <%= course.amount %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<% end %>
+
+
+

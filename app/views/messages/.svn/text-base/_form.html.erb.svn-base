@@ -1,0 +1,16 @@
+<%= form_for @message  do |f| %>
+  <table style="font-size: small">
+    <tr>
+      <td>To:</td>
+      <td><%= f.select :receiver_id, User.all.map{|user| [user.account_id, user.id]}-[[current_user.account_id, current_user.id]] %></td>
+    </tr>
+    <tr>
+      <td>Message:</td>
+      <td><%= f.text_area :body, :rows => '3', :cols => '40' %></td>
+    </tr>
+    <tr>
+      <td><%=f.submit "Send"%></td>
+      <td><%= link_to "Cancel", messages_path%></td>
+    </tr>
+  </table>
+<% end %>

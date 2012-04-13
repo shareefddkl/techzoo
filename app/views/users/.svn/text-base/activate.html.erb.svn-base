@@ -1,0 +1,7 @@
+
+Dear User
+please click the below link to activate u r Email
+<%  activate_user_path(user.activation_code) %>
+
+
+Thanks

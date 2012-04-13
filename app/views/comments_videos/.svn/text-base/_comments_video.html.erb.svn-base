@@ -1,0 +1,9 @@
+<% @video.comments.each do |comment| %>
+  <table>
+    <tr>
+      <td style="font-size:15px; color: black;"><%=comment.user.account_id %>&nbsp;&nbsp;&nbsp;<%= comment.user.display_name %></td>
+    </tr>
+    <tr><td style="font-size:15px; color :#00A4FF;"> <%= comment.comment%></td></tr>
+    <tr><td><%=image_tag('lcpcurrentcourseline.png', :style=>"margin: 5px 0px; height: 5px;width: 200px; ")%></td></tr>
+  </table>
+<%end%>

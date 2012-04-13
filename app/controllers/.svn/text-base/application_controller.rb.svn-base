@@ -1,0 +1,49 @@
+require 'juggernaut'
+class ApplicationController < ActionController::Base
+  protect_from_forgery
+  layout :get_layout
+  helper_method :current_user
+  helper :all
+  before_filter :is_loggedin?
+
+  def is_loggedin?
+    unless current_user
+      flash[:error] = "Please login"
+      redirect_to "/"
+    end
+  end
+
+
+
+  def update_last_activity
+    current_user.update_attribute(:last_time_activity, Time.now) if current_user
+  end
+
+  private
+  #current user student/mentor
+  def current_user
+   User.find(session[:user_id])
+  rescue ActiveRecord::RecordNotFound
+  end
+
+
+  def get_layout
+    if current_user
+      return current_user.user_type
+    else
+      return "application"
+    end
+  end
+  
+  protected
+
+  #login
+  def authorize
+    unless User.find_by_id(session[:user_id])
+      redirect_to login_path, :notice => "please login"
+    end
+  end
+  def param_posted?(sym)
+    request.post? and params[sym]
+  end
+end

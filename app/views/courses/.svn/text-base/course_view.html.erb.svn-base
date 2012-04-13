@@ -1,0 +1,104 @@
+<div id="background_form">
+  <div id="sub_course_navigation">
+    <% @course_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <% if current_user.courses.exists? %>
+      <br/><table cellpadding="5px" cellspacing="0px" cellspacing="0px" width="70%" border="0" style="margin: 16px 38px;">
+        <tr>
+          <td>Select Course</td>
+          <td>
+            <%= select_tag :id, options_for_select(current_user.courses.select("id, name").map{|course| [course.name, course.id, {:class => "drop_down_bg"}]}, params[:id]), :onchange => "window.location.href = '/courses/course_view?id='+this.value", :style=>"background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;font-size: 18px; padding: 0 3px;"  %>
+          </td>
+        </tr>
+        <tr>
+          <td>Course Name:</td>
+          <td>
+            <%= @course.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Starting Date:</td>
+          <td>
+            <%= @course.start_date %>
+          </td>
+        </tr>
+        <tr>
+          <td>Ending Date:</td>
+          <td>
+            <%= @course.end_date %>
+          </td>
+        </tr>
+        <tr>
+          <td>Duration:</td>
+          <td>
+            <% if @course.end_date.blank? and @course.start_date.blank? %>
+            <%else%>
+              <% if((((@course.end_date-@course.start_date).to_i)/30)>=1) %>
+                <%=(((@course.end_date-@course.start_date).to_i)/30) %>months
+              <% else %>
+              <% end %>
+              <%=(((@course.end_date-@course.start_date).to_i)%30) %>days
+            <%end%>
+          </td>
+        </tr>
+        <tr>
+          <td>Class Strength:</td>
+          <td>
+            <%= @course.strength %>
+          </td>
+        </tr>
+        <tr>
+          <td>Categories:</td>
+          <td>
+            <%= @course.categories %>
+          </td>
+        </tr>
+        <tr>
+          <td>Type:</td>
+          <td>
+            <%= @course.course_type %>
+          </td>
+        </tr>
+        <tr>
+          <td>Amount:</td>
+          <td>
+            <%= @course.amount %>
+          </td>
+        </tr>
+      </table>
+      <table style="margin-left: 3%; margin-top: 1.5%;font-size: 15px;color:#ffffff;padding: 2px;" width="94%" border="0"  cellpadding="5px" cellspacing="0px">
+        <tr style="background-color:#333232; color: white;font-size: 14px;font-family:'Liberation Sans';">
+          <th class="table_border">Topic</th>
+          <th class="table_border">File Name</th>
+          <th class="table_border">File Type</th>
+          <th></th>
+        </tr>
+        <% @course.documents.each do |course_document|  %>
+          <tr id="document_<%= course_document.id %>" class="<%= cycle('list-line-odd', 'list-line-even') %>" style="font-size: 11px;font-family:'Liberation Sans';">
+            <td class="table_border"><%=link_to course_document.title, course_document_path(@course,course_document), :remote => true%></td>
+            <td class="table_border"><%=link_to course_document.document_file_name, course_document_path(@course,course_document), :remote => true%></td>
+            <td class="table_border"><%= course_document.present? ? 'Doc' : ''%></td>
+            <td><%= link_to "Remove",course_document_path(@course, course_document), :method => :delete,:confirm => 'Are you sure?', :remote => true %></td>
+          </tr>
+        <%end%>
+        <% @course.videos.each do |course_video|  %>
+          <tr id="video_<%= course_video.id %>" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+            <td class="table_border"><%=link_to course_video.title, course_video_path(@course,course_video), :remote => true%></td>
+            <td class="table_border"><%=link_to course_video.video_file_name, course_video_path(@course,course_video), :remote => true%></td>
+            <td class="table_border"><%= course_video.present? ? 'video' : ''%></td>
+            <td><%= link_to "Remove",course_video_path(@course,course_video), :method => :delete,:confirm => 'Are you sure?', :remote => true %></td>
+          </tr>
+        <%end%>
+      </table>
+    <%else%>
+     <br/> <div style="color: red;margin: 67px 75px;">You have no courses. First you have to create course in course design.</div>
+    <%end%>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+
+
+
+

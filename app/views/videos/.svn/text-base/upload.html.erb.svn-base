@@ -1,0 +1,2 @@
+<iframe src="<%= @upload_form_url %>" width="400" height="100" frameborder="0"></iframe>
+<p>Video uploaded! It will appear on the <%= link_to 'video page', video_path(@video), :target => "_parent"  %> once it has finished encoding.</p>

@@ -1,0 +1,39 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @profile_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <br/> <h2 style=" background-color: rgb(84, 81, 81); width: 649px; height: 25px; margin: 5px 5px;padding: 0 0 4px; font-size: 16px; color: white; "><b style="font-style:italic; margin: 5px 20px;float: left;">Upload Picture</b></h2><br/>
+    <table width="100%">
+      <tr>
+        <td width="20%" style="margin:13px 15px; float: left;">
+          <%= image_tag(current_user.avatar.url(:original) , :style=>"width:125px;height: 118px; margin:1px;") %>
+        </td>
+        <td align="left">
+          <%= form_for @user, :as => :user, :url => update_photo_users_path(current_user), :html => { :multipart => true } do |form| %>
+            <table width="80%"style="margin-top:-1%;margin-left:5%;">
+              <tr>
+                <td  height="45px" style="font-size:13px; color: black;">Select an image file on your computer (4MB max):</td></tr>
+              <tr> <td height="45px" style="font-size:18px; color: black;">Choose
+                  <%= form.file_field :avatar %>
+                </td>
+              </tr>
+              <tr>
+                <td height="45px">
+                  <button type="submit" style="background: none; border: none;  margin: -329px 127px;"><%=  image_tag('upload button.png') %></button>
+                </td>
+              </tr>
+              <tr>
+                <td height="45px" style="font-size:10px; color: black;">by uploading a file you certify that you have the right to distribute this picture and that it does
+                  not violate the<a href="" style="font-size:10px; text-decoration: none; color: #538ED1;">Terms of Service</a></td>
+              </tr>
+            </table>
+          <% end %>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

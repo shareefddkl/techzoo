@@ -1,0 +1,302 @@
+<div id="background_form">
+  <div id="sub_navigation">
+   <% @profile_subtab_tab = true %>
+  </div>
+  <div style="left: 898px;    position: absolute;    top: 283px;"><%= image_tag(@student.user.avatar.url(:original), :style=>"height: 112px;    width: 113px;") %></div>
+  <div style="margin-top: 2%; margin-left: 7.3% ;
+       background: url('/images/form bg.png');width: 660px; height: 99%;">
+    <table id="profile_table" width="649px;" cellpadding="6px" cellspacing="2px" border="0" style="margin: 0 5px;border-collapse: collapse;font-size: 16px; color: #555555;">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr  style="background-color: rgb(84, 81, 81);font-style:italic; color:white; -moz-border-radius: 10px;">
+
+        <td><b style="">Personal Details</b>
+        </td>
+        <td><b style="float:right; margin: 0 50px;"><%=@student.user.account_id%></b></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;" width ="30%">Name:</td>
+          <td><%= @student.user.display_name  %> </td><!--<td style="padding-left: 42em" valign="top"> <%#= image_tag @avatar.url(:small) %></td>--></tr>
+      <tr>
+        <td style="font-weight: bold;">Date Of Birth:</td>
+        <td><%= @student.date_of_birth %> </td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Location:</td>
+        <td><%= @student.city %>, <%= @student.state %>, <%= @student.country %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr  style="background-color: rgb(84, 81, 81);font-style:italic; color:white;height: 20px;padding: 1px;">
+        <td><b style="">Contact Info</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <%if @student.mobile?%>
+        <tr>
+          <td style="font-weight: bold;">Mobile No:</td>
+          <td><%=  @student.mobile %> </td>
+        </tr>
+      <%end%>
+      <% if @student.land_line_no? %>
+        <tr>
+          <td style="font-weight: bold;">LandLine No:</td>
+          <td><%= @student.land_line_no %> </td>
+        </tr>
+      <%end%>
+      <tr>
+        <td style="font-weight: bold;">Email Id:</td>
+        <td><%= @student.user.email %> </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <!--<%# if @student.college_name? || @student.standard? || @student.board? || @student.university? || @student.degree? || @student.stream? || @student.designation? || @student.qualification? || @student.corexp? || @student.education? || @student.occupation? || @student.work? || @student.location?%>-->
+      <tr style="background-color: rgb(84, 81, 81);font-style:italic; color:white;padding: 1px;">
+        <td><b>Education Details</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <%  if @student.education_type == 'in_school' %>
+        <tr>
+          <td style="font-weight: bold;">School Name</td>
+          <td><%= @student.college_name %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Class</td>
+          <td><%= @student.standard %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Board</td>
+          <td><%= @student.university %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City</td>
+          <td><%= @student.city %></td>
+        </tr>
+      <%  elsif @student.education_type == 'college' %>
+        <tr>
+          <td style="font-weight: bold;">College Name</td>
+          <td><%= @student.college_name %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Semister</td>
+          <td><%= @student.standard %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">University</td>
+          <td><%= @student.university %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">City</td>
+          <td><%= @student.city %></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">Degree</td>
+          <td><%= @student.degree %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Stream</td>
+          <td><%= @student.stream %></td>
+        </tr>
+      <%  elsif @student.education_type == 'phd' %>
+        <tr >
+          <td style="font-weight: bold;">College Name</td>
+          <td><%= @student.college_name %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">University</td>
+          <td><%= @student.university %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">City</td>
+          <td><%= @student.city %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Degree</td>
+          <td><%= @student.degree %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Stream</td>
+          <td><%= @student.stream %></td>
+        </tr>
+      <%  elsif @student.education_type == 'pg' %>
+        <tr >
+          <td style="font-weight: bold;">College Name</td>
+          <td><%= @student.college_name %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Semister</td>
+          <td><%= @student.standard %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">University</td>
+          <td><%= @student.university %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">City</td>
+          <td><%= @student.city %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Degree</td>
+          <td><%= @student.degree %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Stream</td>
+          <td><%= @student.stream %></td>
+        </tr>
+      <%  elsif @student.education_type == 'professional' %>
+        <tr >
+          <td style="font-weight: bold;">Company</td>
+          <td><%= @student.college_name %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Designation</td>
+          <td><%= @student.designation %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Qualification</td>
+          <td><%= @student.qualification %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">City</td>
+          <td><%= @student.city %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Degree</td>
+          <td><%= @student.degree %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Stream</td>
+          <td><%= @student.stream %></td>
+        </tr>
+      <% elsif @student.education_type == 'others' %>
+        <tr >
+          <td style="font-weight: bold;">Education</td>
+          <td><%= @student.education %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Occupation</td>
+          <td><%= @student.occupation%></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Work Area</td>
+          <td><%= @student.working_domain %></td>
+        </tr>
+        <tr >
+          <td style="font-weight: bold;">Location</td>
+          <td><%= @student.location %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <% if @student.employer? || @student.working? || @student.more_work_details? || @student.research_paper? || @student.research_work? || @student.misc? %>
+        <tr style="background-color: rgb(84, 81, 81);font-style:italic; color:white;padding: 1px;">
+          <td><b>Work Details</b></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      <% end %>
+      <%  if @student.employer? %>
+        <tr >
+          <td style="font-weight: bold;">Employer:</td>
+          <td><%= @student.employer %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if @student.working? %>
+        <tr >
+          <td style="font-weight: bold;">Designation:</td>
+          <td><%= @student.working %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if @student.more_work_details? %>
+        <tr >
+          <td style="font-weight: bold;" >More Work:</td>
+          <td><%= @student.more_work_details %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if @student.research_paper? %>
+        <tr >
+          <td style="font-weight: bold;">Research Paper:</td>
+          <td><%= @student.research_paper %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if @student.research_work? %>
+        <tr >
+          <td style="font-weight: bold;">Research Work:</td>
+          <td><%= @student.research_work %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if @student.misc? %>
+        <tr >
+          <td style="font-weight: bold;">Misc:</td>
+          <td><%= @student.misc %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <% if @student.technical? || @student.nontechnical? %>
+         <tr style="background-color: rgb(84, 81, 81);font-style:italic; color:white;padding: 1px;">
+          <td><b style="">Interest</b></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      <% end %>
+      <%  if @student.technical? %>
+        <tr >
+          <td style="font-weight: bold;">Technical:</td>
+          <td><%= @student.technical %></td>
+        </tr>
+      <% else %>
+      <% end %>
+      <% if @student.nontechnical? %>
+        <tr >
+          <td style="font-weight: bold;">Non-Technical:</td>
+          <td><%= @student.nontechnical %></td>
+        </tr>
+      <% else %>
+      <% end %>
+    </table>
+</div>
+<%= image_tag('banner shadow.png', :style=>"height: 11px;
+  left: 214px;
+  position: absolute;
+  top: 1305px;
+  width: 977px;"   ) %>
+<!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>

@@ -1,0 +1,17 @@
+<%@message_subtab=true%>
+<table>
+  <tr style="font-size: small">
+    <th>IDCode</th>
+    <th>Name</th>
+    <th>Course Name</th>
+    <th>Status</th>
+  </tr>
+  <%for course in @courses%>
+    <tr style="font-size: smaller; font-style: italic" >
+      <td><%= course.user.account_id %></td>
+      <td><%= course.user.display_name %></td>
+      <td><%= course.name %></td>
+      <td></td>
+    </tr>
+  <%end%>
+</table>

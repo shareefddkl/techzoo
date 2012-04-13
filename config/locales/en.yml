@@ -1,0 +1,28 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  layout:
+    signin: Sign in
+    signout: Sign out
+    signup: Sign up
+    add_credits: Add Credits
+    total_credits: Total Credits
+    title: Free Dating Site for all, Women seeking Women, TS Dating - Free Online Dating for all - MyDateIsHere.com
+    meta_description_content: "100% Free Online Dating for everyone. A place for everyone seeking a relationship or just friendship. Men Seeking Men, TS singles, men seeking women, women seeking women - MyDateIsHere.com"
+    welcome: Welcome
+    friends_to_chat: Friends to chat
+    home: Home
+    products: Products
+    users: Users
+    users_search: Users Search
+    users_credits: Users Credits
+    blocked_users: Blocked Users
+    product_categories: Product categories
+    feedbacks: Feedbacks
+    inappropriate_photos: Inappropriate Photos
+    inappropriate_profile_photos: Inappropriate Profile Photos
+    statistics: Statistics
+    download_api_doc: Download API Doc
+    rebuild_search_index: Rebuild search index

@@ -1,0 +1,1311 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en-US:
+  activerecord:
+    errors:
+      messages:
+        accepted: "must be accepted"
+        taken: "has already been taken"
+        not_a_number: "is not a number"
+        blank: can't be blank
+        greater_than_or_equal_to: "must be greater than or equal to %{count}"
+        exclusion: "is reserved"
+        confirmation: "doesn't match confirmation"
+        less_than_or_equal_to: "must be less than or equal to %{count}"
+        odd: "must be odd"
+        invalid: "is invalid"
+        empty: "can't be empty"
+        too_short: "is too short (minimum is %{count} characters)"
+        wrong_length: "is the wrong length (should be %{count} characters)"
+        too_long: "is too long (maximum is %{count} characters)"
+        less_than: "must be less than %{count}"
+        even: "must be even"
+        inclusion: "is not included in the list"
+        greater_than: "must be greater than %{count}"
+        equal_to: "must be equal to %{count}"
+  time:
+    hour: HOUR
+    am: am
+    formats:
+      default: "%a %b %d %H:%M:%S %Z %Y"
+      time: "%H:%M"
+      verb: "%B %d %Y"
+      short1: "%d %B %Y"
+      short2: "%m/%d/%Y,%I:%M %p"
+      short3: "%b %d %Y at %I:%M%p"
+      short4: "%m/%d/%Y at %I:%M %P"
+      short5: "%B %d, %Y at %I:%M %p"
+      short6: "%Y-%m-%d"
+      short7: "%Y-%m-%d %H:%M:%S"
+      only_second: "%S"
+      only_hour: "%H"
+      only_day: "%e"
+      only_verb: "%b"
+      only_year: "%y"
+      only_date: "%d"
+      only_cap_year: "%Y"
+      on_month_time: "%m/%d/%Y %H:%M"
+      datetime:
+        formats:
+          default: "%Y-%m-%dT%H:%M:%S%Z"
+      short: time"%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+      long1: "%d %B %Y at %H:%M:%S"
+      at_time: at %I:%M %p
+      on_date: On %b %d %Y
+      on_month: "%m/%d/%Y"
+
+    pm: pm
+  date:
+    order:
+    - :year
+    - :month
+    - :day
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    formats:
+      default: "%Y-%m-%d"
+
+      short: "%e %b"
+      long: "%B %e, %Y"
+      digital: "%Y-%m-%d 00:00:00"
+      digital1: "%Y-%m-%d 23:59:59"
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    month_names:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    abbr_month_names:
+    -
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+  datetime:
+    distance_in_words:
+      default: "%d %B %Y at %H:%M:%S"
+      x_days_ago: "%{count} days ago"
+      one_minute_ago: 1 minute ago
+      one_day_ago: 1 day ago
+      x_minutes_ago: "%{count} minutes ago"
+      less_than_a_minute: less than a minute ago
+      x_hours_ago: "%{count} hours ago"
+      one_hour_ago: 1 hour ago
+  general_home:
+    site_description: We know you're disappointed with dating sites today, we were too! Dating
+      sites today are either too expensive, too restrictive, too judgemental and most
+      recently too shallow! MyDateIsHere is changing all of that! We want to help
+      everyone from all walks of life find love and friendship. Come join our new
+      online community and take advantage of all of our great features today!
+    site_description2: It's Fun - Easy - Free!
+    general_error: The page you were looking for doesn't exist.
+    general_error1: You may have mistyped the address or the page may have moved.
+    general_error2: We're sorry, but something went wrong.
+    general_error3: We've been notified about this issue and we'll take a look at it shortly.
+    terms_of_service: TERMS OF SERVICE
+    acceptance_of_terms: 1.ACCEPTANCE OF TERMS
+    acceptance_of_terms_description1: The services that MyRoya, LLC provide to the user are subject to the following Terms of Service ("TOS"). MyRoya, LLC reserves the right to update the TOS at any time without notice to the user. The most current version of the TOS can be reviewed by clicking on the "Terms of Service" hypertext link located at the bottom of our Web pages.
+    acceptance_of_terms_description2: This Agreement, which incorporates by reference other provisions applicable to use of mydateishere.com, including, but not limited to, supplemental terms and conditions set forth hereof ("Supplemental Terms") governing the use of certain specific material contained in mydateishere.com, sets forth the terms and conditions that apply to use of mydateishere.com by the user. By using MyRoya, LLC (other than to read this Agreement for the first time), the user agrees to comply with all of the terms and conditions herein. The right to use mydateishere.com is personal to the user and is not transferable to any other person or entity. The user is responsible for all use of the user's Account (under any screen name or password) and for ensuring that all use of the user's Account complies fully with the provisions of this Agreement. The user shall be responsible for protecting the confidentiality of the user's password(s), if any.
+    acceptance_of_terms_description3: MyRoya, LLC shall have the right at any time to change or discontinue any aspect or feature of mydateishere.com, including, but not limited to, content, hours of availability, and equipment needed for access or use.
+    changed_terms: 2.CHANGED TERMS
+    changed_terms_description: MyRoya, LLC shall have the right at any time to change or modify the terms and conditions applicable to the user's use of mydateishere.com, or any part thereof, or to impose new conditions, including, but not limited to, adding fees and charges for use. Such changes, modifications, additions or deletions shall be effective immediately upon notice thereof, which may be given by means including, but not limited to, posting on mydateishere.com, or by electronic or conventional mail, or by any other means by which the user obtains notice thereof. Any use of mydateishere.com by the user after such notice shall be deemed to constitute acceptance by the user of such changes, modifications or additions.
+    description_of_services: 3.DESCRIPTION OF SERVICES
+    description_of_services_description: Through its Web property, MyRoya, LLC provides the user with access to a variety of resources, including dating services, communication fora and product information (collectively "Services"). The Services, including any updates, enhancements, new features, and/or the addition of any new Web properties, are subject to the TOS.
+    equipment:  4.EQUIPMENT
+    equipment_description: The user shall be responsible for obtaining and maintaining all telephone, computer hardware, software and other equipment needed for access to and use of mydateishere.com and all charges related thereto.
+    the_user_conduct: THE USER CONDUCT
+    the_user_conduct_description1: The user shall use mydateishere.com for lawful purposes only. The user shall not post or transmit through mydateishere.com any material which violates or infringes in any way upon the rights of others, which is unlawful, threatening, abusive, defamatory, invasive of privacy or publicity rights, vulgar, obscene, profane or otherwise objectionable, which encourages conduct that would constitute a criminal offense, give rise to civil liability or otherwise violate any law, or which, without MyRoya, LLC 's express prior approval, contains advertising or any solicitation with respect to products or services. Any conduct by the user that in MyRoya, LLC 's discretion restricts or inhibits any other user from using or enjoying mydateishere.com will not be permitted. The user shall not use mydateishere.com to advertise or perform any commercial solicitation, including, but not limited to, the solicitation of other users to become subscribers of other on-line information services competitive with MyRoya, LLC .
+    the_user_conduct_description2: Please take note that we prohibit anyone from promoting illegal activities (such as prostitution or human trafficking) or commercial activities of any kind in their profile or in messages sent on the site and if such conduct comes to our attention we reserve the right to, among other things, remove you from the site and ban you permanently. We have a zero tolerance prostitution and human trafficking policy and we fully co-operate with all law enforcement agencies when it comes to fighting prostitution and human trafficking and keeping this site a safe, clean and enjoyable dating site. All persons appearing on this site are required to be 18 years of age or older.
+    the_user_conduct_description3: Mydateishere.com contains copyrighted material, trademarks and other proprietary information, including, but not limited to, text, software, photos, video, graphics, music and sound, and the entire contents of mydateishere.com are copyrighted as a collective work under the U.S. copyright laws. MyRoya, LLC owns a copyright in the selection, coordination, arrangement and enhancement of such content, as well as in the content original to it. The user may not modify, publish, transmit, participate in the transfer or sale, create derivative works, or in any way exploit, any of the content, in whole or in part. The user may download copyrighted material for the user's personal use only. Except as otherwise expressly permitted under copyright law, no copying, redistribution, retransmission, publication or commercial exploitation of downloaded material will be permitted without the express permission of MyRoya, LLC and the copyright owner. In the event of any permitted copying, redistribution or publication of copyrighted material, no changes in or deletion of author attribution, trademark legend or copyright notice shall be made. The user acknowledges that it does not acquire any ownership rights by downloading copyrighted material.
+    the_user_conduct_description4: The user shall not upload, post or otherwise make available on mydateishere.com any material protected by copyright, trademark or other proprietary right without the express permission of the owner of the copyright, trademark or other proprietary right and the burden of determining that any material is not protected by copyright rests with the user. The user shall be solely liable for any damage resulting from any infringement of copyrights, proprietary rights, or any other harm resulting from such a submission. By submitting material to any public area of mydateishere.com, the user automatically grants, or warrants that the owner of such material has expressly granted MyRoya, LLC the royalty-free, perpetual, irrevocable, non-exclusive right and license to use, reproduce, modify, adapt, publish, translate and distribute such material (in whole or in part) worldwide and/or to incorporate it in other works in any form, media or technology now known or hereafter developed for the full term of any copyright that may exist in such material. The user also permits any other user to access, view, store or reproduce the material for that user's personal use. The user hereby grants MyRoya, LLC the right to edit, copy, publish and distribute any material made available on mydateishere.com by the user.
+    the_user_conduct_description5: The foregoing provisions of Section 5 are for the benefit of MyRoya, LLC, its subsidiaries, affiliates and its third party content providers and licensors and each shall have the right to assert and enforce such provisions directly or on its own behalf.
+    use_of_services: USE OF SERVICES
+    use_of_services_description1: The Services may contain e-mail services, bulletin board services, chat areas, news groups, fora, communities, personal web pages, calendars, photo albums, file cabinets and/or other message or communication facilities designed to enable the user to communicate with others (each a "Communication Service" and collectively "Communication Services"). The user agrees to use the Communication Services only to post, send and receive messages and material that are proper and, when applicable, related to the particular Communication Service. By way of example, and not as a limitation, the user agrees that when using the Communication Services, the user will not
+    use_of_services_description2: Use the Communication Services in connection with surveys, contests, pyramid schemes, chain letters, junk email, spamming or any duplicative or unsolicited messages (commercial or otherwise).
+    use_of_services_description3: Defame, abuse, harass, stalk, threaten or otherwise violate the legal rights (such as rights of privacy and publicity) of others.
+    use_of_services_description4: Publish, post, upload, distribute or disseminate any inappropriate, profane, defamatory, obscene, indecent or unlawful topic, name, material or information.
+    use_of_services_description5: Upload, or otherwise make available, files that contain images, photographs, software or other material protected by intellectual property laws, including, by way of example, and not as limitation, copyright or trademark laws (or by rights of privacy or publicity) unless the user own or control the rights thereto or have received all necessary consent to do the same.
+    use_of_services_description6: Use any material or information, including images or photographs, which are made available through the Services in any manner that infringes any copyright, trademark, patent, trade secret, or other proprietary right of any party.
+    use_of_services_description7: Upload files that contain viruses, Trojan horses, worms, time bombs, cancelbots, corrupted files, or any other similar software or programs that may damage the operation of another's computer or property of another.
+    use_of_services_description8: Advertise or offer to sell or buy any goods or services for any business purpose, unless such Communication Services specifically allows such messages.
+    use_of_services_description9: Download any file posted by another the user of a Communication Service that the user know, or reasonably should know, cannot be legally reproduced, displayed, performed, and/or distributed in such manner.
+    use_of_services_description10: Falsify or delete any copyright management information, such as author attributions, legal or other proper notices or proprietary designations or labels of the origin or source of software or other material contained in a file that is uploaded.
+    use_of_services_description11: Restrict or inhibit any other the user from using and enjoying the Communication Services.
+    use_of_services_description12: Violate any code of conduct or other guidelines, which may be applicable for any particular Communication Service.
+    use_of_services_description13: Harvest or otherwise collect information about others, including e-mail addresses.
+    use_of_services_description14: Violate any applicable laws or regulations.
+    use_of_services_description15: Create a false identity for the purpose of misleading others.
+    use_of_services_description16: Use, download or otherwise copy, or provide (whether or not for a fee) to a person or entity any directory of the users of the Services or other the user or usage information or any portion thereof.
+    use_of_services_description17: MyRoya, LLC has no obligation to monitor the Communication Services. However, MyRoya, LLC reserves the right to review materials posted to the Communication Services and to remove any materials in its sole discretion. MyRoya, LLC reserves the right to terminate the user’s access to any or all of the Communication Services at any time, without notice, for any reason whatsoever. MyRoya, LLC reserves the right at all times to disclose any information as it deems necessary to satisfy any applicable law, regulation, legal process or governmental request, or to edit, refuse to post or to remove any information or materials, in whole or in part, in MyRoya, LLC's sole discretion.
+    use_of_services_description18: Materials uploaded to the Communication Services may be subject to posted limitations on usage, reproduction and/or dissemination; the user is responsible for adhering to such limitations if the user downloads the materials.
+    use_of_services_description19: Always use caution when giving out any personally identifiable information in any Communication Services. MyRoya, LLC does not control or endorse the content, messages or information found in any Communication Services and, therefore, MyRoya, LLC specifically disclaims any liability with regard to the Communication Services and any actions resulting from the user’s participation in any Communication Services. Managers and hosts are not authorized MyRoya, LLC spokespersons, and their views do not necessarily reflect those of MyRoya, LLC.
+    member_account_password_security: 5.MEMBER ACCOUNT,PASSWORD AND SECURITY
+    member_account_password_and_security: The user must complete the registration process by providing MyRoya, LLC with current, complete and accurate information as prompted by the applicable registration form. The user also will choose a password and a user name. The user is entirely responsible for maintaining the confidentiality of the user’s password and account. Furthermore, the user is entirely responsible for any and all activities that occur under the user’s account. The user agrees to notify MyRoya, LLC immediately of any unauthorized use of the user’s account or any other breach of security. MyRoya, LLC will not be liable for any loss that the user may incur as a result of someone else using the user’s password or account, either with or without the user’s knowledge. However, the user could be held liable for losses incurred by MyRoya, LLC or another party due to someone else using the user’s account or password. The user may not use anyone else's account at any time, without the permission of the account holder.
+    notice_specific_to_software_available_on_this_site: 6.NOTICE SPECIFIC TO SOFTWARE AVAILABLE ON THIS WEB SITE
+    notice_software_description1: Any software that is made available to download from the Services ("Software") is the copyrighted work of MyRoya, LLC and/or its suppliers. Use of the Software is governed by the terms of the end the user license agreement, if any, which accompanies or is included with the Software ("License Agreement"). An end the user will be unable to install any Software that is accompanied by or includes a License Agreement, unless he or she first agrees to the License Agreement terms.
+    notice_software_description2: The Software is made available for download solely for use by end the users according to the License Agreement. Any reproduction or redistribution of the Software not in accordance with the License Agreement is expressly prohibited by law, and may result in severe civil and criminal penalties. Violators will be prosecuted to the maximum extent possible.
+    notice_software_description3: WITHOUT LIMITING THE FOREGOING, COPYING OR REPRODUCTION OF THE SOFTWARE TO ANY OTHER SERVER OR LOCATION FOR FURTHER REPRODUCTION OR REDISTRIBUTION IS EXPRESSLY PROHIBITED, UNLESS SUCH REPRODUCTION OR REDISTRIBUTION IS EXPRESSLY PERMITTED BY THE LICENSE AGREEMENT ACCOMPANYING SUCH SOFTWARE. THE SOFTWARE IS WARRANTED, IF AT ALL, ONLY ACCORDING TO THE TERMS OF THE LICENSE AGREEMENT. EXCEPT AS WARRANTED IN THE LICENSE AGREEMENT, MyRoya, LLC HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH REGARD TO THE SOFTWARE, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, WHETHER EXPRESS, IMPLIED OR STATUTORY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.
+    notice_software_description4: FOR YOUR CONVENIENCE, MyRoya, LLC MAY MAKE AVAILABLE AS PART OF THE SERVICES OR IN ITS SOFTWARE PRODUCTS, TOOLS AND UTILITIES FOR USE AND/OR DOWNLOAD. MyRoya, LLC DOES NOT MAKE ANY ASSURANCES WITH REGARD TO THE ACCURACY OF THE RESULTS OR OUTPUT THAT DERIVES FROM SUCH USE OF ANY SUCH TOOLS AND UTILITIES. PLEASE RESPECT THE INTELLECTUAL PROPERTY RIGHTS OF OTHERS WHEN USING THE TOOLS AND UTILITIES MADE AVAILABLE ON THE SERVICES.
+    notice_specific_to_documents_available_on_this_site: 7.NOTICE SPECIFIC TO DOCUMENTS AVAILABLE ON THIS WEB SITE
+    notice_specific_to_documents_description1: Permission to use Documents (such as white papers, press releases, datasheets and FAQs) from the Services is granted, provided that (1) the below copyright notice appears in all copies and that both the copyright notice and this permission notice appear, (2) use of such Documents from the Services is for informational and non-commercial or personal use only and will not be copied or posted on any network computer or broadcast in any media, and (3) no modifications of any Documents are made. Accredited educational institutions, such as universities, private/public colleges, and state community colleges, may download and reproduce the Documents for distribution in the classroom. Distribution outside the classroom requires express written permission. Use for any other purpose is expressly prohibited by law, and may result in severe civil and criminal penalties. Violators will be prosecuted to the maximum extent possible.
+    notice_specific_to_documents_description2: MyRoya, LLC AND/OR ITS RESPECTIVE SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY OF THE INFORMATION CONTAINED IN THE DOCUMENTS AND RELATED GRAPHICS PUBLISHED AS PART OF THE SERVICES FOR ANY PURPOSE. ALL SUCH DOCUMENTS AND RELATED GRAPHICS ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. MyRoya, LLC AND/OR ITS RESPECTIVE SUPPLIERS HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THIS INFORMATION, INCLUDING ALL WARRANTIES AND CONDITIONS OF MERCHANTABILITY, WHETHER EXPRESS, IMPLIED OR STATUTORY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL MyRoya, LLC AND/OR ITS RESPECTIVE SUPPLIERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF INFORMATION AVAILABLE FROM THE SERVICES.
+    notice_specific_to_documents_description3:  THE DOCUMENTS AND RELATED GRAPHICS PUBLISHED ON THE SERVICES COULD INCLUDE TECHNICAL INACCURACIES OR TYPOGRAPHICAL ERRORS. CHANGES ARE PERIODICALLY ADDED TO THE INFORMATION HEREIN. MyRoya, LLC AND/OR ITS RESPECTIVE SUPPLIERS MAY MAKE IMPROVEMENTS AND/OR CHANGES IN THE PRODUCT(S) AND/OR THE PROGRAM(S) DESCRIBED HEREIN AT ANY TIME.
+    notices_software_documents_services: 8.NOTICES REGARDING SOFTWARE, DOCUMENTS AND SERVICES AVAILABLE ON THIS SITE
+    notices_software_documents_services_description: IN NO EVENT SHALL MyRoya, LLC AND/OR ITS RESPECTIVE SUPPLIERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF SOFTWARE, DOCUMENTS, PROVISION OF OR FAILURE TO PROVIDE SERVICES, OR INFORMATION AVAILABLE FROM THE SERVICES.
+    materials_provided_to_myroya: 9.MATERIALS PROVIDED TO MyRoya, LLC OR POSTED AT ANY OF ITS WEB SITES
+    materials_provided_to_myroya_description1: MyRoya, LLC does not claim ownership of the materials the user provide to MyRoya, LLC (including feedback and suggestions) or post, upload, input or submit to any Services or its associated services for review by the general public, or by the members of any public or private community, (each a "Submission" and collectively "Submissions"). However, by posting, uploading, inputting, providing or submitting ("Posting") the user’s Submission the user is granting MyRoya, LLC, its affiliated companies and necessary sublicensees permission to use the user’s Submission in connection with the operation of their Internet businesses (including, without limitation, all MyRoya, LLC Services), including, without limitation, the license rights to copy, distribute, transmit, publicly display, publicly perform, reproduce, edit, translate and reformat the user’s Submission to publish the user’s name in connection with the user’s Submission and the right to sublicense such rights to any supplier of the Services.No compensation will be paid with respect to the use of the user’s Submission, as provided herein. MyRoya, LLC is under no obligation to post or use any Submission the user may provide and MyRoya, LLC may remove any Submission at any time in its sole discretion. By Posting a Submission the user warrants and represents to own or otherwise control all of the rights to the user’s Submission as described in these Terms of Service including, without limitation, all the rights necessary for the user to provide, post, upload, input or submit the Submissions.
+    materials_provided_to_myroya_description2: In addition to the warranty and representation set forth above, by Posting a Submission that contain images, photographs, pictures or that are otherwise graphical in wholeor in part ("Images"), the user warrant and represent that (a) the user is the copyright owner of such Images, or that the copyright owner of such Images has granted the user permission to use such Images or any content and/or images contained in such Images consistent with the manner and purpose of the user’s use and as otherwise permitted by these Terms of Service and the Services, (b) the user have the rights necessary to grant the licenses and sublicenses described in these Terms of Service, and (c) that each person depicted in such Images, if any, has provided consent to the use of the Images as set forth in these Terms of Service, including, by way of example, and not as a limitation, the distribution, public display and reproduction of such Images.By Posting Images, the user is granting (a) to all members of the user’s private community (for each such Images available to members of such private community), and/or (b) to the general public (for each such Images available anywhere on the Services, other than a private community), permission to use the user’s Images in connection with the use, as permitted by these Terms of Service, of any of the Services, (including, by way of example, and not as a limitation, making prints and gift items which include such Images), and including, without limitation, a non-exclusive, world-wide, royalty-free license to copy, distribute, transmit, publicly display, publicly perform, reproduce, edit, translate and reformat the user’s Images without having the user’s name attached to such Images, and the right to sublicense such rights to any supplier of the Services. The licenses granted in the preceding sentences for a Images will terminate at the time the user completely remove such Images from the Services, provided that, such termination shall not affect any licenses granted in connection with such Images prior to the time the user completely remove such Images. No compensation will be paid with respect to the use of the user’s Images.
+    disclaimer_of_warranty_and_liability: 10.DISCLAIMER OF WARRANTY; LIMITATION OF LIABILITY
+    disclaimer_of_warranty_and_liability_description1: THE USER EXPRESSLY AGREES THAT USE OF mydateishere.com IS AT THE USER'S SOLE RISK. NEITHER MyRoya, LLC, ITS AFFILIATES NOR ANY OF THEIR RESPECTIVE EMPLOYEES, AGENTS, THIRD PARTY CONTENT PROVIDERS OR LICENSORS WARRANT THAT mydateishere.com WILL BE UNINTERRUPTED OR ERROR FREE; NOR DO THEY MAKE ANY WARRANTY AS TO THE RESULTS THAT MAY BE OBTAINED FROM USE OF mydateishere.com, OR AS TO THE ACCURACY, RELIABILITY OR CONTENT OF ANY INFORMATION, SERVICE, OR MERCHANDISE PROVIDED THROUGH mydateishere.com.
+    disclaimer_of_warranty_and_liability_description2: IS PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF TITLE OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, OTHER THAN THOSE WARRANTIES WHICH ARE IMPLIED BY AND INCAPABLE OF EXCLUSION, RESTRICTION OR MODIFICATION UNDER THE LAWS APPLICABLE TO THIS AGREEMENT.
+    disclaimer_of_warranty_and_liability_description3: THIS DISCLAIMER OF LIABILITY APPLIES TO ANY DAMAGES OR INJURY CAUSED BY ANY FAILURE OF PERFORMANCE, ERROR, OMISSION, INTERRUPTION, DELETION, DEFECT, DELAY IN OPERATION OR TRANSMISSION, COMPUTER VIRUS, COMMUNICATION LINE FAILURE, THEFT OR DESTRUCTION OR UNAUTHORIZED ACCESS TO, ALTERATION OF, OR USE OF RECORD, WHETHER FOR BREACH OF CONTRACT, TORTIOUS BEHAVIOR, NEGLIGENCE, OR UNDER ANY OTHER CAUSE OF ACTION. THE USER SPECIFICALLY ACKNOWLEDGES THAT MyRoya, LLC IS NOT LIABLE FOR THE DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OF OTHER THE USERS OR THIRD-PARTIES AND THAT THE RISK OF INJURY FROM THE FOREGOING RESTS ENTIRELY WITH THE USER.
+    disclaimer_of_warranty_and_liability_description4:  IN NO EVENT WILL MyRoya, LLC, OR ANY PERSON OR ENTITY INVOLVED IN CREATING, PRODUCING OR DISTRIBUTING mydateishere.com OR THE MyRoya, LLC SOFTWARE, BE LIABLE FOR ANY DAMAGES, INCLUDING, WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE mydateishere.com. THE USER HEREBY ACKNOWLEDGES THAT THE PROVISIONS OF THIS SECTION SHALL APPLY TO ALL CONTENT ON THE SITE.
+    disclaimer_of_warranty_and_liability_description5: IN ADDITION TO THE TERMS SET FORTH ABOVE NEITHER, MyRoya, LLC, NOR ITS AFFILIATES, INFORMATION PROVIDERS OR CONTENT PARTNERS SHALL BE LIABLE REGARDLESS OF THE CAUSE OR DURATION, FOR ANY ERRORS, INACCURACIES, OMISSIONS, OR OTHER DEFECTS IN, OR UNTIMELINESS OR UNAUTHENTICITY OF, THE INFORMATION CONTAINED WITHIN mydateishere.com, OR FOR ANY DELAY OR INTERRUPTION IN THE TRANSMISSION THEREOF TO THE THE USER, OR FOR ANY CLAIMS OR LOSSES ARISING THEREFROM OR OCCASIONED THEREBY. NONE OF THE FOREGOING PARTIES SHALL BE LIABLE FOR ANY THIRD-PARTY CLAIMS OR LOSSES OF ANY NATURE, INCLUDING, BUT NOT LIMITED TO, LOST PROFITS, PUNITIVE OR CONSEQUENTIAL DAMAGES.
+    disclaimer_of_warranty_and_liability_description6: FORCE MAJEURE – NEITHER PARTY WILL BE RESPONSIBLE FOR ANY FAILURE OR DELAY IN PERFORMANCE DUE TO CIRCUMSTANCES BEYOND ITS REASONABLE CONTROL, INCLUDING, WITHOUT LIMITATION, ACTS OF GOD, WAR, RIOT, EMBARGOES, ACTS OF CIVIL OR MILITARY AUTHORITIES, FIRE, FLOODS, ACCIDENTS, SERVICE OUTAGES RESULTING FROM EQUIPMENT AND/OR SOFTWARE FAILURE AND/OR TELECOMMUNICATIONS FAILURES, POWER FAILURES, NETWORK FAILURES, FAILURES OF THIRD PARTY SERVICE PROVIDERS (INCLUDING PROVIDERS OF INTERNET SERVICES AND TELECOMMUNICATIONS). THE PARTY AFFECTED BY ANY SUCH EVENT SHALL NOTIFY THE OTHER PARTY WITHIN A MAXIMUM OF FIFTEEN (15) DAYS FROM ITS OCCURENCE. THE PERFORMANCE OF THS AGREEMENT SHALL THEN BE SUSPENDED FOR AS LONG AS ANY SUCH EVENT SHALL PREVENT THE AFFECTED PARTY FROM PERFORMING ITS OBLIGATIONS UNDER THIS AGREEMENT.
+    link_to_third_party_sites: 11.LINKS TO THIRD PARTY SITES
+    link_to_third_party_site_description1: THE LINKS IN THIS AREA WILL LET YOU LEAVE MyRoya, LLC'S SITE. THE LINKED SITES ARE NOT UNDER THE CONTROL OF MyRoya, LLC AND MyRoya, LLC IS NOT RESPONSIBLE FOR THE CONTENTS OF ANY LINKED SITE OR ANY LINK CONTAINED IN A LINKED SITE, OR ANY CHANGES OR UPDATES TO SUCH SITES. MyRoya, LLC IS NOT RESPONSIBLE FOR WEBCASTING OR ANY OTHER FORM OF TRANSMISSION RECEIVED FROM ANY LINKED SITE. MyRoya, LLC IS PROVIDING THESE LINKS TO YOU ONLY AS A CONVENIENCE, AND THE INCLUSION OF ANY LINK DOES NOT IMPLY ENDORSEMENT BY MyRoya, LLC OF THE SITE.
+    link_to_third_party_site_description2: MyRoya, LLC  is a distributor (and not a publisher) of content supplied by third parties and the users. Accordingly, MyRoya, LLC  has no more editorial control over such content than does a public library, bookstore, or newsstand. Any opinions, advice, statements, services, offers, or other information or content expressed or made available by third parties, including information providers, the users or any other the user of mydateishere.com, are those of the respective author(s) or distributor(s) and not of MyRoya, LLC. Neither MyRoya, LLC nor any third-party provider of information guarantees the accuracy, completeness, or usefulness of any content, nor its merchantability or fitness for any particular purpose.
+    link_to_third_party_site_description3: In many instances, the content available through mydateishere.com represents the opinions and judgments of the respective information provider, the user, or other the user not under contract with MyRoya, LLC. MyRoya, LLC neither endorses nor is responsible for the accuracy or reliability of any opinion, advice or statement made on mydateishere.com by anyone other than authorized MyRoya, LLC employee spokespersons while acting in their official capacities. Under no circumstances will MyRoya, LLC be liable for any loss or damage caused by the user's reliance on information obtained through mydateishere.com. It is the responsibility of the user to evaluate the accuracy, completeness or usefulness of any information, opinion, advice or other content available through MyRoya, LLC. Please seek the advice of professionals, as appropriate, regarding the evaluation of any specific information, opinion, advice or other content.
+    unsolicited_idea_submission_policy: 12.UNSOLICITED IDEA SUBMISSION POLICY
+    unsolicited_idea_submission_policy_description: MyRoya, LLC OR ANY OF ITS EMPLOYEES DO NOT ACCEPT OR CONSIDER UNSOLICITED IDEAS, INCLUDING IDEAS FOR NEW ADVERTISING CAMPAIGNS, NEW PROMOTIONS, NEW PRODUCTS OR TECHNOLOGIES, PROCESSES, MATERIALS, MARKETING PLANS OR NEW PRODUCT NAMES. PLEASE DO NOT SEND ANY ORIGINAL CREATIVE ARTWORK, SAMPLES, DEMOS, OR OTHER WORKS. THE SOLE PURPOSE OF THIS POLICY IS TO AVOID POTENTIAL MISUNDERSTANDINGS OR DISPUTES WHEN MyRoya, LLC'S PRODUCTS OR MARKETING STRATEGIES MIGHT SEEM SIMILAR TO IDEAS SUBMITTED TO MyRoya, LLC. SO, PLEASE DO NOT SEND YOUR UNSOLICITED IDEAS TO MyRoya, LLC OR ANYONE AT MyRoya, LLC. IF, DESPITE OUR REQUEST THAT YOU NOT SEND US YOUR IDEAS AND MATERIALS, YOU STILL SEND THEM, PLEASE UNDERSTAND THAT MyRoya, LLC MAKES NO ASSURANCES THAT YOUR IDEAS AND MATERIALS WILL BE TREATED AS CONFIDENTIAL OR PROPRIETARY.
+    monitoring: 13.MONITORING
+    monitoring_description:  MyRoya, LLC shall have the right, but not the obligation, to monitor the content of mydateishere.com, including chat rooms and fora, to determine compliance with this Agreement and any operating rules established by MyRoya, LLC and to satisfy any law, regulation or authorized government request. MyRoya, LLC shall have the right in its sole discretion to edit, refuse to post or remove any material submitted to or posted on mydateishere.com. Without limiting the foregoing, MyRoya, LLC shall have the right to remove any material that MyRoya, LLC, in its sole discretion, finds to be in violation of the provisions hereof or otherwise objectionable.
+    indemnification: 14.INDEMNIFICATION
+    indemnification_description: The user agrees to defend, indemnify and hold harmless MyRoya, LLC, its affiliates and their respective directors, officers, employees and agents from and against all claims and expenses, including attorneys' fees, arising out of the use of MyRoya, LLC by the user or the user's Account.
+    termination: 15.TERMINATION
+    termination_description: Either MyRoya, LLC or the user may terminate this Agreement at any time. Without limiting the foregoing, MyRoya, LLC shall have the right to immediately terminate the user's Account in the event of any conduct by the user which MyRoya, LLC, in its sole discretion, considers to be unacceptable, or in the event of any breach by the user of this Agreement.
+    miscellaneous: 16.MISCELLANEOUS
+    miscellaneous_description: This Agreement and any operating rules for mydateishere.com established by MyRoya, LLC constitute the entire agreement of the parties with respect to the subject matter hereof, and supersede all previous written or oral agreements between the parties with respect to such subject matter. This Agreement shall be construed in accordance with the laws of the state of California without regard to its conflict of laws rules. No waiver by either party of any breach or default hereunder shall be deemed to be a waiver of any preceding or subsequent breach or default. The section headings used herein are for convenience only and shall not be given any legal import.
+    copyright_notice: 17.COPYRIGHT NOTICE
+    copyright_notice_description: MyRoya, LLC  its logos are trademarks of MyRoya, LLC  Ltd. All rights reserved. All other trademarks appearing on MyRoya, LLC  are the property of their respective owners.
+    trade_marks: 18.TRADEMARKS
+    trade_marks_description1: The names of actual companies and products mentioned herein may be the trademarks of their respective owners. The example companies, organizations, products, domain names, email addresses, logos, people and events depicted herein are fictitious. No association with any real company, organization, product, domain name, e-mail address, logo, person, or event is intended or should be inferred.
+    trade_marks_description2:  Any rights not expressly granted herein are reserved.
+    no_messages: No messages
+    privacy_policy: PRIVACY POLICY
+    privacy_policy_description1: It's important to Myroya, LLC to help our customers retain their privacy when they take advantage of the services that Myroya, LLC has to offer.
+    privacy_policy_description2: We believe your business is no one else's. Your privacy is important to you and to us. So we'll protect the information you share with us. To protect your privacy, Myroya, LLC follows different principles in accordance with best practices for customer privacy and data protection.
+    privacy_policy_description3: We won’t sell or give away your name, mail address, phone number, email address, credit card number or any other information to anyone.
+    privacy_policy_description4: We’ll use state-of-the-art security measures to protect your information from unauthorized users.
+    notice: NOTICE
+    notice_description1: We will ask you when we need information that personally identifies you (personal information) or allows us to contact you. Generally this information is requested when you create a Registration ID on the site or when you download free software, enter a contest, order e-mail newsletters or join a limited-access premium site. We use your Personal Information for four primary purposes
+    notice_description2: To make the site easier for you to use by not having to enter information more than once.
+    notice_description3: To help you quickly find software, services or information.
+    notice_description4: To help us create content most relevant to you.
+    notice_description5: To alert you to product upgrades, special offers, updated information and other new services from Myroya, LLC.
+    consent: CONSENT
+    consent_description1: If you choose not to register or provide personal information, you can still use some features of mydateishere.com, but you will not be able to access areas that require registration.
+    consent_description2: If you decide to register, you will be able to select the kinds of information you want to receive from us by subscribing to various services, like our electronic newsletters. If you do not want us to communicate with you about other offers regarding Myroya, LLC products, programs, events, or services by e-mail, postal mail, or telephone, you may select the option stating that you do not wish to receive marketing messages from Myroya, LLC.
+    consent_description3:  Myroya, LLC occasionally allows other companies to offer our registered customers information about their products and services, using postal mail only. If you do not want to receive these offers, you may select the option stating that you do not wish to receive marketing materials from third parties.
+    access: ACCESS
+    access_description1: We will provide you with the means to ensure that your personal information is correct and current. You may review and update this information at any time in your profile. There, you can
+    access_description2: View and edit personal information you have already given us.
+    access_description3: Tell us whether you want us to send you marketing information, or whether you want third parties to send you their offers by postal mail.
+    access_description4: Sign up for electronic newsletters about our services and products.
+    access_description5: Register. Once you register, you won't need to do it again. Wherever you go on mydateishere.com your information stays with you.
+    security: SECURITY
+    security_description1: Myroya, LLC has taken strong measures to protect the security of your personal information and to ensure that your choices for its intended use are honored. We take strong precautions to protect your data from loss, misuse, unauthorized access or disclosure, alteration, or destruction.
+    security_description2: We guarantee your e-commerce transactions to be 100% safe and secure. When you place orders you're utilizing secure server software SSL, which encrypts your personal information before it's sent over the Internet. SSL is one of the safest encryption technologies available.
+    security_description3: In addition, your transactions are guaranteed under the Fair Credit Billing Act. This Act states that your bank cannot hold you liable for more than $50.00 in fraudulent credit card charges. In the event of unauthorized use of your credit card, you must notify your credit card provider in accordance with its reporting rules and procedures.
+    security_description4: Myroya, LLC strictly protects the security of your personal information and honors your choices for its intended use. We carefully protect your data from loss, misuse, unauthorized access or disclosure, alteration, or destruction.
+    security_description5: Your personal information is never shared outside the company without your permission, except under conditions explained above. Inside the company, data is stored in password-controlled servers with limited access. Your information may be stored and processed in the United States or any other country where Myroya, LLC, its subsidiaries, affiliates or agents are located.
+    security_description6: You also have a significant role in protecting your information. No one can see or edit your personal information without knowing your user name and password, so do not share these with others.
+    notice_to_parents: NOTICE TO PARENTS
+    notice_to_parents_description1: Parents or guardians we want to help you guard your children's privacy. We encourage you to talk to your children about safe and responsible use of their Personal Information while using the Internet.
+    notice_to_parents_description2: The Myroya, LLC site does not publish content that is targeted to children. Myroya, LLC’s services and websites such as mydateishere.com are targeted to adults only.
+    enforcement: ENFORCEMENT
+    enforcement_description: If for some reason you believe Myroya, LLC has not adhered to these principles, please notify us by e-mail at privacy@myroya.com and we will do our best to determine and correct the problem promptly. Be certain the words Privacy Policy are in the Subject line.
+    information_share: WHAT WE DO WITH THE INFORMATION YOU SHARE
+    information_share_description1:  When you join us, you provide us with your contact information, including your name and email address. We use this information to send you updates about activity and interest in your profile, questionnaires to measure your satisfaction with our service and announcements about new and exciting services that we offer. When you order from us, we ask for your credit card number and billing address. We use this information only to bill you for the product(s) you order at that time. For added security, we do not save your billing information in case you want to order from us again.   You will have to re-enter your billing information when you re-order from us.This is done for your security.
+    information_share_description2: We occasionally hire other companies to provide limited services on our behalf, including packaging, mailing and delivering purchases, answering customer questions about products or services, sending postal mail and processing event registration. We will only provide those companies the information they need to deliver the service, and they are prohibited from using that information for any other purpose.
+    information_share_description3: Myroya, LLC will disclose your personal information, without notice, only if required to do so by law or in the good faith belief that such action is necessary to (a) conform to the edicts of the law or comply with legal process served on Myroya, LLC or the site; (b) protect and defend the rights or property of Myroya, LLC and its family of Web sites, and, (c) act in urgent circumstances to protect the personal safety of users of Myroya, LLC, its Web sites, or the public.
+    viewed_me_most_recent: Viewed Me(most recent)
+    see_all_the_users_who_viewed: See All The Users Who Viewed Me
+    upcoming_dates: Upcoming Dates
+    no_schedules:  No schedules
+    my_matches: My Matches
+    age : Age
+    want_to_see_more:  Want to see more
+    no_match_yet: No Match yet
+    contact_us: Contact Us
+    full_name*: Full Name *
+    email_address: Email Address*
+    subject: Subject
+    your_message:  Your Message*
+    submit_form: Submit Form
+    about_us: About Us
+    under_development: Under development
+  starburst_text:
+      enjoy_the_best: Enjoy the best free dating site ever!
+  general_word:
+    facebook: Facebook
+    twitter: twitter
+    blog: Blog
+    i_am_a: I'm a
+    looking_for: Looking for a
+    interest_in: Interested in
+    from: From
+    to: To
+    on: On
+    error: Error
+    display_per_page: Display per page
+    create: Create
+    update: Update
+    delete: Delete
+    discard: Discard
+    in: In
+    more: More
+  layout:
+    signin: Sign in
+    signout: Sign out
+    signup: Sign up
+    add_credits: Add Credits
+    total_credits: Total Credits
+    title: Free Dating Site for all, Women seeking Women, TS Dating - Free Online Dating for all - MyDateIsHere.com
+    meta_description_content: "100% Free Online Dating for everyone. A place for everyone seeking a relationship or just friendship. Men Seeking Men, TS singles, men seeking women, women seeking women - MyDateIsHere.com"
+    welcome: Welcome
+    friends_to_chat: Friends to chat
+    home: Home
+    products: Products
+    users: Users
+    users_search: Users Search
+    users_credits: Users Credits
+    blocked_users: Blocked Users
+    product_categories: Product categories
+    feedbacks: Feedbacks
+    inappropriate_photos: Inappropriate Photos
+    inappropriate_profile_photos: Inappropriate Profile Photos
+    statistics: Statistics
+    download_api_doc: Download API Doc
+    rebuild_search_index: Rebuild search index
+    user_menu:
+      add_edit_photo: Add / Edit Photo
+      my_messages: My Messages
+      my_scheduler: My Scheduler
+      who_checked_me_out: Who checked me out
+      who_i_checked_out: Who I checked out
+      my_matches: My Matches
+      date_requests: Date requests
+      my_stats: My Stats
+      add_as_friend: Add as friend
+      friends: Friends
+      send_mail: Send Email
+      send_a_virtual_gift: Send a Virtual Gift
+      photos: Photos
+      stats: Stats
+      ask_for_date: Ask for a date
+    settings: Settings
+    email: Email
+    saved_searches: Saved Searches
+    blocked_users: Blocked users
+    my_calender: My Calendar
+    my_dates: My dates
+    who_d_date_me: who'd date me!
+    who_i_d_date: who I'd date
+    compose: Compose
+    sent: Sent
+    templates: Templates
+    my_friends_list: My Friends List
+    import_contacts: Import contacts
+    my_contacts: My contacts
+    my_virtual_gifts: My Virtual Gifts
+    virtual_gifts_received: Virtual Gifts Received
+    virtual_gifts_sent: Virtual Gifts Sent
+    your_virtual_gifts: Your Virtual Gifts!
+    current_profile: Current Profile
+    upload_your_images_here: Upload your images here.
+    upload_multiple_photos: Upload multiple photos
+    upload: Upload
+    upload_files: Upload files
+    mypics_albums: My pics & albums
+    menu_link:
+      home: Home
+      friends: Friends
+      search: Search
+      my_matches: My Matches
+      my_scheduler: My Scheduler
+      messages: Messages
+      my_virtual_gifts: My Virtual Gifts
+      my_photos: My Photos
+      my_account: My Account
+      admin: Admin
+    footer_link:
+      privacy_policy: Privacy Policy
+      terms_of_use: Terms of Use
+      contact_us: Contact Us
+      blog: Blog
+      home: Home
+  feedback:
+    thankyou: Thank you for your feedback!
+    error_message: Please enter your
+    destroy:
+      notice_feedback_delete: Feedback was deleted successfully
+      error_feedback_delete: Feedback deletion failed. Please try again
+    label:
+      feedback1: Feedbacks
+      no_feedback: No Feedback
+      please_leave_us: Please leave us feedback, it's really appreciated
+      email: Email
+      comment: Comment
+      send: Send
+    confirm_delete: Are you sure?
+    by: By
+    sent_on: sent on
+    feedback_mailer:
+      dear_site_administrator: Dear site administrator,
+      you_re_lucky: You're lucky today, you've got feedback from your users
+      subject: Subject
+      users_mail: User's email
+      sent_at: Sent at
+      comment: Comment
+  inappropriate_photo:
+    destroy:
+      report_delete: Report was deleted successfully
+      alert: Report was not deleted. Please try again
+    destroy_photo:
+      notice: Photo was deleted successfully
+      error: Photo was not deleted. Please try again
+    remove_photo:
+      notice: Photo has been removed successfully
+      error: Photo removing failed. Please try again
+    remove_profile_photo:
+      notice: Profile photo has been removed successfull
+      error: Profile photo removing failed. Please try again
+    label:
+      photos_report: Photos reported as inappropriate
+      no_photos: No Photos
+      are_you_sure: Are you sure
+      confirm_delete: Are you sure? you want to delete photo
+      confirm_delete1: Are you sure? you want to remove profile photo and show picture was removed
+      reports: Reports
+      profile_photos: Profile Photos reported as inappropriate
+  pcategory:
+    create:
+      available_categories: available Categories
+      notice: Product category was created successfully
+    destroy:
+      notice: Product category was deleted successfully
+      error: Product category deletion failed. Please try again
+    label:
+      new: New
+      edit: Edit
+      product_category: Product Category
+      no_product_category: No product category
+      name: Name
+      products_associated: Products Associated
+      name*: Name*
+      create: Create
+      update: Update
+      delete_confirm: Are you sure?you want to delete this category.This will delete products association also.
+  product:
+    create:
+      notice: Product was successfully created.
+    update:
+      notice: Product was successfully updated.
+    label:
+      new_product: New product
+      product1: Products
+      no_products: No products
+      credits: Credits
+      are_you_sure: Are you sure
+      editing_product: Editing Product
+      name: Name*
+      credits_love_points: Credits(love points)*
+      photo: Photo*
+      categories: Categories*
+      available_categories: Available categories
+      assigned_categories: Assigned categories
+  statistic:
+    email_response:
+      title: People responded to emails
+    non_responded: Non responded
+    responded: Responded
+    email_response_by_category:
+      title: People responded to emails by category
+    email_responses_to_original_vs_template:
+      title: People who respond based on template emails vs. original emails
+      replies_to_template_emails: Replies to template emails
+    best_time: Best time of day to get responses
+    online_history: Your matches online history
+    no_of_time: No. of times logged in
+    multibar: MultiBar Tooltip
+    replies: Replies
+    label:
+      age_between: Age between
+  user:
+    gender: Gender
+    orientation: Orientation
+    ethnicity_IN: ethnicity IN
+    income_level: income_level
+    destroy:
+      notice: User was deleted successfully
+      error: User was not deleted. Please try again
+    change_credit:
+      error1: Credits should be greater than 0
+      error2: Select either increase or decrease option
+      update_credit: Updated credits successfully
+    please_try: Error,Please try again
+    general_error: Permission denied
+    create_old:
+      error: You are already invited. Please accept this invitation to activate your account
+      notice: Thanks for signing up!  We're sending you an email with your activation code,If you don't see the activation e-mail in your Inbox, please check your SPAM folder.
+              You can resend the activation e-mail by clicking on Sign In and then on Not received activation email?.
+      captcha_error: Captcha is not correct
+    signup_step2:
+      accept_agreement: Please accept agreement
+    signup_failed: Signup failed. Please try again
+    account_activation: your account has been activated
+    invalid_link: Invalid link
+    invited_not_activated: You are just invited and not activated your account. Please accept this invitation to activate your account.
+    reset_password_email: We sent you an email with instructions to reset your password.
+    to_reset_password: Please enter your email to reset password.
+    no_user_exist: No user exist with
+    correct_email: Please enter your correct email
+    cant_reset_password: You can't reset password of this user since you logged in as facebook user
+    password_change: Password successfully changed
+    password_change_failed: Password reset failed. Please try again.
+    invalid_url: Invalid URL
+    account_update: Your account updated successfully.
+    account_update_fail: Account updation failed
+    added_match_list: Added to match list
+    delete_match: User successfully removed from your match list
+    error_delete_match: Error while removing user from your match list. Please try again
+    votes: Voted successfully.
+    voted: Already voted
+    signup_success: Successfully signedup
+    added_friend_list: added to your friends list
+    email_setting: Settings saved successfully
+    recharged: Recharged successfully
+    recharge_credit_fail: Your transaction couldn't be processed. Please try again
+    number_of_credits: Number of credits should be greater than zero
+    account_deactivation: Instruction to deactivate your account has been sent to
+    account_deactivation_fail: Account deactivation failed. Please try again
+    account_deactivation_success: Your account deactivated successfully. You will not be visible any more in the system
+    reactivate_account: Instruction to activate your account has been sent to
+    reactivate_account_fail: Sending instructions to reactivate your account failed. Please try again
+    reactivate_account_success: Your account has been reactivated successfully. Welcome back to
+    reactivate_account_failed: Account reactivation failed. Please try again
+    activation_email: Activation email has been sent to
+    activation_email_fail: Error while sending activation email. Please try again
+    user_already_active: This user is already active
+    thanks_signup: Thanks for signing up!  We're sending you an email with your activation link
+    user_not_existed_id:  User not exist with this id
+    added_user_match_list:  Successfully added user to your matched list
+    adding_user_match_list_failed: Adding a user to your matched list failed. Please try again
+    recharge_credits: Credits are recharged successfully
+    exception: Exception occured while processing the request. Please try with proper input values
+    invalid_email: Invalid email
+    label:
+      resent_activation_mail: Resent activation email to
+      user_already_active: User already active or invalid user id passed
+      cantb_blank: can't be blank
+      doesnt_match: doesn't match with confirmation password
+      error: Error
+      users_between_the_interval: Users between the interval of time
+      hours_to: hours TO
+      hours: Hours
+      online_user_only: Online user only
+      users_who_haved_joined_mdih_in_last: Users who have joined MDIH in last
+      days: Days
+      users_between_the_ages: Users between the ages
+      user1: Users
+      login: Login
+      password: Password
+      full_name: Full Name
+      email: Email
+      activated_on: Activated on
+      change_credits_of: Change Credits of
+      credits: Credits
+      increase: increase
+      decrease: decrease
+      send_mail: Send email
+      message: Message
+      password_reset: Password Reset
+      email_address: Email address
+      password*: Password*
+      confirm_password*: Confirm Password*
+      chat_not_permitted: Either scripts and active content are not permitted to run or Adobe Flash Player version10.0.0 or greater is not installed.
+      please_signup:  Please signup
+      to_accept_invitation: to accept your invitation from
+      last_login: Last login
+      my_basic_info: My basic info
+      interested_in: Interested in
+      description: Description
+      personal: Personal
+      height: Height
+      cm: cm
+      inch: inch
+      weight: Weight
+      ethnic_origin: Ethnic Origin
+      skin_color: Skin Color
+      eye_color: Eye Color
+      hair_color: Hair Color
+      body_type: Body Type
+      body_hair: Body Hair
+      languages: Languages
+      marital_status: Marital Status
+      best_feature: Best feature
+      has_kids: Has kids
+      want_kids: Wants Kids
+      religion: Religion
+      sexual_activity: Sexual Activity
+      fetish: Fetish
+      smoke: Smoke
+      drink: Drink
+      drugs: Drugs
+      zodiac_sign: Zodiac Sign
+      chinese_calender:  Chinese Calender
+      professional: Professional
+      educational_level: Educational Level
+      profession: Profession
+      income_level: Income Level
+      interests: Interests
+      favourite_music: Favourite Music
+      favourite_movies: Favourite Movies
+      favourite_actors: Favourite actors
+      favourite_tv_shows: Favourite TV Shows
+      favourite_books: Favourite books
+      favourite_authors: Favourite Authors
+      favourite_food: Favourite food
+      role_models: Role Models
+      favourite_sport_fitness: Favourite Sports/Fitness
+      favourite_clubs_bars: Favourite clubs/bars
+      favourite_restaurants: Favourite Restaurants
+      favourite_activities: Favourite Activities
+      ideal_places_to_live: Ideal Places To Live
+      ideal_vacation: Ideal Vacation
+      hobbies: Hobbies
+      political_view: Political View
+      you_have: You Have
+      payment_details: Payment details
+      first_name: First Name
+      last_name: Last Name
+      no_of_credits: No of Credits
+      card_type: Card Type
+      card_number: Card Number
+      card_verification: Card Verification
+      expiration_date: Expiration Date
+      billing_address: Billing Address
+      city: City
+      state_province: State/Province
+      zip: Zip
+      country: Country
+      add_ur_photo: Add your photo
+      i_agree: I agree with the terms & conditions
+      i_agree_terms: I agree to the Terms of Service. By checking this box, you agree to be bound by the terms and conditions for the use of this service and web site. I agree not to share my account login credentials and maintain the confidentiality of this information.  I understand that no illegal activity is allowed in use of the site.  MyRoya LLC reserves the right to terminate my account at any time for violation of terms or other "suspicous" activity.
+      sign_up_for_free: Sign up for free!
+      already_a_member: Already a member?
+      user_name: User Name
+      email: Email
+      DOB: Date Of Birth
+      my_matches: My matches
+      added_time: Added time
+      match_percent: Match Percent
+      last_viewed_me_at: Last Viewed Me At
+      not_yet: Not Yet
+      no_matches_added: No Matches been added yet!
+      your_matches_now: Your Matches Now
+      choose_user_name: Choose a user name
+      middle_name: Middle name
+      looking_for: Looking for
+      dont_show_straight_search: Don't show me when straight users search
+      agreed: i agree
+      email_alert_settings: Email alert settings
+      email_settings:  This page will allow you to change email alert settings. Here you can enable/disable email alerts from My Date Is Here
+      update_your_account: Update your account details.
+      to_view_this_page: To view this page ensure that Adobe Flash Player version 10.0.0 or greater is installed.
+      edit_account: Edit account
+      edit_profile: Edit profile
+      email_settings_link: Email settings
+      delete_profile: Delete profile
+      message_me: Message me
+      add_as_friend: Add as friend
+      send_gift: Send gift
+      email_address: Email address
+      iagree: I agree
+      save_settings: Save settings
+      total: Total
+      active: Active
+      inactive: Inactive
+      registered_using_facebook: Registered using facebook
+      title: Title
+      block: Block
+      unblock: Unblock
+      created_at: Created at
+      number_of_users: Number of users
+      blocked_users: Blocked user
+      time_zone: Select your time zone
+    field:
+      login: Login
+      email: Email
+      first_name: First name
+      last_name: Last name
+      middle_name: Middle name
+      full_name: Full name
+      date_of_birth: Date of birth
+      activated_at: Activated at
+      password: Password
+      confirm_password: Confirm Password
+      message_alert_email: Messages alert emails
+      hot_votes_alert_email: Hot votes alert emails
+      virtual_gift_alert_email: Virtual Gifts alert emails
+      schedule_alert_emails: Schedules alert emails
+    delete:
+      confirm_alert: Are you sure? you want to delete this user. This will delete all the assiciated information also
+    block:
+      confirm_alert: Are you sure?
+    status:
+      activated: Activated
+      not_activated: Not activated
+    my_match:
+      remove_confirm: Are you sure? you want to remove this user from your match list
+      remove_link_title: Remove from match list
+    show:
+      inappropriate_profile_photo_link: Report as inappropriate profile photo
+      delete_account_confirm_alert: Are you sure ? you want to deactivate your profile. After deactivation you will not be a active user in the system
+      edit_headline_title: Edit headline
+  album:
+    new:
+      link: Create new album
+    create:
+      notice: Album created successfully
+    update:
+      notice: Album updated successfully
+    destroy:
+      notice: Album deleted successfully
+    error_delete: Album was not deleted. Please try again
+    label:
+       create_and_manage_your_images_albums: Create and manage your images and albums
+       no_photos_in: No Photos in
+       uploaded_at: Uploaded at
+       are_you_sure_you_want_to_delete: Are you sure? you want to delete this photo
+       make_album_cover: Make album cover
+       create_and_manage_your_images_albums: Create and manage your images and albums
+       my: My
+       album1: Albums
+       no_albums: No Albums
+       created_at: Created at
+       last_updated_at: Last updated at
+       add_pics: Add pics
+       confirm_delete_album: Are you sure you want to delete this album?. This will delete all photos in this album also.
+       new_album:  New Album
+       name: Name*
+       description: Description
+  application:
+    is_logged:
+      error: Please login to view that page
+      alert: Please login to do this action
+    is_valid_account:
+      error: Your account information is not complete.Please provide first name, last name, email, gender, orientation details
+    invalid_userid: Invalid user id passed
+  chat:
+    create:
+      subject: Offline chat message from
+    label:
+      offline_messages_delivered: Offline messages will be delivered to his inbox
+  contact:
+    import:
+      error: Username and password do not match
+    create:
+      notice: Contact was created successfully
+    update:
+      notice: contact was updated successfully
+    destroy:
+      notice: Contact was deleted successfully
+    invite:
+      notice: Invitations are sent successfully
+      error:  Please select atleast one contact to invite
+    label:
+      my_contacts: My contacts
+      add_new_contact: Add new contact
+      filter_by: Filter by
+      other:  Other
+      title: Contacts start with other than letters
+      email:  Email
+      name: Name
+      send_personal_message: Send personal message
+      message: Message
+      no_contacts: No Contacts
+      imported_contacts: Imported contacts
+      you_can_invite_your_friends: You can invite your friends in your address book here. We don't save or share your information.
+      new_contact: New Contact
+      email*: Email*
+      are_you_sure_you_want_to_delete: Are you sure you want to delete?
+  facebook:
+    please_click: Please click
+    to_know_more_about_this_application: to know more about this application
+  friend:
+    index:
+      title: %{name}'s friends
+      filter_by_added_time_asc_hint: Filter by added time asc
+      filter_by_added_time_desc_hint: Filter by added time desc
+      filter_by_login_asc_hint: Filter by login asc
+      filter_by_login_desc_hint: Filter by login desc
+      remove_from_friends_list: Remove from friends list
+      remove_from_friends_list_confirm_alert: Are you sure? you want to delete %{name} from your friends list?
+      more_pictures: more pictures
+      chat_with_me: Chat with me
+      age: %{age} years
+      location: from %{location}
+      block_this_user: Block this user
+      block_this_user_confirm_alert: Are you sure? you want to block #{name}. From now onwards #{name} will not visible in your search results
+      unblock_this_user: Unblock this user
+      unblock_this_user_confirm_alert: Are you sure? you want to unblock %{name}
+    requested_friends:
+      title: Friend requests
+    invalid_user: Invalid user
+    invalid_friend: Invalid friend
+    destroy:
+      notice: Friend was deleted successfully
+      error:  Error while deleting friend
+    add:
+      notice: Already requested. Waiting for confirmation
+      notice1: Already added to your friend list
+      notice2: Your friend request has been sent to
+      notice3: Sent notification for confirmation
+      error: Error occured while adding
+      error1: as your friend
+      acccepted_successfully: Accepted successfully
+      regected_successfully: Rejected successfully
+    label:
+      years: years
+      blocked_users: Blocked users
+      users_viewed_me:  Users viewed me
+      users_i_viewed: Users i viewed
+      my: My
+      pals: folks
+      no_blocked_users: No blocked users
+      no_friends_were_added:  No friends were added yet.
+      no_friend: No friend request with this user
+      invalid_status: Invalid status passed
+      successfully: Successfully
+  gift:
+    flash_message: Your virtual gift has been sent!
+    flash_message1: Virtual Gift was not sent. Please send again
+    flash_message2: You do not have enough credits to send this gift
+    flash_message3: You do not have enough credits to send this gift. Please recharge your credits
+    destroy:
+      notice: Virtual Gift deleted successfully
+    invalid_user_id: Invalid user id or product id
+    invalid_id_passed: Invalid id passed
+    label:
+      send_virtual_gift_to: Send virtual gift to
+      your_credits: your credits
+      recharge_now: recharge now
+      filter_by_category: Filter by category
+      credits: credits
+      no_virtual_gifts_are_there_to_send: No virtual gifts are there to send
+      send_a_virtual_gift:  Send a Virtual Gift
+      cart: Cart
+      year_old: year old
+      show_virtual_gift: Show them you are really interested with a<br> special virtual gift straight to their inbox.
+      message: Message
+      below_are_virtual_gifts_received: Below are virtual gifts you have received!.
+      below_are_virtual_gifts_sent: Below are virtual gifts you have sent!
+      my_virtual_gifts: My Virtual Gifts
+      no_virtual_gifts: No Virtual Gifts
+      the: On the
+      to_the: To
+      by: By
+      are_you_sure: Are you sure?
+      seeking: Seeking
+  home:
+    contact_us:
+      fullname_error: Full name can't be blank
+      email_error: Email address can't be blank
+      email_error1: Invalid email
+      subject_error: Subject can't be blank
+      message_error: Message can't be blank.
+      notice: Your details has been successfully sent to the admin
+      error: Error while sending email. Please submit again
+    start_search:
+      alert1: Search reindexed and restarted successfully
+      alert2: Search reindexing failed. Please reindex manually
+    label:
+      see_all_actions: See All Actions
+  message_template:
+    create:
+      notice: Template created successfully
+      notice1: Template creation failed
+    update:
+      notice: Template updated successfully
+      notice1: Template updation failed
+    destroy:
+      notice: Template deleted successfully
+      error: Template deletion failed
+    destroy_template:
+      notice: Templates are delted but got error while deleting some templates
+      notice1: Templates are deleted
+      error: Please select templates to delete
+      error1: Error while deleting templates
+    label:
+      select_template: Select template
+      add_new_template: Add new template
+      no_templates_created: No templates are created. Please
+      now: now
+      new_template: New template
+      delete: Delete
+      are_you_sure: Are you sure?
+      send_this: Send this
+      no_templates: No templates
+      headline: Headline *
+      body: Body
+  message:
+    index:
+      no_messages: No messages
+    new:
+      error: You do not have permissions to send message to
+    create:
+      notice: Message was successfully
+      message_failed: Sending message failed.
+    no_permission: You do not have permissions to send message to some users from selection
+    update:
+      notice: Message was successfully sent
+    make_delete:
+      notice: Messages deleted successfully
+    reply:
+      notice: Message was successfully sent
+      error: Sending message failed
+    block_user:
+      alert1: has successfully blocked
+      alert2: This user already blocked
+    message_saved: Message was successfully saved to draft.
+    label:
+      to: To
+      email_subject: This will be the email subject
+      edit_email_settings: Edit Email Settings!
+      sent: Sent
+      headline: Subject
+      body: Message
+      replies: Replies
+      by: By
+      on: On
+      unknown_sender: Unknown sender
+      inbox: Inbox
+      draft: Draft
+      received: Received
+      no: No
+      to: To
+      type_the_name: Type the name or email of your friend
+      are_you_sure: Are you sure?
+      invalid_user: Invalid users selected
+      subject_and_body: Subject and Body can't blank
+      unknown: Unknown
+      want_to_block: Are you sure? you want to block
+  photo:
+    photo_upload: Photo was uploaded successfully
+    comment_added: Comment successfully added
+    comment_not_posted: Comment wasn't posted. Please try again
+    create:
+      message1: Uploaded successfully
+    make_album_cover:
+      notice: Updated album cover photo successfully
+      error: Faild to make photo as album cover photo
+    destroy:
+      notice: Photo was successfully deleted.
+      error: Photo deletion failed
+    post_comment:
+      comment_created: Comment successfully created
+    delete_comment:
+      comment_deleted: Comment was deleted successfully
+      comment_delete_failed: Comment deletion failed
+    report_as_inappropriate:
+      alert: Reported successfully
+      error_occured: Error occured. Please send again
+      not_reported: Not reported. Please try again
+    label:
+      create_and_manage: Create and manage your images and albums
+      report_photo_inappropriate: Report photo as inappropriate
+      comment: Comment
+      previous: Previous
+      next: Next
+      comment1: Comments
+      on: on
+      report_as_inappropriate: Report as inappropriate
+      are_you_sure: Are you sure?
+      update: Successfully updated profile photo
+      update_error: Error while updating profile photo. Please try again
+      make_as: Make as profile photo
+  profile:
+    create:
+      notice: Profile was created successfully
+      error: Profile creation failed
+    update:
+      notice: Profile was updated successfully
+      error: Profile updation failed
+    update_photo:
+      notice: Profile photo was updated successfully
+    report_inappropriate_avatar:
+      alert: Reported successfully
+      error: Error occured. Please send again
+    label:
+      enter_ur_profile_headline: Enter your profile headline
+      report_inappropriate: Report profile photo as inappropriate
+      comment: Comment
+      create_and_update: Create or update your profile.
+      headline: Headline
+      profile_photo: Profile Photo
+      address: Address
+      suite_apt: Suite/Apt
+      city: City
+      state: State
+      country: Country
+      description: Description
+      nationality: Nationality
+      personal: Personal
+      upload_profile_pic: Upload Your Profile Picture
+      select_an_image: Select an image file on your computer
+      expand_all: Expand all
+      interests: Interests
+      professional: Professional
+      height: Height
+      weight: Weight
+      ethnic_origin: Ethnic Origin
+      skin_color: Skin Color
+      eye_color: Eye Color
+      hair_color: Hair Color
+      body_type: Body Type
+      body_hair: Body Hair
+      best_feature: Best feature
+      languages: Languages
+      marital_status: Marital status
+      want_children: Want children?
+      number_of_children: Number of children
+      religion: Religion
+      fetish: Fetish
+      sexual_activity: Sexual Activity
+      smoke: Smoke
+      drink: Drink
+      drugs: Drugs
+      zodiac_sign: Zodiac Sign
+      chinese_calendar: Chinese Calendar
+      pets: Pets
+      political_view: Political View
+      i_am_a: I am a
+      education_level: Education Level
+      profession: Profession
+      income_level: Income Level
+      looking_for: What are you looking for?
+      favorite_food: Favorite Food
+      favorite_sports: Favorite Sports
+      favorite_clubs: Favorite Clubs
+      favorite_restaurants: Favorite Restaurants
+      favorite_music: Favorite Music
+      favorite_movies: Favorite movies
+      favorite_actors: Favorite Actors
+      favorite_tv_show: Favorite Tv Show
+      favorite_books: Favorite Books
+      favorite_authors: Favorite Authors
+      favorite_avtivity: Favorite Avtivity
+      favorite_type_of_cuisine: Favorite type of cuisine
+      role_model: Role Model
+      ideal_places_to_live: Ideal Places To live
+      ideal_vacation_type: Ideal Vacation Type
+      interests: Interests
+  quick_message:
+    create:
+      message_sent: Message was successfully sent
+      error: Error while sending message.Please try again.
+      no_permission_to_send:  You do not have permission to send message.
+    get_user:
+      no_user: No user
+    label:
+      year_old: year old
+      from: From
+      quick_message: Quick Message
+      dear: Dear
+      subject: Subject
+      message: Message
+      my_messages: My Messages
+      by: By
+      no_messages: No messages
+      send_message_to: Send message to
+      see_all_messages: See all messages
+      send_message: Send message
+  schedule:
+    create:
+      notice: Request was sent successfully
+    update:
+      notice: Schedule has been updated successfully
+    destroy:
+      notice: Schedule was deleted successfully
+      error: Schedule deletion failed
+    label:
+      initial_proposal: Initial proposal
+      in: In
+      schedule_details: Schedule details
+      current_proposal: Current proposal
+      replies: Replies
+      dates_from:  Dates from
+      view_by: View by
+      status: Status
+      view_invitation: View Invitation
+      no_date_requests: You did not have date requests from any one.
+      date_with: Date with
+      scheduleon: Schedule on
+      place: Place
+      description: Description
+      send_a_note_back: Send a note back
+      reason_for: Reason for
+      enter_details_to_change_date: Enter details to change date schedule
+      date_on: Date on
+      reason: Reason
+      invalid_schedule: Invalid Schedule
+      are_you_sure: Are you sure? you want to delete this date request?
+      change_schedule: Change schedule
+      view_invitation: View Invitation
+      to_ask_for_date: to ask for date
+      you_did_not: You did not requested any one
+      view_schedule: View the schedule
+  search:
+    results:
+      save_this_search: Save this search
+      new_search: New search
+      remove_from_results: Remove from results
+      unblock: Unblock
+      new_search: [New search]
+    create:
+      search_save: Search was saved successfully
+      search_not_saved: Search was not saved. Please try again
+    block_user:
+      error: This user already blocked
+    unblock_user:
+      notice: Unblocked user successfully
+    label:
+      your_search: Your Search
+      basics: Basics
+      years_old: years old
+      with_photos: With Photos
+      show_people_not_contacted: Show people I haven't contacted
+      blocked_users: Blocked users
+      saved_searches: Saved searches
+      no_results_found:  No Results found
+      to_search_again: to search again
+      advance_search: Advance search
+      i_m_a: i'm a
+      looking_for_a: looking for a
+      between_the_ages: between the ages
+      located: Located
+      miles_of: miles of
+      has_picture: Has picture
+      hide_people: Hide people i've contacted already
+      professional: Professional
+      interests: Interests
+      year_old: year old
+      orientation: Orientation
+      I_m_a: I'm a
+      simple_search: Simple Search.
+      has_pictures: Has pictures
+      online_user_only: Online user only
+      new_member: New member (last 14 days)
+      nearest_users: Nearest users
+      search_results: Search Results
+      match_percent: Match percent
+      name*: Name*
+      give_name: (give name to refer in future)
+      looking_for: looking for
+      headline: Headline
+      description: Description
+      you_cannot_send: You can not send virtual gift or email to this user
+      not_yet: Not yet
+      miles_from: miles from
+      personal: Personal
+      any: Any
+      between: Between
+      feets: feets
+      inches: inches
+      cm_to: cm to
+      cm: cm
+      interests:  Interests
+      search_again: Search again
+      send_message: Send message
+      send_virtual_gift: Send Virtual Gift
+      no_result_found: No Result Found
+      view_photos: View Photos
+      viewed_at: Viewed at
+      last_viewed_me_at: Last viewed me at
+      add_as_friend: Add as Friend
+      expand_all: Expand all
+      add_to_my_match: Add to my match
+      hot: Hot?
+      seeking_for: Seeking %{looking_for}
+      have_kids: Have kids
+  session:
+    create:
+      notice: Login Successful!
+      error: Invalid login/password
+      error1: Your account has been deactivated.
+      error2: please click
+      error3: to activate
+    note_failed_signin:
+      error: Couldn't log you in as
+      warn: Failed login for
+    not_authorized: Requested user is not authorized
+    label:
+      invalid_language: Invalid language
+      login_required: Sign in
+      login*: Login *
+      password*: Password*
+      stay_logged_in: Stay logged in
+      reset_password: Reset Password
+      email: Email*
+      resend_activation_email: Resend Activation email
+      not_received_activation_mail: Not received activation email?
+      forgot_password: Forgot password?
+      reset: Reset
+      resend: Resend
+  usermailer:
+    dear: Dear
+    thankyou: Thank you for joining mydateishere.com . Use the link below to activate your account with us.
+    user_name: Username
+    cannot_click_link: (If you cannot click the link above, please copy and paste it into your browser's address bar).
+    this_mail_sent_to: This email was sent to
+    add_donotreply@mail: Please add donotreply@mail.mydateishere.com  to your address book to ensure our emails reach your inbox!
+    full_name: Full name
+    email_address: Email address
+    message: Message
+    thanks: Thanks,
+    date_schedule: You have a date schedule with
+    to_view: to view
+    reactivate_link: You are requested to reactivate your profile in
+    below_link: Please use below link to reactivate
+    please_ignore: If it was not at your request, please ignore
+    reply_to_a_message: replied to you a message
+    message_subject: Message subject
+    reply: Reply
+    click: Click
+    to_view_message: to view message
+    sent_u_message: sent you a message
+    subject: Subject
+    has_invited: has invited you to join in
+    connect_to: Connect to
+    to_connect_to: to connect to you
+    to_accept: to accept
+    s_invitation: s invitaion
+    voted_you_hot: voted you as hot
+    years_from: years from
+    years: years
+    s_profile: s profile
+    sent_virtual_gift: sent you a virtual gift
+    view_virtual_gift: to view virtual gift
+    credits: Credits
+    on:  On
+    has_sent_request: has sent you friend request
+    s_friend_request: s friend request.
+    to_reset_mdih: To reset your mydateishere.com  password use below link.   Don't forget next time! ;)
+    login: Login
+    mydate_is_here: The MyDateIsHere Team.
+    deactivate_profile: You are requested to deactivate your profile in
+    use_to_deactivate: Please use bellow link to deactivate
+    notur_request: If it was not at your request, then you should be aware that someone has accessed your account and tried to deactivate.
+    credits_are: credits are
+    your_account: your account.
+    reason: Reason
+    mdih_team: MyDateIsHere.com team.
+    ur_friend_request: your friend request
+    happy_birthday: HAPPY BIRTHDAY!
+    wish_birthday: We wish you a great day full of joy and happiness. To help with that MyDateIsHere.com is giving you
+    gift_birthday: credits as a gift to celebrate this important day. You can use this credits to purchase virtual gifts for your friends or your special person.
+    happy_anniversary:  Wish you a very happy anniversary! And we hope you have a great day today!!.
+    you_earned: You earned
+    credits_for_anniversary: credits for this anniversary
+    thanku_for_signup: Thank you for signing up for mydateishere.com.  We hope you will find your match online.
+    please_use: Please use
+    to_visit: to visit
+  links:
+    delete: Delete
+    reports: Reports
+    remove_profile_photo: Remove profile photo
+    remove_photo: Remove photo
+    delete_photo: Delete photo
+    add_new_category: Add New Category
+    edit: Edit
+    view: View
+    confirm: Confirm
+    ignore: Ignore
+    back: Back
+    reply: Reply
+    send: Send
+    ask_now: Ask now!
+    accept: Accept
+    reject: Reject
+    click: Click
+    cancel: Cancel
+    remove: remove
+    here: Here
+    submit:
+      update: Update
+      send: Send
+      delete: Delete
+      save: save
+      submit1: Submit
+      post: post
+      upload: Upload
+      add: Add
+      reset: Reset
+      recharge: Recharge
+      accept: Accept
+      import: Import
+      recharge: Recharge
+  model:
+    valid_presence_of:
+      select_user_to_date: Select user to date
+      select_time_for_schedule: Select time for schedule
+      place_cant_blank: Place can't be blank
+    validate:
+      self:
+        error: Schedule time should be after 15 minutes from now
+        error1: Invalid user selected
+        error2: is a keyword. Please use different
+    feedback_for: Feedback for
+    valid_format_of:
+      is_invalid: is invalid(use only letters and numbers)
+  helper:
+    link_title: chat with me
+    link_text: you have
+    link_text1: friends
+    link_text2: friend
+    link_text3: you got
+    link_text4: new
+    link_text5: gifts
+    link_text6: gift
+    new_date: new date request
+    change_date: change date request(s)
+    is_online: is online
+    is_offline: is offline
+    invalid_user: invalid user!
+    content_text: not signed in
+    yacaph_block:
+      label: Please type the characters in the image below
+

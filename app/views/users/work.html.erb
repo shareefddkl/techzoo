@@ -1,0 +1,108 @@
+<tr>
+  <td valign="top">
+    <%= link_to "Basic Info", basic_users_path(@user) %>
+    <%= link_to "Picture", picture_users_path(@user) %>
+    <%= link_to "Education", education_users_path(@user) %>
+    <%= link_to "Work", work_users_path(@user) %>
+   <%= link_to "Interest", interest_users_path(@user) %>
+  </td>
+
+  <td width="85%">
+        <table>
+          <html>
+            <body>
+
+              <table border="0">
+                <tr>
+                  <td id="tabs" >
+
+                    <a href="javascript: display_tab('work')"></a>
+
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div id="work" >
+                      <table>
+                        <tr>
+                          <td>
+                            <input type="radio" name="work_type" value="more_work" onclick="display_work_from('more_work_form')" />More Work Details
+
+                            <br />
+                            <input type="radio" name="work_type" value="research" onclick="display_work_from('research_form')" /> Research Paper
+                            <br />
+                            <input type="radio" name="work_type" value="research_work" onclick="display_work_from('research_work_form')" /> Research Work
+                            <br />
+                            <input type="radio" name="work_type" value="misc" onclick="display_work_from('misc_form')" /> Misc
+                            <br />
+                          </td>
+                          <td>
+                            <div id="more_work_form" style="display:none">
+                              <table>
+                                <tr>
+
+                                  <td><%=text_area_tag :first_name %></td>
+                                </tr>
+                              </table>
+                            </div>
+
+                            <div id="research_form" style="display:none">
+                              <table>
+                                <tr>
+
+                                  <td><%=text_area_tag :first_name %></td>
+                                </tr>
+                              </table>
+                            </div>
+
+                            <div id="research_work_form" style="display:none">
+                              <table>
+                                <tr>
+
+                                  <td><%=text_area_tag :first_name %></td>
+                                </tr>
+                              </table>
+
+                            </div>
+
+                            <div id="misc_form" style="display:none">
+                              <table>
+                                <tr>
+
+                                  <td><%=text_area_tag :first_name %></td>
+                                </tr>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <script>
+                function display_work_from(form_id){
+                  var forms = ["more_work_form", "research_form", "research_work_form", "misc_form"]
+                  for(i=0; i<forms.length; i++){
+
+                    document.getElementById(forms[i]).style.display = "none";
+                  }
+                  document.getElementById(form_id).style.display = "block";
+                }
+
+                function display_tab(tab_id){
+                  var tabs = ["work"]
+                  for(i=0; i<tabs.length; i++){
+
+                    document.getElementById(tabs[i]).style.display = "none";
+                  }
+                  document.getElementById(tab_id).style.display = "block";
+                }
+              </script>
+            </body>
+          </html>
+        </table>
+</td>
+</tr>

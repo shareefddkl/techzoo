@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/techzoo/!svn/ver/274/trunk/app/controllers
+END
+suggestions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/273/trunk/app/controllers/suggestions_controller.rb
+END
+chat_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/217/trunk/app/controllers/chat_controller.rb
+END
+courses_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/274/trunk/app/controllers/courses_controller.rb
+END
+mentors_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/techzoo/!svn/ver/272/trunk/app/controllers/mentors_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/techzoo/!svn/ver/219/trunk/app/controllers/home_controller.rb
+END
+videos_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/267/trunk/app/controllers/videos_controller.rb
+END
+searches_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/274/trunk/app/controllers/searches_controller.rb
+END
+comments_videos_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/techzoo/!svn/ver/210/trunk/app/controllers/comments_videos_controller.rb
+END
+rooms_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/155/trunk/app/controllers/rooms_controller.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/270/trunk/app/controllers/users_controller.rb
+END
+documents_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/267/trunk/app/controllers/documents_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/273/trunk/app/controllers/application_controller.rb
+END
+others_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/techzoo/!svn/ver/150/trunk/app/controllers/others_controller.rb
+END
+sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/274/trunk/app/controllers/sessions_controller.rb
+END
+discussions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/techzoo/!svn/ver/210/trunk/app/controllers/discussions_controller.rb
+END
+blogs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/techzoo/!svn/ver/257/trunk/app/controllers/blogs_controller.rb
+END
+feedbacks_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/techzoo/!svn/ver/253/trunk/app/controllers/feedbacks_controller.rb
+END
+messages_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/272/trunk/app/controllers/messages_controller.rb
+END
+defaults_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/270/trunk/app/controllers/defaults_controller.rb
+END
+ads_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/techzoo/!svn/ver/272/trunk/app/controllers/ads_controller.rb
+END
+students_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/techzoo/!svn/ver/270/trunk/app/controllers/students_controller.rb
+END

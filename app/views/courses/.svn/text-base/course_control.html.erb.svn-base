@@ -1,0 +1,108 @@
+<div id="background_form">
+  <div id="sub_course_navigation">
+    <% @course_control_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <%= form_for @course, :as => :course, :url => update_course_control_course_path(@course),:html => { :multipart => true } do |f| %>
+      <h1 style="float: left; margin: 39px 40px -37px; font-size: 18px;">Select Course</h1>
+      <%= select_tag :id, options_for_select(current_user.courses.select("id, name").map{|course| [course.name, course.id, {:class => "drop_down_bg"}]}, params[:id]), :onchange => "window.location.href = '/courses/course_control?id='+this.value", :style=>"margin: 10px 256px 0; background:#545151;color: white;-moz-border-radius: 4px;width: 223px;height: 30px;float: right;font-size: 18px; padding: 0 3px;"  %>
+      <img alt="" src="/images/line (separater).png" style="margin: 45px 28px -37px;"/>
+      <div id="course_control_form" style="font-size:15px;color: black;">
+        <%=f.label :start_date, "Starting Date" %>
+        <div id="start_date">
+          <%= f.calendar_date_select  :start_date , :style =>"background:#545151;    color: white;    margin: 8px 23px;    -moz-border-radius: 5px;    width: 185px;    height: 26px;    font-size: 16px;    padding: 1px 9px;"%>
+          <%= validation_error(@course.errors["start_date"]) %>
+        </div><br/>
+        <%=f.label :end_date, "Ending Date" %>
+        <div id="end_date">
+          <%= f.calendar_date_select  :end_date, :style =>"background:#545151;    color: white;    margin: 8px 23px;    -moz-border-radius: 5px;    width: 185px;    height: 26px;    font-size: 16px;    padding: 1px 9px;" %>
+          <%= validation_error(@course.errors["end_date"]) %>
+        </div><br/>
+        <%=f.label :strength, "Class Strength" %>
+        <div>
+          <%= f.text_field :strength, :style=>" background:#545151;color: white; margin: 5px 46px 27px; -moz-border-radius: 10px; width: 36px;    height: 26px;    font-size: 16px;    padding: 1px 9px;" %>
+          <%= validation_error(@course.errors["strength"]) %>
+        </div>
+        <%=f.label :categories, "Categories" %>
+        <div class="control_checkbox">
+          <h1 style="float:right; margin: 10px 91px; color: black; font-size: 15px;">AnyOne</h1>
+          <%  [ "School", "College","PG","Ph.d","Professional","Others"].each do |category| %><br/>
+            <% if @course.categories.to_s.split(", ").include?(category) or (params[:course] && params[:course][:categories] && params[:course][:categories].include?(category)) %>
+              <%= check_box_tag("course[categories][]", "#{category}", true) %>
+              <%= categories %>
+            <% else %>
+              <%= check_box_tag("course[categories][]", "#{category}") %>
+              <%= category %>
+            <% end %>
+          <% end %>
+          <%= validation_error(@course.errors["categories"]) %>
+        </div>
+        <%=f.label :time, "Timing" %>
+        <div><%= f.time_select :time, :style=>" -moz-border-radius: 4px 4px 4px 4px;background: none repeat scroll 0 0 #545151;color: white;float: right;font-size: 16px;height: 30px;margin:-20px 356px 15px;padding: 0 3px;width: 65px;" %></div><br/>
+        <div id="tabs" >
+          <a href="javascript: display_tab('course')"></a>
+        </div>
+        <label>Course Fee</label>
+        <div id="course" >
+          <div style="float: left;margin: 4px 38px 0 -18px; font-size: 18px;">
+            <input type="radio" name="course[course_fee]" checked value="free" onclick="display_course_fee_form('free_form')" />Free
+            <br/>
+
+            <input type="radio" name="course[course_fee]" value="paid" onclick="display_course_fee_form('paid_form')" />paid
+          </div>
+          <div id="free_form" style="display:none">
+          </div>
+          <div id="paid_form" style="display:none">
+            <div style="float: right;margin:-24px -55px 0px 239px; font-size: 18px;">
+              Amount:
+              <%= text_field_tag :amount, params[:amount],:style=>" background:#545151;color: white; margin: -62px 160px 15px 2px;-moz-border-radius: 5px; width: 73px;    height: 26px;" %>
+              <%=  select_tag :amount_symbol, options_for_select(%w[Rs $ Y E], params[:amount_symbol]),:style=>" -moz-border-radius: 4px 4px 4px 4px;background: none repeat scroll 0 0 #545151;color: white;float: right;font-size: 16px;height: 30px;margin:-46px 171px 15px;padding: 0 3px;width: 65px;" %>
+              <%= select_tag :package, options_for_select(%w[FullFees]), :style=>" -moz-border-radius: 4px 4px 4px 4px;background: none repeat scroll 0 0 #545151;color: white;float: right;font-size: 16px;height: 30px;margin: -47px 68px 9px 0;padding: 0 3px;width: 100px;" %>
+            </div>
+          </div>
+          <!-- <tr>
+             <td align="left">
+          <%= f.radio_button(:course_fee, "Free", :checked => true) %>
+          <%= f.label(:course_fee_free, "Free") %>
+               <br />
+          <%= f.radio_button(:course_fee, "Paid") %>
+          <%= f.label(:course_fee_paid, "Paid") %>
+             </td>
+           </tr>-->
+          <div style="position: absolute; font-size: 16px;  color: #6D6B6B;left: 850px;    position: absolute;    top: 368px;">
+            <%= f.radio_button(:status, "published") %>Published
+            <%#= f.label(:status_published, "published", :style=>"") %>
+            <br />
+            <%= f.radio_button(:status, "unpublished") %>Unpublished
+            <%#= f.label(:status_unpublished, "unpublished", :style=>"") %>
+          </div>
+          <button type="submit"  style="background: none; border: none; position: absolute; left: 885px;top: 254px; width: 80px; height: 28px;"><%=  image_tag('save button.png') %></button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+
+
+
+<script>
+  function display_course_fee_form(form_id){
+    var forms = ["free_form", "paid_form"]
+    for(i=0; i<forms.length; i++){
+
+      document.getElementById(forms[i]).style.display = "none";
+    }
+    document.getElementById(form_id).style.display = "block";
+  }
+
+  function display_tab(tab_id){
+    var tabs = ["course"]
+    for(i=0; i<tabs.length; i++){
+
+      document.getElementById(tabs[i]).style.display = "none";
+    }
+    document.getElementById(tab_id).style.display = "block";
+  }
+</script>

@@ -1,0 +1,38 @@
+<div id="background_form">
+  <div id="sub_navigation">
+    <% @message_subtab = true %>
+  </div>
+  <div id="home_sub_form">
+    <h1 style="float:left;font-size: 16px;margin: 29px 27px; color: black">Learner's List</h1>
+    <table  cellpadding="5px" cellspacing="0px" cellspacing="0px" width="94%" border="0" style=" background-color: white;margin: -5px 0 0 19px;float: left; ">
+      <tr height="30px" style="background-color:#333232; color: white;font-family:'Liberation Sans';font-size: 14px;">
+        <th class="table_border">IDCode</th>
+        <th class="table_border">Name</th>
+        <th class="table_border">CourseName</th>
+        <th class="table_border">&nbsp;&nbsp;&nbsp;Accept/Reject</th>
+        <th class="table_border">Date</th>
+        <th class="table_border">Time</th>
+      </tr>
+
+      <% @courses_students.each do |courses_student| %>
+        <% if courses_student.status == 'pending' %>
+          <tr height="30px" style="font-family:'Liberation Sans';font-size: 11px;" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+            <td class="table_border"><%= courses_student.account_id %></td>
+            <td class="table_border"><%= courses_student.student_first_name %></td>
+            <td class="table_border"><%=courses_student.course_name %></td>
+            <td class="table_border">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to_function image_tag('right bullet.png', :border => 0, :title => "Accept"),"accept_course_message(#{courses_student.id})"  %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to_function image_tag('cross icon.png', :border => 0, :title => "Reject"),"reject_course_message(#{courses_student.id})" %>
+            </td>
+            <td class="table_border"><%=courses_student.created_at.strftime("%d/%b/%Y")%></td>
+            <td><%= courses_student.created_at.strftime("%I:%M%p")%></td>
+          </tr>
+        <%end%>
+      <%end%>
+    </table>
+  </div>
+  <%= image_tag('banner shadow.png', :style=>"height: 11px;    margin: 35px -96px 10px;    width: 962px;") %>
+  <!--<img alt="" src="images/banner shadow.png" style="height: 11px;    margin: 37px -96px 10px;    width: 962px;"/>-->
+</div>
+
+
+
